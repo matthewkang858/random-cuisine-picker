@@ -1,17 +1,19 @@
-"""Fixed-basket price-trend analysis and client exhibit.
+"""Fixed-basket price-trend analysis and client exhibit (top-10 TCGs).
 
 Method (documented in the exhibit footnote):
-- Basket per segment = (productId, subTypeName) pairs with a non-null
-  marketPrice in EVERY sampled month (avoids mix-shift artifacts).
-- Each basket product is indexed to 100 at its own Feb 2024 price; the
-  segment series is the cross-product median of those relatives per month,
-  with the IQR (25th-75th pct) as a dispersion band.
-- Four segments: Pokemon singles, Pokemon sealed, MTG singles, MTG sealed.
+- Basket per (game, segment) = (productId, subTypeName) pairs with a
+  non-null marketPrice in EVERY sampled month the game has data for
+  (avoids mix-shift artifacts).
+- Games launched after Feb 2024 are indexed from their first sampled
+  month (annotated on the panel); everything else from Feb 2024.
+- Each basket product is indexed to 100 at its base-month price; the
+  segment series is the cross-product median, with the IQR band.
 
-Outputs (./output): exhibit PNG + SVG, tcg_price_trends.xlsx, and a printed
-5-line findings summary.
+Outputs (./output): exhibit PNG + SVG, tcg_price_trends.xlsx, and a
+printed 5-line findings summary.
 """
 import sys
+from datetime import date
 from pathlib import Path
 
 import matplotlib
@@ -21,17 +23,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from tcg_config import CATEGORIES, CATEGORY_ORDER
+
 MONTHLY = Path(sys.argv[1])   # per-month price parquets
 CATALOG = Path(sys.argv[2])   # catalog parquets
 OUTPUT = Path(sys.argv[3]) if len(sys.argv) > 3 else Path("output")
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
-GAMES = {1: "Magic: The Gathering", 3: "Pokemon"}
-BASE_MONTH = "2024-02"
-SCATTER_PER_GAME = 500
+SCATTER_PER_GAME = 150
+MIN_BASE_ROWS = 50            # month must have this many priced rows to count
 RNG = np.random.default_rng(20260716)
 
-# Deck style (validated palette; see scripts/ dataviz notes)
+# Deck style (validated palette; see dataviz notes)
 INK = "#0b0b0b"
 INK2 = "#52514e"
 MUTED = "#898781"
@@ -43,8 +46,6 @@ C_SEALED = "#008300"
 
 # ---------------------------------------------------------------- load data
 months = sorted(p.stem.replace("prices_", "") for p in MONTHLY.glob("prices_*.parquet"))
-if BASE_MONTH not in months:
-    sys.exit(f"base month {BASE_MONTH} missing from {MONTHLY}")
 print(f"{len(months)} months: {months[0]} .. {months[-1]}")
 
 frames = []
@@ -56,149 +57,209 @@ prices = pd.concat(frames, ignore_index=True)
 prices["subTypeName"] = prices["subTypeName"].fillna("")
 
 catalog = pd.concat(
-    [pd.read_parquet(CATALOG / f"products_{c}.parquet") for c in (1, 3)],
+    [pd.read_parquet(CATALOG / f"products_{c}.parquet") for c in CATEGORY_ORDER],
     ignore_index=True,
 )[["productId", "isSingle"]]
 prices = prices.merge(catalog, on="productId", how="inner")
 prices["segment"] = np.where(prices["isSingle"], "singles", "sealed")
 
 # ------------------------------------------------- fixed basket + relatives
-# Wide matrix: one row per (category, segment, productId, subTypeName),
-# one column per month. Basket = rows priced in every month.
 wide = prices.pivot_table(
     index=["categoryId", "segment", "productId", "subTypeName"],
     columns="month", values="marketPrice", aggfunc="first")
-basket = wide.dropna()
-basket = basket[basket[BASE_MONTH] > 0]
-relatives = basket.div(basket[BASE_MONTH], axis=0) * 100.0
 
-summary_rows, series = [], {}
-for (cat, seg), grp in relatives.groupby(level=["categoryId", "segment"]):
-    med = grp.median()
-    q25 = grp.quantile(0.25)
-    q75 = grp.quantile(0.75)
-    series[(cat, seg)] = {"median": med, "q25": q25, "q75": q75, "n": len(grp)}
-    print(f"{GAMES[cat]} {seg}: basket n={len(grp)}, "
-          f"final index {med.iloc[-1]:.1f}")
+series = {}        # (cat, seg) -> dict(median, q25, q75, n, base, months)
+relatives_by_cat = {}
+for cat in CATEGORY_ORDER:
+    cat_wide = wide.loc[wide.index.get_level_values("categoryId") == cat]
+    # base month = first sampled month with a real footprint for this game
+    counts = cat_wide.notna().sum()
+    live = [m for m in months if counts.get(m, 0) >= MIN_BASE_ROWS]
+    if not live:
+        print(f"{CATEGORIES[cat][0]}: no data, skipped", file=sys.stderr)
+        continue
+    base, cat_months = live[0], live
+    sub = cat_wide[cat_months].dropna()
+    sub = sub[sub[base] > 0]
+    rel = sub.div(sub[base], axis=0) * 100.0
+    relatives_by_cat[cat] = rel
+    for seg in ("singles", "sealed"):
+        grp = rel.loc[rel.index.get_level_values("segment") == seg]
+        if grp.empty:
+            continue
+        series[(cat, seg)] = {
+            "median": grp.median(), "q25": grp.quantile(0.25),
+            "q75": grp.quantile(0.75), "n": len(grp),
+            "base": base, "months": cat_months,
+        }
+        print(f"{CATEGORIES[cat][0]} {seg}: basket n={len(grp)}, "
+              f"base {base}, final index {grp.median().iloc[-1]:.1f}")
+
+
+def month_dates(ms):
+    return pd.to_datetime([m + "-01" for m in ms])
+
+
+def cagr(key):
+    s = series[key]
+    y0, m0 = map(int, s["base"].split("-"))
+    d0 = date(2024, 2, 8) if s["base"] == "2024-02" else date(y0, m0, 1)
+    y1, m1 = map(int, months[-1].split("-"))
+    yrs = (date(y1, m1, 1) - d0).days / 365.25
+    return (s["median"].iloc[-1] / 100.0) ** (1 / yrs) - 1 if yrs > 0 else np.nan
+
 
 # ---------------------------------------------------------------- exhibit
-dates = pd.to_datetime([m + "-01" for m in months])
-fig, axes = plt.subplots(1, 2, figsize=(13.5, 6.2), dpi=200, sharey=True,
-                         facecolor=SURFACE)
-fig.subplots_adjust(left=0.065, right=0.985, top=0.80, bottom=0.16, wspace=0.06)
+all_dates = month_dates(months)
+fig, axes = plt.subplots(2, 5, figsize=(16.5, 8.6), dpi=200, sharey=True,
+                         sharex=True, facecolor=SURFACE)
+fig.subplots_adjust(left=0.05, right=0.985, top=0.845, bottom=0.09,
+                    wspace=0.08, hspace=0.30)
 
-for ax, cat in zip(axes, (3, 1)):  # Pokemon left, Magic right
+for ax, cat in zip(axes.ravel(), CATEGORY_ORDER):
     ax.set_facecolor(SURFACE)
-    # scatter of sampled basket products' relatives, log y
-    game_rel = relatives.loc[relatives.index.get_level_values("categoryId") == cat]
-    n_sample = min(SCATTER_PER_GAME, len(game_rel))
-    sample = game_rel.iloc[RNG.choice(len(game_rel), n_sample, replace=False)]
+    rel = relatives_by_cat.get(cat)
+    if rel is None:
+        ax.set_axis_off()
+        continue
+    dates = month_dates(series[(cat, "singles")]["months"]
+                        if (cat, "singles") in series
+                        else series[(cat, "sealed")]["months"])
+
+    n_sample = min(SCATTER_PER_GAME, len(rel))
+    sample = rel.iloc[RNG.choice(len(rel), n_sample, replace=False)]
     for seg, color in (("singles", C_SINGLES), ("sealed", C_SEALED)):
         seg_rows = sample.loc[sample.index.get_level_values("segment") == seg]
         if len(seg_rows):
             xs = np.tile(mdates.date2num(dates), len(seg_rows))
-            ax.plot(xs, seg_rows.to_numpy().ravel(), ".", ms=2, color=color,
-                    alpha=0.05, rasterized=True, zorder=1)
+            ax.plot(xs, seg_rows.to_numpy().ravel(), ".", ms=1.8, color=color,
+                    alpha=0.06, rasterized=True, zorder=1)
 
-    # dodge the two end-of-line labels apart if the series end close together
-    ends = {seg: series[(cat, seg)]["median"].iloc[-1]
-            for seg in ("singles", "sealed")}
+    present = [seg for seg in ("singles", "sealed") if (cat, seg) in series]
+    ends = {seg: series[(cat, seg)]["median"].iloc[-1] for seg in present}
     label_y = dict(ends)
-    hi, lo = max(ends, key=ends.get), min(ends, key=ends.get)
-    if ends[hi] / ends[lo] < 1.22:
-        mid = (ends[hi] * ends[lo]) ** 0.5
-        label_y[hi], label_y[lo] = mid * 1.10, mid / 1.10
+    if len(present) == 2:
+        hi, lo = max(ends, key=ends.get), min(ends, key=ends.get)
+        if ends[hi] / ends[lo] < 1.35:
+            mid = (ends[hi] * ends[lo]) ** 0.5
+            label_y[hi], label_y[lo] = mid * 1.16, mid / 1.16
 
-    for seg, color, label in (("singles", C_SINGLES, "Singles"),
-                              ("sealed", C_SEALED, "Sealed")):
+    for seg, color in (("singles", C_SINGLES), ("sealed", C_SEALED)):
+        if (cat, seg) not in series:
+            continue
         s = series[(cat, seg)]
         ax.fill_between(dates, s["q25"], s["q75"], color=color, alpha=0.12,
                         linewidth=0, zorder=2)
-        ax.plot(dates, s["median"], color=color, lw=2, zorder=3,
+        ax.plot(dates, s["median"], color=color, lw=1.8, zorder=3,
                 solid_capstyle="round")
-        ax.annotate(f"{label}  {ends[seg]:.0f}", (dates[-1], label_y[seg]),
-                    xytext=(6, 0), textcoords="offset points",
-                    va="center", fontsize=9.5, fontweight="bold", color=color)
+        ax.annotate(f"{ends[seg]:.0f}", (dates[-1], label_y[seg]),
+                    xytext=(4, 0), textcoords="offset points",
+                    va="center", fontsize=8.5, fontweight="bold", color=color)
 
     ax.set_yscale("log")
-    ax.axhline(100, color=BASELINE, lw=1, zorder=2)
-    ax.set_title(GAMES[cat], fontsize=13, fontweight="bold", color=INK,
-                 loc="left", pad=10)
-    n_s = series[(cat, "singles")]["n"]
-    n_x = series[(cat, "sealed")]["n"]
-    ax.text(0, 1.005, f"basket: {n_s:,} singles / {n_x:,} sealed",
-            transform=ax.transAxes, fontsize=8.5, color=MUTED)
-    ax.grid(axis="y", color=GRID, lw=0.7)
-    for spine in ("top", "right", "left"):
-        ax.spines[spine].set_visible(False)
-    ax.spines["bottom"].set_color(BASELINE)
-    ax.tick_params(colors=MUTED, labelsize=9)
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
-    # fixed y-range: individual outlier products would otherwise blow out
-    # the log scale (the scatter is a context layer, so clipping it is fine)
     ax.set_ylim(20, 1000)
     ax.yaxis.set_major_locator(matplotlib.ticker.FixedLocator(
         [25, 50, 100, 200, 400, 800]))
     ax.yaxis.set_major_formatter(matplotlib.ticker.FixedFormatter(
         ["25", "50", "100", "200", "400", "800"]))
     ax.yaxis.set_minor_locator(matplotlib.ticker.NullLocator())
-    ax.set_xlim(dates[0], dates[-1] + pd.Timedelta(days=170))
+    ax.axhline(100, color=BASELINE, lw=0.9, zorder=2)
 
-axes[0].set_ylabel("Price index (Feb 2024 = 100, log scale)", fontsize=10,
-                   color=INK2)
-fig.suptitle("Trading-card prices since Feb 2024: fixed-basket market-price index",
-             x=0.065, y=0.965, ha="left", fontsize=16, fontweight="bold",
-             color=INK)
-fig.text(0.065, 0.905,
-         "Median of per-product price relatives with interquartile band; "
-         "dots show a sample of individual basket products",
+    base = series[(cat, present[0])]["base"]
+    title = CATEGORIES[cat][0]
+    ax.set_title(title, fontsize=11, fontweight="bold", color=INK,
+                 loc="left", pad=13)
+    n_txt = " / ".join(f"{series[(cat, seg)]['n']:,} {seg}" for seg in present)
+    base_txt = "" if base == months[0] else \
+        f"  ·  since {pd.to_datetime(base + '-01'):%b %y}"
+    ax.text(0, 1.02, n_txt + base_txt, transform=ax.transAxes,
+            fontsize=7, color=MUTED)
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    for spine in ("top", "right", "left"):
+        ax.spines[spine].set_visible(False)
+    ax.spines["bottom"].set_color(BASELINE)
+    ax.tick_params(colors=MUTED, labelsize=8)
+    ax.xaxis.set_major_locator(mdates.YearLocator())
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("'%y"))
+    ax.set_xlim(all_dates[0], all_dates[-1] + pd.Timedelta(days=150))
+
+for ax in axes[:, 0]:
+    ax.set_ylabel("Index (base = 100, log)", fontsize=9, color=INK2)
+
+fig.suptitle("Trading-card prices, top-10 TCGs: fixed-basket market-price index",
+             x=0.05, y=0.965, ha="left", fontsize=16, fontweight="bold", color=INK)
+fig.text(0.05, 0.915,
+         "Median of per-product price relatives with interquartile band; dots "
+         "show sampled basket products. Base = Feb 2024 or first month on market.",
          fontsize=10.5, color=INK2)
-fig.text(0.065, 0.035,
-         "TCGplayer market prices via TCGCSV; fixed basket; price trend, "
-         "not sales volume. Monthly snapshots Feb 2024 – Jul 2026; basket = "
-         "products priced in every sampled month.",
+# figure-level legend (color identifies segment in every panel)
+fig.legend(handles=[plt.Line2D([], [], color=C_SINGLES, lw=2, label="Singles"),
+                    plt.Line2D([], [], color=C_SEALED, lw=2, label="Sealed")],
+           loc="upper right", bbox_to_anchor=(0.985, 0.97), ncol=2,
+           frameon=False, fontsize=10.5)
+fig.text(0.05, 0.025,
+         "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
+         "sales volume. Monthly snapshots Feb 2024 – Jul 2026; basket = products "
+         "priced in every sampled month the game has data for.",
          fontsize=8, color=MUTED)
 fig.savefig(OUTPUT / "tcg_price_trends.png", facecolor=SURFACE)
 fig.savefig(OUTPUT / "tcg_price_trends.svg", facecolor=SURFACE)
 print(f"exhibit -> {OUTPUT}/tcg_price_trends.png|.svg")
 
 # ------------------------------------------------------------------- xlsx
+seg_label = {(cat, seg): f"{CATEGORIES[cat][0]} {seg}"
+             for cat in CATEGORY_ORDER for seg in ("singles", "sealed")
+             if (cat, seg) in series}
 with pd.ExcelWriter(OUTPUT / "tcg_price_trends.xlsx") as writer:
-    seg_names = {(3, "singles"): "Pokemon singles", (3, "sealed"): "Pokemon sealed",
-                 (1, "singles"): "MTG singles", (1, "sealed"): "MTG sealed"}
     idx_df = pd.DataFrame({"month": months})
-    for key, name in seg_names.items():
-        idx_df[f"{name} — median index"] = series[key]["median"].values
-    idx_df.to_excel(writer, sheet_name="Index (Feb24=100)", index=False)
-
-    for key, name in seg_names.items():
-        s = series[key]
-        pd.DataFrame({
-            "month": months,
-            "median_index": s["median"].values,
-            "iqr_p25": s["q25"].values,
-            "iqr_p75": s["q75"].values,
-            "basket_size": s["n"],
-        }).to_excel(writer, sheet_name=name.replace(":", ""), index=False)
+    for key, name in seg_label.items():
+        med = series[key]["median"].reindex(months)
+        idx_df[name] = med.values
+    idx_df.to_excel(writer, sheet_name="Index (base=100)", index=False)
 
     pd.DataFrame({
-        "segment": [seg_names[k] for k in seg_names],
-        "basket_size": [series[k]["n"] for k in seg_names],
-    }).to_excel(writer, sheet_name="Basket sizes", index=False)
+        "segment": list(seg_label.values()),
+        "base_month": [series[k]["base"] for k in seg_label],
+        "basket_size": [series[k]["n"] for k in seg_label],
+        "final_index": [round(series[k]["median"].iloc[-1], 1) for k in seg_label],
+        "CAGR": [round(cagr(k), 4) for k in seg_label],
+    }).to_excel(writer, sheet_name="Summary & baskets", index=False)
+
+    for cat in CATEGORY_ORDER:
+        present = [s for s in ("singles", "sealed") if (cat, s) in series]
+        if not present:
+            continue
+        cat_months = series[(cat, present[0])]["months"]
+        out = pd.DataFrame({"month": cat_months})
+        for seg in present:
+            s = series[(cat, seg)]
+            out[f"{seg}_median"] = s["median"].values
+            out[f"{seg}_p25"] = s["q25"].values
+            out[f"{seg}_p75"] = s["q75"].values
+            out[f"{seg}_basket"] = s["n"]
+        sheet = CATEGORIES[cat][0][:31].replace(":", "").replace("/", "-")
+        out.to_excel(writer, sheet_name=sheet, index=False)
 print(f"workbook -> {OUTPUT}/tcg_price_trends.xlsx")
 
 # ------------------------------------------------------------- 5-line summary
-def line(cat, seg):
-    s = series[(cat, seg)]["median"]
-    peak_m = s.idxmax()
-    return (f"{GAMES[cat]} {seg}: index {s.iloc[-1]:.0f} in {months[-1]} "
-            f"({s.iloc[-1] - 100:+.0f}% vs Feb 2024; peak {s.max():.0f} in {peak_m})")
+ranked = sorted(seg_label, key=lambda k: cagr(k), reverse=True)
+sealed_beats = sum(
+    1 for cat in CATEGORY_ORDER
+    if (cat, "sealed") in series and (cat, "singles") in series
+    and series[(cat, "sealed")]["median"].iloc[-1]
+    > series[(cat, "singles")]["median"].iloc[-1])
+n_games = len({k[0] for k in series})
+decliners = [seg_label[k] for k in seg_label
+             if series[k]["median"].iloc[-1] < 100]
 
-gap = (series[(3, "singles")]["median"].iloc[-1]
-       - series[(1, "singles")]["median"].iloc[-1])
 print("\nFINDINGS")
-for cat, seg in ((3, "singles"), (3, "sealed"), (1, "singles"), (1, "sealed")):
-    print("- " + line(cat, seg))
-print(f"- Pokemon singles ended {gap:+.0f} index points vs MTG singles; "
-      f"medians mask wide product-level dispersion (see IQR bands/scatter).")
+top3 = ", ".join(f"{seg_label[k]} {cagr(k) * 100:+.0f}%/yr" for k in ranked[:3])
+bot2 = ", ".join(f"{seg_label[k]} {cagr(k) * 100:+.0f}%/yr" for k in ranked[-2:])
+print(f"- Fastest appreciation: {top3}.")
+print(f"- Slowest: {bot2}.")
+print(f"- Sealed outperformed singles in {sealed_beats} of {n_games} games "
+      f"with both segments.")
+print(f"- Segments below their base level: "
+      f"{', '.join(decliners) if decliners else 'none'}.")
+print(f"- Fixed baskets track the pre-existing card pool only; newer games "
+      f"are indexed from their first sampled month (see Summary sheet).")

@@ -1,7 +1,8 @@
-"""One-time catalog pull: groups and products for Magic (1) and Pokemon (3).
+"""One-time catalog pull: groups and products for the configured categories.
 
 Classifies products as singles (extendedData has "Rarity" or "Number") vs
-sealed, and writes one catalog parquet per category.
+sealed, and writes one catalog parquet per category. Categories whose
+parquet already exists are skipped (IDs are stable).
 """
 import sys
 import time
@@ -10,10 +11,12 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from tcg_config import CATEGORIES as CATEGORY_NAMES
+
 HEADERS = {"User-Agent": "ActivateAnalysis/1.0"}
 DEST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("catalog")
 DEST.mkdir(parents=True, exist_ok=True)
-CATEGORIES = {1: "Magic", 3: "Pokemon"}
+CATEGORIES = {cat: names[0] for cat, names in CATEGORY_NAMES.items()}
 
 
 def get_json(url):
@@ -30,6 +33,9 @@ def get_json(url):
 
 
 for cat, cat_name in CATEGORIES.items():
+    if (DEST / f"products_{cat}.parquet").exists():
+        print(f"{cat_name}: cached")
+        continue
     groups = get_json(f"https://tcgcsv.com/tcgplayer/{cat}/groups")["results"]
     pd.DataFrame(
         [{"groupId": g["groupId"], "groupName": g["name"],

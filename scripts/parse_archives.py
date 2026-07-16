@@ -14,11 +14,13 @@ from pathlib import Path
 
 import pandas as pd
 
+from tcg_config import CATEGORIES
+
 ARCHIVES = Path(sys.argv[1])
 WORK = Path(sys.argv[2])
 OUT = Path(sys.argv[3])
 OUT.mkdir(parents=True, exist_ok=True)
-CATS = ("1", "3")
+CATS = tuple(str(c) for c in CATEGORIES)
 
 manifest = pd.read_csv(ARCHIVES / "manifest.csv", dtype=str)
 
@@ -48,7 +50,7 @@ for _, row in manifest.iterrows():
     for cat in CATS:
         cat_dir = extract_dir / date / cat
         if not cat_dir.is_dir():
-            print(f"{month}: WARNING missing category {cat}", file=sys.stderr)
+            # normal for games that launched after this snapshot
             continue
         for prices_file in cat_dir.glob("*/prices"):
             with open(prices_file) as f:
@@ -63,8 +65,7 @@ for _, row in manifest.iterrows():
                                      "marketPrice"])
     df.to_parquet(out_path)
     shutil.rmtree(extract_dir)
-    print(f"{month}: {len(df)} priced rows "
-          f"(mtg {int((df.categoryId == 1).sum())}, "
-          f"pkm {int((df.categoryId == 3).sum())})")
+    per_cat = df.groupby("categoryId").size()
+    print(f"{month}: {len(df)} priced rows across {len(per_cat)} categories")
 
 print("parse done")
