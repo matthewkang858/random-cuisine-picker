@@ -105,9 +105,9 @@ for ax, cat in zip(axes, (3, 1)):  # Pokemon left, Magic right
             for seg in ("singles", "sealed")}
     label_y = dict(ends)
     hi, lo = max(ends, key=ends.get), min(ends, key=ends.get)
-    if ends[hi] / ends[lo] < 1.14:
+    if ends[hi] / ends[lo] < 1.22:
         mid = (ends[hi] * ends[lo]) ** 0.5
-        label_y[hi], label_y[lo] = mid * 1.07, mid / 1.07
+        label_y[hi], label_y[lo] = mid * 1.10, mid / 1.10
 
     for seg, color, label in (("singles", C_SINGLES, "Singles"),
                               ("sealed", C_SEALED, "Sealed")):
@@ -135,9 +135,13 @@ for ax, cat in zip(axes, (3, 1)):  # Pokemon left, Magic right
     ax.tick_params(colors=MUTED, labelsize=9)
     ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
-    ax.yaxis.set_major_locator(matplotlib.ticker.FixedLocator([25, 50, 100, 200, 400]))
+    # fixed y-range: individual outlier products would otherwise blow out
+    # the log scale (the scatter is a context layer, so clipping it is fine)
+    ax.set_ylim(20, 1000)
+    ax.yaxis.set_major_locator(matplotlib.ticker.FixedLocator(
+        [25, 50, 100, 200, 400, 800]))
     ax.yaxis.set_major_formatter(matplotlib.ticker.FixedFormatter(
-        ["25", "50", "100", "200", "400"]))
+        ["25", "50", "100", "200", "400", "800"]))
     ax.yaxis.set_minor_locator(matplotlib.ticker.NullLocator())
     ax.set_xlim(dates[0], dates[-1] + pd.Timedelta(days=170))
 
