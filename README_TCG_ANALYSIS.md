@@ -5,15 +5,11 @@ for Magic: The Gathering and Pokemon, Feb 2024 – Jul 2026.
 
 ## Status
 
-**Blocked on network access.** This session's egress policy denies
-`tcgcsv.com` (proxy CONNECT → 403; only GitHub/package registries are
-allowed). The pipeline is complete and validated end-to-end against
-synthetic archives that mirror the real structure — it just needs the
-domain allowed, then one command.
-
-To unblock: add `tcgcsv.com` to the allowed domains in this Claude Code
-environment's network policy (claude.ai/code → environment settings), or
-run locally.
+**Complete.** Run on live TCGCSV data on 2026-07-16 (30 monthly snapshots,
+2024-02-08 through 2026-07-01); generated outputs are committed under
+`./output`. Requires network access to `tcgcsv.com` to re-run (in Claude
+Code cloud environments: set the environment's network access to Custom
+and allow `tcgcsv.com`).
 
 ## Run
 
