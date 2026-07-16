@@ -1,13 +1,12 @@
 """One-chart overview: the TCG market overall.
 
-Headline series is VALUE-WEIGHTED: the aggregate market value of the fixed
-baskets (one unit of every basket product), chain-linked month over month so
-games that launched after Feb 2024 join without distorting the base. That
-weights each game by the dollar value of its basket (Feb 2024 shares: Magic
-~50%, Pokemon ~21%, Yu-Gi-Oh ~17%), a market proxy in the spirit of a
-cap-weighted stock index. The equal-weight composite of game medians (the
-"typical game") is kept as a dashed reference; gray lines show each game's
-own value index.
+Headline series is GMV-WEIGHTED: within each game, the aggregate market
+value of its fixed basket; across games, static weights from realized
+TCGplayer GMV (client-provided 3-month sales summary — Magic 40%, Pokemon
+32%, One Piece 13% of the top-10 total), chain-linked month over month so
+games that launched after Feb 2024 join without distorting the base. The
+equal-weight composite of game medians (the "typical game") is kept as a
+dashed reference; gray lines show each game's own value index.
 """
 import sys
 from datetime import date
@@ -20,7 +19,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from tcg_config import CATEGORIES, CATEGORY_ORDER
+from tcg_config import CATEGORIES, CATEGORY_ORDER, GMV_3MO
 
 MONTHLY = Path(sys.argv[1])
 CATALOG = Path(sys.argv[2])
@@ -80,16 +79,18 @@ for cat in CATEGORY_ORDER:
 
 
 def chain_value_index(values):
-    """Chained aggregate-value index (base 100): month-over-month growth of
-    total basket value across games live in both months."""
+    """Chained GMV-weighted index (base 100): month-over-month growth is the
+    GMV-weighted geometric mean of each game's basket-value growth, over the
+    games live in both months (weights renormalized among them)."""
     vals = [100.0]
     for prev, cur in zip(months, months[1:]):
         num = den = 0.0
-        for v in values.values():
+        for cat, v in values.items():
             if pd.notna(v.get(prev)) and pd.notna(v.get(cur)):
-                num += v[cur]
-                den += v[prev]
-        vals.append(vals[-1] * (num / den if den else 1.0))
+                w = GMV_3MO[cat]
+                num += w * np.log(v[cur] / v[prev])
+                den += w
+        vals.append(vals[-1] * (np.exp(num / den) if den else 1.0))
     return pd.Series(vals, index=months)
 
 
@@ -107,15 +108,15 @@ comp = {scope: chain_value_index(value[scope])
 comp_ew = chain_equal_weight(game_median)
 
 span_years = (date(2026, 7, 1) - date(2024, 2, 8)).days / 365.25
-for name, s in [("Market (value-wt)", comp["all"]),
-                ("Singles (value-wt)", comp["singles"]),
-                ("Sealed (value-wt)", comp["sealed"]),
+for name, s in [("Market (GMV-wt)", comp["all"]),
+                ("Singles (GMV-wt)", comp["singles"]),
+                ("Sealed (GMV-wt)", comp["sealed"]),
                 ("Equal-weight typical game", comp_ew)]:
     print(f"{name}: final {s.iloc[-1]:.1f}, "
           f"CAGR {((s.iloc[-1] / 100) ** (1 / span_years) - 1) * 100:+.1f}%/yr")
-base_total = sum(v.dropna().iloc[0] for v in value["all"].values())
-for cat, v in sorted(value["all"].items(), key=lambda kv: -kv[1].dropna().iloc[0]):
-    print(f"  weight {CATEGORIES[cat][0]}: {v.dropna().iloc[0] / base_total:.1%}")
+gmv_total = sum(GMV_3MO.values())
+for cat in sorted(GMV_3MO, key=GMV_3MO.get, reverse=True):
+    print(f"  weight {CATEGORIES[cat][0]}: {GMV_3MO[cat] / gmv_total:.1%}")
 
 # ------------------------------------------------------------------ chart
 dates = pd.to_datetime([m + "-01" for m in months])
@@ -173,21 +174,21 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
 ax.set_xlim(dates[0], dates[-1] + pd.Timedelta(days=40))
 ax.set_ylabel("Price index (Feb 2024 = 100, log scale)", fontsize=10, color=INK2)
 
-fig.suptitle("The TCG market overall: value-weighted fixed-basket price index",
+fig.suptitle("The TCG market overall: GMV-weighted fixed-basket price index",
              x=0.075, y=0.97, ha="left", fontsize=16, fontweight="bold",
              color=INK)
 fig.text(0.075, 0.915,
-         "Aggregate market value of the fixed baskets, chain-linked monthly; "
-         "base weights Magic 50%, Pokemon 21%, Yu-Gi-Oh 17%.\nDashed: "
-         "equal-weight median of the 10 games (the typical game). Gray: "
-         "individual games' value indices.",
+         "Games weighted by realized TCGplayer sales (3-mo GMV): Magic 40%, "
+         "Pokemon 32%, One Piece 13%, Yu-Gi-Oh 7%.\nDashed: equal-weight "
+         "median of the 10 games (the typical game). Gray: individual games' "
+         "value indices.",
          fontsize=10, color=INK2, linespacing=1.6, va="top")
 fig.text(0.075, 0.025,
          "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
-         "sales volume. Monthly snapshots Feb 2024 – Jul 2026.\nValue weighting "
-         "prices one unit of each basket product; sales-volume weights are not "
-         "public. Games launched after Feb 2024 join from their second sampled "
-         "month.",
+         "sales volume. Monthly snapshots Feb 2024 – Jul 2026.\nCross-game "
+         "weights: realized TCGplayer GMV, ~3-mo window ending Jul 2026 "
+         "(static). Games launched after Feb 2024 join from their second "
+         "sampled month.",
          fontsize=8, color=MUTED, linespacing=1.5)
 fig.savefig(OUTPUT / "tcg_market_overview.png", facecolor=SURFACE)
 fig.savefig(OUTPUT / "tcg_market_overview.svg", facecolor=SURFACE)
@@ -195,9 +196,9 @@ print(f"chart -> {OUTPUT}/tcg_market_overview.png|.svg")
 
 out = pd.DataFrame({
     "month": months,
-    "market_value_weighted": comp["all"].values,
-    "singles_value_weighted": comp["singles"].values,
-    "sealed_value_weighted": comp["sealed"].values,
+    "market_gmv_weighted": comp["all"].values,
+    "singles_gmv_weighted": comp["singles"].values,
+    "sealed_gmv_weighted": comp["sealed"].values,
     "equal_weight_typical_game": comp_ew.values,
 })
 xlsx = OUTPUT / "tcg_price_trends.xlsx"
