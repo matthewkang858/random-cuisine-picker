@@ -11,10 +11,12 @@ CATEGORIES = {
     2: ("Yu-Gi-Oh", "Yu-Gi-Oh!"),
     68: ("One Piece", "One Piece Card Game"),
     71: ("Lorcana", "Disney Lorcana"),
+    89: ("Riftbound", "Riftbound: League of Legends TCG"),
     79: ("SW Unlimited", "Star Wars: Unlimited"),
     62: ("Flesh & Blood", "Flesh and Blood"),
     63: ("Digimon", "Digimon Card Game"),
     80: ("DBS Fusion World", "Dragon Ball Super: Fusion World"),
+    77: ("Sorcery", "Sorcery: Contested Realm"),
     20: ("Weiss Schwarz", "Weiss Schwarz"),
 }
 
@@ -35,4 +37,6 @@ GMV_3MO = {
     63: 1_833_381,    # Digimon
     80: 1_965_471,    # DBS Fusion World
     20: 683_482,      # Weiss Schwarz
+    89: 6_947_506,    # Riftbound
+    77: 888_295,      # Sorcery
 }

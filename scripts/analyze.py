@@ -111,10 +111,10 @@ def cagr(key):
 
 # ---------------------------------------------------------------- exhibit
 all_dates = month_dates(months)
-fig, axes = plt.subplots(2, 5, figsize=(16.5, 8.6), dpi=200, sharey=True,
+fig, axes = plt.subplots(3, 4, figsize=(15.5, 11.8), dpi=200, sharey=True,
                          sharex=True, facecolor=SURFACE)
-fig.subplots_adjust(left=0.05, right=0.985, top=0.845, bottom=0.09,
-                    wspace=0.08, hspace=0.30)
+fig.subplots_adjust(left=0.055, right=0.985, top=0.885, bottom=0.075,
+                    wspace=0.08, hspace=0.34)
 
 for ax, cat in zip(axes.ravel(), CATEGORY_ORDER):
     ax.set_facecolor(SURFACE)
@@ -186,18 +186,19 @@ for ax, cat in zip(axes.ravel(), CATEGORY_ORDER):
 for ax in axes[:, 0]:
     ax.set_ylabel("Index (base = 100, log)", fontsize=9, color=INK2)
 
-fig.suptitle("Trading-card prices, top-10 TCGs: fixed-basket market-price index",
-             x=0.05, y=0.965, ha="left", fontsize=16, fontweight="bold", color=INK)
-fig.text(0.05, 0.915,
+fig.suptitle("Trading-card prices, top TCGs: fixed-basket market-price index",
+             x=0.055, y=0.972, ha="left", fontsize=16, fontweight="bold",
+             color=INK)
+fig.text(0.055, 0.935,
          "Median of per-product price relatives with interquartile band; dots "
          "show sampled basket products. Base = Feb 2024 or first month on market.",
          fontsize=10.5, color=INK2)
 # figure-level legend (color identifies segment in every panel)
 fig.legend(handles=[plt.Line2D([], [], color=C_SINGLES, lw=2, label="Singles"),
                     plt.Line2D([], [], color=C_SEALED, lw=2, label="Sealed")],
-           loc="upper right", bbox_to_anchor=(0.985, 0.97), ncol=2,
+           loc="upper right", bbox_to_anchor=(0.985, 0.975), ncol=2,
            frameon=False, fontsize=10.5)
-fig.text(0.05, 0.025,
+fig.text(0.055, 0.02,
          "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
          "sales volume. Monthly snapshots Feb 2024 – Jul 2026; basket = products "
          "priced in every sampled month the game has data for.",
