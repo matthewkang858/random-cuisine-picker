@@ -178,10 +178,10 @@ fig.suptitle("The TCG market overall: GMV-weighted fixed-basket price index",
              x=0.075, y=0.97, ha="left", fontsize=16, fontweight="bold",
              color=INK)
 fig.text(0.075, 0.915,
-         "Games weighted by realized TCGplayer sales (3-mo GMV): Magic 40%, "
-         "Pokemon 32%, One Piece 13%, Yu-Gi-Oh 7%.\nDashed: equal-weight "
-         "median of the 10 games (the typical game). Gray: individual games' "
-         "value indices.",
+         "Games weighted by realized TCGplayer sales (3-mo GMV): Magic 38%, "
+         "Pokemon 30%, One Piece 12%, Yu-Gi-Oh 7%.\nDashed: equal-weight "
+         f"median of the {len(CATEGORY_ORDER)} games (the typical game). "
+         "Gray: individual games' value indices.",
          fontsize=10, color=INK2, linespacing=1.6, va="top")
 fig.text(0.075, 0.025,
          "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
