@@ -40,3 +40,14 @@ GMV_3MO = {
     89: 6_947_506,    # Riftbound
     77: 888_295,      # Sorcery
 }
+
+# Singles-index rebalancing (client request): weight collector-tier and
+# playable-tier cards 50:50 instead of letting the larger tier dominate the
+# median. Products in neither bucket (e.g. promos) are excluded from that
+# game's singles basket. Requires a catalog parquet with a `rarity` column.
+RARITY_BALANCE = {
+    89: {  # Riftbound
+        "collector": {"Showcase"},
+        "playable": {"Common", "Uncommon", "Rare", "Epic"},
+    },
+}

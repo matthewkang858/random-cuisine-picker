@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from tcg_config import CATEGORIES, CATEGORY_ORDER
+from tcg_config import CATEGORIES, CATEGORY_ORDER, RARITY_BALANCE
 
 MONTHLY = Path(sys.argv[1])   # per-month price parquets
 CATALOG = Path(sys.argv[2])   # catalog parquets
@@ -63,6 +63,43 @@ catalog = pd.concat(
 prices = prices.merge(catalog, on="productId", how="inner")
 prices["segment"] = np.where(prices["isSingle"], "singles", "sealed")
 
+rarity_map = pd.concat(
+    [pd.read_parquet(CATALOG / f"products_{c}.parquet") for c in RARITY_BALANCE
+     ], ignore_index=True).set_index("productId")["rarity"] \
+    if RARITY_BALANCE else pd.Series(dtype=object)
+
+
+def weighted_quantile(frame, weights, q):
+    """Per-column weighted quantile of a rows x months frame."""
+    out = {}
+    for col in frame.columns:
+        v = frame[col].to_numpy()
+        order = np.argsort(v)
+        v, w = v[order], weights[order]
+        cw = (np.cumsum(w) - 0.5 * w) / w.sum()
+        out[col] = float(np.interp(q, cw, v))
+    return pd.Series(out)
+
+
+def balanced_weights(cat, grp):
+    """50:50 collector/playable weights for a balanced game's singles basket.
+    Returns (trimmed frame, weights, note) or None if not applicable."""
+    spec = RARITY_BALANCE.get(cat)
+    if spec is None:
+        return None
+    rarities = rarity_map.reindex(
+        grp.index.get_level_values("productId")).to_numpy()
+    is_col = np.isin(rarities, list(spec["collector"]))
+    is_play = np.isin(rarities, list(spec["playable"]))
+    keep = is_col | is_play
+    grp, is_col = grp[keep], is_col[keep]
+    n_col, n_play = int(is_col.sum()), int((~is_col).sum())
+    if not n_col or not n_play:
+        return None
+    w = np.where(is_col, 0.5 / n_col, 0.5 / n_play)
+    return grp, w, f"{n_col} collector / {n_play} playable, 50:50"
+
+
 # ------------------------------------------------- fixed basket + relatives
 wide = prices.pivot_table(
     index=["categoryId", "segment", "productId", "subTypeName"],
@@ -87,13 +124,25 @@ for cat in CATEGORY_ORDER:
         grp = rel.loc[rel.index.get_level_values("segment") == seg]
         if grp.empty:
             continue
-        series[(cat, seg)] = {
-            "median": grp.median(), "q25": grp.quantile(0.25),
-            "q75": grp.quantile(0.75), "n": len(grp),
-            "base": base, "months": cat_months,
-        }
-        print(f"{CATEGORIES[cat][0]} {seg}: basket n={len(grp)}, "
-              f"base {base}, final index {grp.median().iloc[-1]:.1f}")
+        balance = balanced_weights(cat, grp) if seg == "singles" else None
+        if balance is not None:
+            grp, w, note = balance
+            entry = {
+                "median": weighted_quantile(grp, w, 0.5),
+                "q25": weighted_quantile(grp, w, 0.25),
+                "q75": weighted_quantile(grp, w, 0.75),
+                "n": len(grp), "note": note,
+            }
+        else:
+            entry = {
+                "median": grp.median(), "q25": grp.quantile(0.25),
+                "q75": grp.quantile(0.75), "n": len(grp), "note": None,
+            }
+        entry.update(base=base, months=cat_months)
+        series[(cat, seg)] = entry
+        print(f"{CATEGORIES[cat][0]} {seg}: basket n={entry['n']}"
+              f"{' (' + entry['note'] + ')' if entry['note'] else ''}, "
+              f"base {base}, final index {entry['median'].iloc[-1]:.1f}")
 
 
 def month_dates(ms):
@@ -172,6 +221,8 @@ for ax, cat in zip(axes.ravel(), CATEGORY_ORDER):
     n_txt = " / ".join(f"{series[(cat, seg)]['n']:,} {seg}" for seg in present)
     base_txt = "" if base == months[0] else \
         f"  ·  since {pd.to_datetime(base + '-01'):%b %y}"
+    if (cat, "singles") in series and series[(cat, "singles")]["note"]:
+        base_txt += "  ·  singles 50:50 collector/playable"
     ax.text(0, 1.02, n_txt + base_txt, transform=ax.transAxes,
             fontsize=7, color=MUTED)
     ax.grid(axis="y", color=GRID, lw=0.6)

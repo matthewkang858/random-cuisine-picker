@@ -48,12 +48,14 @@ for cat, cat_name in CATEGORIES.items():
         time.sleep(0.26)
         data = get_json(f"https://tcgcsv.com/tcgplayer/{cat}/{g['groupId']}/products")
         for p in data["results"]:
-            ext_names = {e.get("name") for e in (p.get("extendedData") or [])}
+            ext = {e.get("name"): e.get("value")
+                   for e in (p.get("extendedData") or [])}
             rows.append({
                 "productId": p["productId"],
                 "productName": p["name"],
                 "groupId": g["groupId"],
-                "isSingle": bool(ext_names & {"Rarity", "Number"}),
+                "isSingle": bool(ext.keys() & {"Rarity", "Number"}),
+                "rarity": ext.get("Rarity"),
             })
         if (i + 1) % 50 == 0:
             print(f"  {cat_name}: {i + 1}/{len(groups)} groups, {len(rows)} products")
