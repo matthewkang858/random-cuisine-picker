@@ -251,8 +251,9 @@ fig.legend(handles=[plt.Line2D([], [], color=C_SINGLES, lw=2, label="Singles"),
            frameon=False, fontsize=10.5)
 fig.text(0.055, 0.02,
          "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
-         "sales volume. Monthly snapshots Feb 2024 – Jul 2026; basket = products "
-         "priced in every sampled month the game has data for.",
+         "sales volume. Monthly snapshots Feb 2024 – Jul 2026 (latest "
+         "Jul 27, 2026); basket = products priced in every sampled month the "
+         "game has data for.",
          fontsize=8, color=MUTED)
 fig.savefig(OUTPUT / "tcg_price_trends.png", facecolor=SURFACE)
 fig.savefig(OUTPUT / "tcg_price_trends.svg", facecolor=SURFACE)

@@ -185,10 +185,10 @@ fig.text(0.075, 0.915,
          fontsize=10, color=INK2, linespacing=1.6, va="top")
 fig.text(0.075, 0.025,
          "TCGplayer market prices via TCGCSV; fixed basket; price trend, not "
-         "sales volume. Monthly snapshots Feb 2024 – Jul 2026.\nCross-game "
-         "weights: realized TCGplayer GMV, ~3-mo window ending Jul 2026 "
-         "(static). Games launched after Feb 2024 join from their second "
-         "sampled month.",
+         "sales volume. Monthly snapshots Feb 2024 – Jul 2026 (latest Jul 27, "
+         "2026).\nCross-game weights: realized TCGplayer GMV, ~3-mo window "
+         "ending Jul 2026 (static). Games launched after Feb 2024 join from "
+         "their second sampled month.",
          fontsize=8, color=MUTED, linespacing=1.5)
 fig.savefig(OUTPUT / "tcg_market_overview.png", facecolor=SURFACE)
 fig.savefig(OUTPUT / "tcg_market_overview.svg", facecolor=SURFACE)
