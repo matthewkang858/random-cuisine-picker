@@ -30,6 +30,19 @@ categories 1 (Magic) and 3 (Pokemon), and writes to `./output`:
   sizes, and per-segment CAGR
 - a printed 5-line findings summary
 
+## Interactive dashboard
+
+`output/tcg_dashboard.html` is a self-contained interactive explorer built
+from the workbook (no network, no external libraries — open it in any
+browser). It has the GMV-weighted market composites, the six focus games
+with toggle chips and a per-game IQR band, small multiples for all 12
+games, the GMV market-share view, table twins for every chart, and
+light/dark themes. Rebuild after re-running the analysis with:
+
+```bash
+python3 scripts/build_dashboard.py   # requires openpyxl only
+```
+
 ## Method
 
 - Snapshots: 2024-02-08 (earliest archive), then the 1st of each month
@@ -53,3 +66,5 @@ categories 1 (Magic) and 3 (Pokemon), and writes to `./output`:
 - `scripts/fetch_catalog.py` — one-time groups/products pull, singles flag
 - `scripts/parse_archives.py` — selective 7z (PPMd) extraction → monthly parquet
 - `scripts/analyze.py` — basket, index, exhibit, workbook, summary
+- `scripts/build_dashboard.py` + `scripts/dashboard_template.html` —
+  interactive HTML dashboard built from the workbook (offline)

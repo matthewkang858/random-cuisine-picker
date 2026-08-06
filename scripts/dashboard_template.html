@@ -1,0 +1,864 @@
+<style>
+/* ===== tokens ===================================================== */
+.tcg-root {
+  color-scheme: light;
+  --page:    #f9f9f7;
+  --surface: #fcfcfb;
+  --ink:     #0b0b0b;
+  --ink2:    #52514e;
+  --muted:   #898781;
+  --grid:    #e1e0d9;
+  --axis:    #c3c2b7;
+  --border:  rgba(11,11,11,0.10);
+  --up:      #006300;
+  --down:    #d03b3b;
+  --cat1: #2a78d6;  /* blue    */
+  --cat2: #eb6834;  /* orange  */
+  --cat3: #1baf7a;  /* aqua    */
+  --cat4: #eda100;  /* yellow  */
+  --cat5: #e87ba4;  /* magenta */
+  --cat6: #008300;  /* green   */
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .tcg-root {
+    color-scheme: dark;
+    --page:    #0d0d0d;
+    --surface: #1a1a19;
+    --ink:     #ffffff;
+    --ink2:    #c3c2b7;
+    --muted:   #898781;
+    --grid:    #2c2c2a;
+    --axis:    #383835;
+    --border:  rgba(255,255,255,0.10);
+    --up:      #0ca30c;
+    --down:    #e66767;
+    --cat1: #3987e5;
+    --cat2: #d95926;
+    --cat3: #199e70;
+    --cat4: #c98500;
+    --cat5: #d55181;
+    --cat6: #008300;
+  }
+}
+:root[data-theme="dark"] .tcg-root {
+  color-scheme: dark;
+  --page:    #0d0d0d;
+  --surface: #1a1a19;
+  --ink:     #ffffff;
+  --ink2:    #c3c2b7;
+  --muted:   #898781;
+  --grid:    #2c2c2a;
+  --axis:    #383835;
+  --border:  rgba(255,255,255,0.10);
+  --up:      #0ca30c;
+  --down:    #e66767;
+  --cat1: #3987e5;
+  --cat2: #d95926;
+  --cat3: #199e70;
+  --cat4: #c98500;
+  --cat5: #d55181;
+  --cat6: #008300;
+}
+
+/* ===== base ======================================================= */
+body { margin: 0; }
+.tcg-root, .tcg-root * { box-sizing: border-box; }
+.tcg-root {
+  background: var(--page);
+  color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+.tcg-root button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.tcg-root :focus-visible { outline: 2px solid var(--cat1); outline-offset: 2px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .tcg-root * { transition: none !important; animation: none !important; }
+}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 30px 20px 44px; display: flex; flex-direction: column; gap: 16px; }
+
+/* ===== masthead =================================================== */
+.masthead { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand h1 { margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sub { margin: 0; font-size: 14.5px; color: var(--ink2); max-width: 74ch; }
+
+/* ===== stat tiles ================================================= */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 12px; }
+.tile {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 2px;
+}
+.tile-label { font-size: 12px; color: var(--ink2); }
+.tile-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
+.tile-value { font-size: 30px; font-weight: 600; line-height: 1.15; }
+.tile-delta { font-size: 12.5px; font-weight: 600; }
+.tile-delta .vs { font-weight: 400; color: var(--muted); }
+.up   { color: var(--up); }
+.down { color: var(--down); }
+.insight { margin: 0; font-size: 13.5px; color: var(--ink2); max-width: 84ch; }
+
+/* ===== filter row ================================================= */
+.filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.filter-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+.preset {
+  border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
+  padding: 5px 13px; font-size: 12.5px; color: var(--ink2); transition: background .12s;
+}
+.preset:hover { background: color-mix(in srgb, var(--ink) 4%, var(--surface)); }
+.preset[aria-pressed="true"] { color: var(--ink); font-weight: 600; border-color: var(--axis); }
+.preset .ck { display: none; font-weight: 700; margin-right: 5px; }
+.preset[aria-pressed="true"] .ck { display: inline; }
+
+/* ===== cards ====================================================== */
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 12px;
+}
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+.card-title { margin: 0; font-size: 15px; font-weight: 650; }
+.card-sub { margin: 2px 0 0; font-size: 12.5px; color: var(--ink2); max-width: 72ch; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.segmented { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.segmented button { padding: 5px 11px; font-size: 12.5px; color: var(--ink2); transition: background .12s; }
+.segmented button + button { border-left: 1px solid var(--border); }
+.segmented button[aria-pressed="true"] { color: var(--ink); font-weight: 600; background: color-mix(in srgb, var(--ink) 5%, var(--surface)); }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px 4px 10px;
+  font-size: 12.5px; color: var(--muted); transition: background .12s, color .12s;
+}
+.chip .key { width: 14px; height: 3px; border-radius: 1.5px; background: var(--c); opacity: 0.35; }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: color-mix(in srgb, var(--c) 45%, var(--border)); background: color-mix(in srgb, var(--c) 9%, var(--surface)); }
+.chip[aria-pressed="true"] .key { opacity: 1; }
+
+.check { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink2); }
+.check input { accent-color: var(--cat1); margin: 0; }
+.check.disabled { opacity: 0.45; }
+
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink2); }
+.legend .item { display: inline-flex; align-items: center; gap: 7px; }
+.legend .key { width: 14px; height: 3px; border-radius: 1.5px; }
+
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; }
+
+.tooltip {
+  position: absolute; display: none; pointer-events: none; z-index: 6;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 11px; box-shadow: 0 4px 18px rgba(0,0,0,0.13); font-size: 12px; white-space: nowrap;
+}
+.tt-title { font-weight: 650; font-size: 12px; margin-bottom: 5px; }
+.tt-row { display: flex; align-items: center; gap: 7px; line-height: 1.7; }
+.tt-key { width: 12px; height: 2.5px; border-radius: 1px; flex: none; }
+.tt-name { color: var(--ink2); flex: 1; padding-right: 12px; }
+.tt-val { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tt-note { color: var(--muted); font-size: 11px; margin-top: 4px; }
+
+/* ===== small multiples ============================================ */
+.grid12 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.panel { border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px 10px; display: flex; flex-direction: column; gap: 4px; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.panel-name { font-size: 13px; font-weight: 650; }
+.panel-gmv { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.panel-foot { display: flex; gap: 12px; font-size: 11.5px; color: var(--ink2); flex-wrap: wrap; }
+.panel-foot .item { display: inline-flex; align-items: center; gap: 5px; }
+.panel-foot .key { width: 10px; height: 2.5px; border-radius: 1px; }
+
+/* ===== tables ===================================================== */
+.tbl-wrap { overflow-x: auto; }
+.tbl-wrap + .tbl-caption, .tbl-caption { margin: 6px 0 2px; font-size: 12.5px; font-weight: 650; }
+.tcg-root table { border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tcg-root th { font-weight: 600; text-align: right; color: var(--ink2); border-bottom: 1px solid var(--axis); padding: 6px 10px; }
+.tcg-root td { padding: 5px 10px; text-align: right; border-bottom: 1px solid var(--grid); }
+.tcg-root th:first-child, .tcg-root td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+
+/* ===== footer ===================================================== */
+.foot { font-size: 12px; color: var(--muted); max-width: 90ch; line-height: 1.6; }
+.foot code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+</style>
+
+<div class="tcg-root">
+  <div class="wrap">
+
+    <header class="masthead">
+      <div class="eyebrow">TCGplayer market prices &middot; TCGCSV archives &middot; Feb 2024 &ndash; Jul 2026</div>
+      <div class="brand">
+        <svg width="40" height="30" viewBox="0 0 40 30" aria-hidden="true">
+          <rect x="4"  y="6" width="13" height="19" rx="2" fill="var(--cat3)" stroke="var(--page)" stroke-width="1.5" transform="rotate(-14 10 16)"/>
+          <rect x="23" y="6" width="13" height="19" rx="2" fill="var(--cat1)" stroke="var(--page)" stroke-width="1.5" transform="rotate(14 29 15)"/>
+          <rect x="13.5" y="4" width="13" height="20" rx="2" fill="var(--cat2)" stroke="var(--page)" stroke-width="1.5"/>
+        </svg>
+        <h1>TCG Market Explorer</h1>
+      </div>
+      <p class="sub">Fixed-basket median price indices for 12 trading card games, built from 30 monthly snapshots
+        of every TCGplayer listing. Interactive companion to the static exhibit &mdash; price trend, not sales volume.</p>
+    </header>
+
+    <section class="tiles" id="tiles" aria-label="Headline composites"></section>
+    <p class="insight">Growth is concentrated at the top: weighted by marketplace GMV the market is up sharply
+      &mdash; carried by Pok&eacute;mon and Magic &mdash; while the equal-weight line shows the <em>typical</em> tracked game
+      lost ground over the same window.</p>
+
+    <div class="filter-row" role="group" aria-label="Time window">
+      <span class="filter-label">Window</span>
+      <button class="preset" data-win="full"><span class="ck">&#10003;</span>Full window</button>
+      <button class="preset" data-win="y12"><span class="ck">&#10003;</span>Last 12 months</button>
+      <button class="preset" data-win="ytd"><span class="ck">&#10003;</span>2026 YTD</button>
+    </div>
+
+    <section class="card" id="card-composite">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">Market composites</h2>
+          <p class="card-sub">All 12 games, weighted by ~3-month realized TCGplayer GMV (Jul 2026).
+            Index base&nbsp;=&nbsp;100 at Feb 2024.</p>
+        </div>
+        <div class="controls">
+          <div class="segmented" data-view-toggle="composite">
+            <button data-view="chart" aria-pressed="true">Chart</button>
+            <button data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+      </div>
+      <div class="legend" id="legend-composite"></div>
+      <div class="card-body" id="body-composite"></div>
+    </section>
+
+    <section class="card" id="card-compare">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">Six focus games</h2>
+          <p class="card-sub">The games broken out in the client exhibit. Each is indexed to 100 at its base month
+            &mdash; Feb 2024, or the first sampled month for post-launch games (Riftbound: Nov 2025).
+            Select a single game to see its 25th&ndash;75th percentile band.</p>
+        </div>
+        <div class="controls">
+          <div class="segmented" id="seg-control" role="group" aria-label="Segment">
+            <button data-seg="s" aria-pressed="true">Singles</button>
+            <button data-seg="x" aria-pressed="false">Sealed</button>
+          </div>
+          <label class="check" id="band-check"><input type="checkbox" checked id="band-input"> IQR band</label>
+          <div class="segmented" data-view-toggle="compare">
+            <button data-view="chart" aria-pressed="true">Chart</button>
+            <button data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Games"></div>
+      <div class="card-body" id="body-compare"></div>
+    </section>
+
+    <section class="card" id="card-grid">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">All 12 tracked games</h2>
+          <p class="card-sub">Median fixed-basket index per segment, ordered by marketplace GMV.
+            Panels for post-launch games start at their base month.</p>
+        </div>
+        <div class="controls">
+          <div class="legend" id="legend-grid"></div>
+          <div class="segmented" data-view-toggle="grid">
+            <button data-view="chart" aria-pressed="true">Charts</button>
+            <button data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" id="body-grid"></div>
+    </section>
+
+    <section class="card" id="card-gmv">
+      <div class="card-head">
+        <div>
+          <h2 class="card-title">Market share &amp; summary</h2>
+          <p class="card-sub">Realized TCGplayer marketplace GMV over ~3 months ending Jul 2026 (client-provided
+            weights for the composite above).</p>
+        </div>
+        <div class="controls">
+          <div class="segmented" data-view-toggle="gmv">
+            <button data-view="chart" aria-pressed="true">Chart</button>
+            <button data-view="table" aria-pressed="false">Summary table</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" id="body-gmv"></div>
+    </section>
+
+    <footer class="foot">
+      <strong>Method.</strong> Fixed basket per game and segment: products priced in every sampled month, each indexed
+      to 100 at its base month; the series is the cross-product median and the band is the 25th&ndash;75th percentile.
+      Singles are catalog products with a rarity or collector number; everything else is sealed. Null market prices
+      dropped; seller high prices ignored. Source: TCGplayer market prices via TCGCSV, 30 monthly snapshots
+      (2024-02-08 &ndash; 2026-07-01). Regenerate with <code>python3 scripts/build_dashboard.py</code>.
+    </footer>
+
+    <noscript><p class="insight">This dashboard is interactive and needs JavaScript. Static exhibits live in
+      <code>output/</code> alongside this file.</p></noscript>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var DATA = /*__TCG_DATA__*/null;
+  if (!DATA) return;
+
+  /* ---- lookups ---------------------------------------------------- */
+  var N = DATA.months.length;
+  var byKey = {};
+  DATA.games.forEach(function (g) { byKey[g.key] = g; });
+  var gamesByGmv = DATA.games.slice().sort(function (a, b) { return b.gmv - a.gmv; });
+  var gameColor = {};
+  DATA.focus.forEach(function (k, i) { gameColor[k] = 'var(--cat' + (i + 1) + ')'; });
+  var SEG = { s: 'Singles', x: 'Sealed' };
+  var SEG_COLOR = { s: 'var(--cat3)', x: 'var(--cat2)' };
+
+  var state = {
+    win: [0, N - 1],
+    seg: 's',
+    sel: DATA.focus.slice(),          // selection, in fixed slot order
+    band: true,
+    views: { composite: 'chart', compare: 'chart', grid: 'chart', gmv: 'chart' }
+  };
+
+  /* ---- formatting -------------------------------------------------- */
+  var MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtM(m, long) {
+    var p = m.split('-'), name = MN[+p[1] - 1];
+    return long ? name + ' ' + p[0] : name + ' ’' + p[0].slice(2);
+  }
+  function fmt1(v) { return v == null ? '–' : v.toFixed(1); }
+  function fmtPct(v) { return (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1) + '%'; }
+  function fmtCagr(c) { var p = Math.round(c * 100); return (p >= 0 ? '+' : '−') + Math.abs(p) + '%/yr'; }
+  function fmtMoney(v) { return v >= 1e6 ? '$' + (v / 1e6).toFixed(1) + 'M' : '$' + Math.round(v / 1e3) + 'K'; }
+
+  /* ---- svg helpers ------------------------------------------------- */
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function svgEl(tag, attrs, parent) {
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function div(cls, parent) {
+    var e = document.createElement('div');
+    if (cls) e.className = cls;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function niceTicks(lo, hi, n) {
+    var span = hi - lo || 1;
+    var step = Math.pow(10, Math.floor(Math.log(span / n) / Math.LN10));
+    var err = span / n / step;
+    step *= err >= 7.5 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1;
+    var out = [];
+    for (var v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(Math.round(v * 100) / 100);
+    return out;
+  }
+  function xTickIdx(n) {
+    var snaps = [1, 2, 3, 6, 12], step = snaps[snaps.length - 1];
+    for (var i = 0; i < snaps.length; i++) if (snaps[i] >= n / 6) { step = snaps[i]; break; }
+    var out = [];
+    for (var j = 0; j < n; j += step) out.push(j);
+    if (out[out.length - 1] !== n - 1) {
+      if (n - 1 - out[out.length - 1] < step * 0.6) out[out.length - 1] = n - 1; else out.push(n - 1);
+    }
+    return out;
+  }
+
+  /* ---- line chart --------------------------------------------------
+     cfg: { months, series: [{name, color, vals, band:{lo,hi}|null}],
+            compact, height, ariaLabel, ttNote }                       */
+  function lineChart(mount, cfg) {
+    mount.textContent = '';
+    var W = Math.max(260, mount.clientWidth || 640);
+    var H = cfg.height || (cfg.compact ? 168 : 330);
+    var M = cfg.compact ? { t: 10, r: 42, b: 22, l: 32 } : { t: 12, r: 60, b: 26, l: 40 };
+    var months = cfg.months, n = months.length;
+    var plotW = W - M.l - M.r, plotH = H - M.t - M.b;
+
+    var svg = svgEl('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img', tabindex: 0 }, mount);
+    svg.setAttribute('aria-label', cfg.ariaLabel || 'Line chart; exact values are in the table view.');
+
+    var lo = Infinity, hi = -Infinity;
+    cfg.series.forEach(function (s) {
+      s.vals.forEach(function (v) { if (v != null) { if (v < lo) lo = v; if (v > hi) hi = v; } });
+      if (s.band) [s.band.lo, s.band.hi].forEach(function (arr) {
+        arr.forEach(function (v) { if (v != null) { if (v < lo) lo = v; if (v > hi) hi = v; } });
+      });
+    });
+    if (lo === Infinity) { lo = 0; hi = 200; }
+    if (lo > 100) lo = 100; if (hi < 100) hi = 100;
+    var pad = (hi - lo) * 0.07 || 5;
+    lo -= pad; hi += pad;
+    var yTicks = niceTicks(lo, hi, cfg.compact ? 3 : 5);
+
+    function X(i) { return M.l + (n <= 1 ? plotW / 2 : plotW * i / (n - 1)); }
+    function Y(v) { return M.t + plotH * (1 - (v - lo) / (hi - lo)); }
+
+    /* grid + axes */
+    yTicks.forEach(function (t) {
+      var base = Math.abs(t - 100) < 1e-9;
+      svgEl('line', { x1: M.l, x2: W - M.r, y1: Y(t), y2: Y(t),
+        stroke: base ? 'var(--axis)' : 'var(--grid)', 'stroke-width': 1 }, svg);
+      var lb = svgEl('text', { x: M.l - 7, y: Y(t) + 3.5, 'text-anchor': 'end',
+        'font-size': '10.5', fill: 'var(--muted)',
+        style: 'font-variant-numeric:tabular-nums' }, svg);
+      lb.textContent = String(Math.round(t));
+    });
+    xTickIdx(n).forEach(function (i) {
+      var lb = svgEl('text', { x: X(i), y: H - M.b + 16, 'text-anchor': 'middle',
+        'font-size': '10.5', fill: 'var(--muted)' }, svg);
+      lb.textContent = fmtM(months[i]);
+    });
+
+    /* IQR bands */
+    cfg.series.forEach(function (s) {
+      if (!s.band) return;
+      var d = '', run = [];
+      for (var i = 0; i <= n; i++) {
+        var ok = i < n && s.band.lo[i] != null && s.band.hi[i] != null;
+        if (ok) run.push(i);
+        else if (run.length) {
+          d += 'M' + run.map(function (j) { return X(j) + ' ' + Y(s.band.hi[j]); }).join('L');
+          d += 'L' + run.slice().reverse().map(function (j) { return X(j) + ' ' + Y(s.band.lo[j]); }).join('L') + 'Z';
+          run = [];
+        }
+      }
+      if (d) svgEl('path', { d: d, style: 'fill:color-mix(in srgb, ' + s.color + ' 12%, transparent)' }, svg);
+    });
+
+    /* lines */
+    cfg.series.forEach(function (s) {
+      var d = '', pen = false;
+      s.vals.forEach(function (v, i) {
+        if (v == null) { pen = false; return; }
+        d += (pen ? 'L' : 'M') + X(i) + ' ' + Y(v);
+        pen = true;
+      });
+      if (d) svgEl('path', { d: d, fill: 'none', style: 'stroke:' + s.color,
+        'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, svg);
+    });
+
+    /* endpoint markers + selective end labels (collisions drop to legend/tooltip) */
+    var labels = [];
+    cfg.series.forEach(function (s) {
+      var li = -1;
+      for (var i = n - 1; i >= 0; i--) if (s.vals[i] != null) { li = i; break; }
+      if (li < 0) return;
+      svgEl('circle', { cx: X(li), cy: Y(s.vals[li]), r: 4,
+        style: 'fill:' + s.color + ';stroke:var(--surface)', 'stroke-width': 2 }, svg);
+      labels.push({ y: Y(s.vals[li]), v: s.vals[li] });
+    });
+    labels.sort(function (a, b) { return a.y - b.y; });
+    var prevY = -1e9;
+    labels.forEach(function (l) {
+      if (l.y - prevY < 13) return;
+      prevY = l.y;
+      var t = svgEl('text', { x: W - M.r + 8, y: l.y + 3.5, 'font-size': '11',
+        'font-weight': 600, fill: 'var(--ink)',
+        style: 'font-variant-numeric:tabular-nums' }, svg);
+      t.textContent = String(Math.round(l.v));
+    });
+
+    /* hover: crosshair + one tooltip listing every series ------------- */
+    var tip = div('tooltip', mount);
+    var hoverG = svgEl('g', {}, svg);
+    var overlay = svgEl('rect', { x: M.l - 10, y: 0, width: plotW + 20, height: H,
+      fill: 'transparent' }, svg);
+
+    function clearHover() { hoverG.textContent = ''; tip.style.display = 'none'; }
+    function showAt(i, py) {
+      hoverG.textContent = '';
+      tip.textContent = '';
+      svgEl('line', { x1: X(i), x2: X(i), y1: M.t, y2: H - M.b, stroke: 'var(--axis)', 'stroke-width': 1 }, hoverG);
+      var rows = [];
+      cfg.series.forEach(function (s) {
+        if (s.vals[i] == null) return;
+        svgEl('circle', { cx: X(i), cy: Y(s.vals[i]), r: 4,
+          style: 'fill:' + s.color + ';stroke:var(--surface)', 'stroke-width': 2 }, hoverG);
+        rows.push(s);
+      });
+      if (!rows.length) { tip.style.display = 'none'; return; }
+      rows.sort(function (a, b) { return b.vals[i] - a.vals[i]; });
+      var tt = div('tt-title', tip); tt.textContent = fmtM(months[i], true);
+      rows.forEach(function (s) {
+        var r = div('tt-row', tip);
+        var k = div('tt-key', r); k.style.background = s.color;
+        var nm = div('tt-name', r); nm.textContent = s.name;
+        var vv = div('tt-val', r); vv.textContent = fmt1(s.vals[i]);
+      });
+      if (cfg.ttNote) { var nt = div('tt-note', tip); nt.textContent = cfg.ttNote; }
+      tip.style.display = 'block';
+      var tw = tip.offsetWidth, th = tip.offsetHeight;
+      var px = X(i);
+      var left = px + 16;
+      if (left + tw > W - 4) left = px - tw - 16;
+      if (left < 4) left = 4;
+      var top = (py == null ? M.t + 10 : py - th - 14);
+      if (top < 4) top = (py == null ? M.t + 10 : py + 14);
+      if (top + th > H - 4) top = H - th - 4;
+      tip.style.left = left + 'px';
+      tip.style.top = top + 'px';
+    }
+
+    var kIdx = n - 1;
+    overlay.addEventListener('pointermove', function (ev) {
+      var box = svg.getBoundingClientRect();
+      var px = ev.clientX - box.left, py = ev.clientY - box.top;
+      var i = Math.round((px - M.l) / (plotW || 1) * (n - 1));
+      if (i < 0) i = 0; if (i > n - 1) i = n - 1;
+      kIdx = i;
+      showAt(i, py);
+    });
+    overlay.addEventListener('pointerleave', clearHover);
+    svg.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowLeft' || ev.key === 'ArrowRight') {
+        kIdx = Math.min(n - 1, Math.max(0, kIdx + (ev.key === 'ArrowRight' ? 1 : -1)));
+        showAt(kIdx, null);
+        ev.preventDefault();
+      } else if (ev.key === 'Escape') { clearHover(); }
+    });
+    svg.addEventListener('focus', function () { showAt(kIdx, null); });
+    svg.addEventListener('blur', clearHover);
+  }
+
+  /* ---- sparkline (stat tiles) -------------------------------------- */
+  function sparkline(mount, vals) {
+    var W = 96, H = 30, P = 3;
+    var svg = svgEl('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, 'aria-hidden': 'true' }, mount);
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    if (hi - lo < 1e-9) hi = lo + 1;
+    function X(i) { return P + (W - 2 * P) * i / (vals.length - 1); }
+    function Y(v) { return P + (H - 2 * P) * (1 - (v - lo) / (hi - lo)); }
+    var d = vals.map(function (v, i) { return (i ? 'L' : 'M') + X(i) + ' ' + Y(v); }).join('');
+    svgEl('path', { d: d, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 1.5,
+      'stroke-linecap': 'round' }, svg);
+    svgEl('circle', { cx: X(vals.length - 1), cy: Y(vals[vals.length - 1]), r: 3,
+      style: 'fill:var(--cat1);stroke:var(--surface)', 'stroke-width': 1.5 }, svg);
+  }
+
+  /* ---- tables ------------------------------------------------------ */
+  function renderTable(mount, cols, rows) {
+    var wrap = div('tbl-wrap', mount);
+    var table = document.createElement('table');
+    wrap.appendChild(table);
+    var thead = document.createElement('thead'), tr = document.createElement('tr');
+    thead.appendChild(tr); table.appendChild(thead);
+    cols.forEach(function (c) {
+      var th = document.createElement('th'); th.textContent = c; tr.appendChild(th);
+    });
+    var tbody = document.createElement('tbody'); table.appendChild(tbody);
+    rows.forEach(function (r) {
+      var tr2 = document.createElement('tr');
+      r.forEach(function (v) {
+        var td = document.createElement('td'); td.textContent = v; tr2.appendChild(td);
+      });
+      tbody.appendChild(tr2);
+    });
+  }
+
+  /* ---- window slicing ---------------------------------------------- */
+  function winMonths() { return DATA.months.slice(state.win[0], state.win[1] + 1); }
+  function slice(arr) { return arr.slice(state.win[0], state.win[1] + 1); }
+
+  /* ---- stat tiles (full window, above the filter row) --------------- */
+  function renderTiles() {
+    var mount = document.getElementById('tiles');
+    mount.textContent = '';
+    var c = DATA.composite;
+    var defs = [
+      { label: 'Market composite · GMV-weighted', vals: c.market },
+      { label: 'Sealed composite', vals: c.sealed },
+      { label: 'Singles composite', vals: c.singles },
+      { label: 'Equal-weight (typical game)', vals: c.equal }
+    ];
+    defs.forEach(function (d) {
+      var last = d.vals[d.vals.length - 1];
+      var tile = div('tile', mount);
+      var lb = div('tile-label', tile); lb.textContent = d.label;
+      var row = div('tile-row', tile);
+      var val = div('tile-value', row); val.textContent = String(Math.round(last));
+      sparkline(div('', row), d.vals.slice(-12));
+      var delta = div('tile-delta ' + (last >= 100 ? 'up' : 'down'), tile);
+      delta.textContent = fmtPct(last - 100) + ' ';
+      var vs = document.createElement('span'); vs.className = 'vs';
+      vs.textContent = 'vs Feb 2024'; delta.appendChild(vs);
+    });
+  }
+
+  /* ---- composite card ---------------------------------------------- */
+  function compositeSeries() {
+    var c = DATA.composite;
+    return [
+      { name: 'Market (GMV-weighted)', color: 'var(--cat1)', vals: slice(c.market) },
+      { name: 'Sealed composite',      color: 'var(--cat2)', vals: slice(c.sealed) },
+      { name: 'Singles composite',     color: 'var(--cat3)', vals: slice(c.singles) },
+      { name: 'Equal-weight game',     color: 'var(--cat4)', vals: slice(c.equal) }
+    ];
+  }
+  function renderComposite() {
+    var series = compositeSeries();
+    var legend = document.getElementById('legend-composite');
+    legend.textContent = '';
+    series.forEach(function (s) {
+      var it = div('item', legend);
+      var k = div('key', it); k.style.background = s.color;
+      var nm = document.createElement('span'); nm.textContent = s.name; it.appendChild(nm);
+    });
+    var body = document.getElementById('body-composite');
+    body.textContent = '';
+    if (state.views.composite === 'table') {
+      renderTable(body, ['Month'].concat(series.map(function (s) { return s.name; })),
+        winMonths().map(function (m, i) {
+          return [fmtM(m, true)].concat(series.map(function (s) { return fmt1(s.vals[i]); }));
+        }));
+    } else {
+      lineChart(div('chart', body), {
+        months: winMonths(), series: series,
+        ariaLabel: 'GMV-weighted market composite indices; switch to the table view for exact values.'
+      });
+    }
+  }
+
+  /* ---- compare card ------------------------------------------------ */
+  function renderCompare() {
+    var seg = state.seg;
+    var series = state.sel.map(function (k) {
+      var g = byKey[k], sd = g[seg];
+      var s = { name: g.key, color: gameColor[k], vals: slice(sd.med), band: null };
+      if (state.sel.length === 1 && state.band)
+        s.band = { lo: slice(sd.p25), hi: slice(sd.p75) };
+      return s;
+    });
+    var bandCheck = document.getElementById('band-check');
+    bandCheck.classList.toggle('disabled', state.sel.length !== 1);
+    document.getElementById('band-input').disabled = state.sel.length !== 1;
+
+    var body = document.getElementById('body-compare');
+    body.textContent = '';
+    if (state.views.compare === 'table') {
+      renderTable(body, ['Month'].concat(state.sel.map(function (k) { return k + ' · ' + SEG[state.seg]; })),
+        winMonths().map(function (m, i) {
+          return [fmtM(m, true)].concat(series.map(function (s) { return fmt1(s.vals[i]); }));
+        }));
+    } else {
+      var note = state.sel.length === 1
+        ? 'Band: 25th–75th percentile · basket n=' + byKey[state.sel[0]][seg].n.toLocaleString('en-US')
+        : null;
+      lineChart(div('chart', body), {
+        months: winMonths(), series: series, ttNote: note,
+        ariaLabel: SEG[seg] + ' price index for the selected games; switch to the table view for exact values.'
+      });
+    }
+  }
+
+  /* ---- 12-game grid ------------------------------------------------ */
+  function renderGrid() {
+    var legend = document.getElementById('legend-grid');
+    legend.textContent = '';
+    [['Singles', SEG_COLOR.s], ['Sealed', SEG_COLOR.x]].forEach(function (p) {
+      var it = div('item', legend);
+      var k = div('key', it); k.style.background = p[1];
+      var nm = document.createElement('span'); nm.textContent = p[0]; it.appendChild(nm);
+    });
+    var body = document.getElementById('body-grid');
+    body.textContent = '';
+    if (state.views.grid === 'table') {
+      [['s', 'Singles index'], ['x', 'Sealed index']].forEach(function (p) {
+        var cap = div('tbl-caption', body); cap.textContent = p[1];
+        renderTable(body, ['Month'].concat(gamesByGmv.map(function (g) { return g.key; })),
+          winMonths().map(function (m, i) {
+            return [fmtM(m, true)].concat(gamesByGmv.map(function (g) {
+              return fmt1(slice(g[p[0]].med)[i]);
+            }));
+          }));
+      });
+      return;
+    }
+    var grid = div('grid12', body);
+    gamesByGmv.forEach(function (g) {
+      var panel = div('panel', grid);
+      var head = div('panel-head', panel);
+      var nm = div('panel-name', head); nm.textContent = g.key; nm.title = g.name;
+      var gm = div('panel-gmv', head); gm.textContent = 'GMV ' + fmtMoney(g.gmv);
+      lineChart(div('chart', panel), {
+        months: winMonths(), compact: true,
+        series: [
+          { name: 'Singles', color: SEG_COLOR.s, vals: slice(g.s.med) },
+          { name: 'Sealed',  color: SEG_COLOR.x, vals: slice(g.x.med) }
+        ],
+        ariaLabel: g.name + ' singles and sealed price indices; exact values in the table view.'
+      });
+      var foot = div('panel-foot', panel);
+      [['Singles', SEG_COLOR.s, g.s.cagr], ['Sealed', SEG_COLOR.x, g.x.cagr]].forEach(function (p) {
+        var it = div('item', foot);
+        var k = div('key', it); k.style.background = p[1];
+        var t = document.createElement('span'); t.textContent = p[0] + ' ' + fmtCagr(p[2]);
+        it.appendChild(t);
+      });
+    });
+  }
+
+  /* ---- GMV card ---------------------------------------------------- */
+  function renderGmv() {
+    var body = document.getElementById('body-gmv');
+    body.textContent = '';
+    if (state.views.gmv === 'table') {
+      renderTable(body,
+        ['Game', 'GMV (~3 mo)', 'Singles index', 'Singles CAGR', 'Singles basket',
+         'Sealed index', 'Sealed CAGR', 'Sealed basket', 'Indexed since'],
+        gamesByGmv.map(function (g) {
+          return [g.name, '$' + g.gmv.toLocaleString('en-US'),
+            fmt1(g.s.final), fmtCagr(g.s.cagr), g.s.n.toLocaleString('en-US'),
+            fmt1(g.x.final), fmtCagr(g.x.cagr), g.x.n.toLocaleString('en-US'),
+            fmtM(g.base, true)];
+        }));
+      return;
+    }
+    var mount = div('chart', body);
+    var W = Math.max(300, mount.clientWidth || 640);
+    var rowH = 30, L = 130, R = 64, T = 6;
+    var H = T + gamesByGmv.length * rowH + 6;
+    var svg = svgEl('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img', tabindex: 0 }, mount);
+    svg.setAttribute('aria-label', 'TCGplayer marketplace GMV by game; exact values in the summary table view.');
+    var max = gamesByGmv[0].gmv;
+    var plotW = W - L - R;
+    var tip = div('tooltip', mount);
+    svgEl('line', { x1: L, x2: L, y1: T, y2: H - 4, stroke: 'var(--axis)', 'stroke-width': 1 }, svg);
+    gamesByGmv.forEach(function (g, i) {
+      var y = T + i * rowH + (rowH - 16) / 2;
+      var w = Math.max(2, plotW * g.gmv / max);
+      var lb = svgEl('text', { x: L - 8, y: y + 12, 'text-anchor': 'end', 'font-size': '12',
+        fill: 'var(--ink2)' }, svg);
+      lb.textContent = g.key;
+      var x1 = L + w;
+      var d = 'M' + L + ',' + y + 'L' + Math.max(L, x1 - 4) + ',' + y +
+        'Q' + x1 + ',' + y + ' ' + x1 + ',' + (y + 4) + 'L' + x1 + ',' + (y + 12) +
+        'Q' + x1 + ',' + (y + 16) + ' ' + Math.max(L, x1 - 4) + ',' + (y + 16) +
+        'L' + L + ',' + (y + 16) + 'Z';
+      var bar = svgEl('path', { d: d, style: 'fill:var(--cat1)' }, svg);
+      var vl = svgEl('text', { x: x1 + 7, y: y + 12, 'font-size': '11.5', 'font-weight': 600,
+        fill: 'var(--ink)', style: 'font-variant-numeric:tabular-nums' }, svg);
+      vl.textContent = fmtMoney(g.gmv);
+      var hit = svgEl('rect', { x: 0, y: T + i * rowH, width: W, height: rowH, fill: 'transparent' }, svg);
+      function show(ev) {
+        bar.style.opacity = '0.82';
+        tip.textContent = '';
+        var tt = div('tt-title', tip); tt.textContent = g.name;
+        var r = div('tt-row', tip);
+        var nm2 = div('tt-name', r); nm2.textContent = 'GMV, ~3 mo ending Jul 2026';
+        var vv = div('tt-val', r); vv.textContent = '$' + g.gmv.toLocaleString('en-US');
+        tip.style.display = 'block';
+        var tw = tip.offsetWidth;
+        var left = Math.min(L + w + 12, W - tw - 4);
+        tip.style.left = left + 'px';
+        tip.style.top = Math.max(4, T + i * rowH - 34) + 'px';
+      }
+      function hide() { bar.style.opacity = ''; tip.style.display = 'none'; }
+      hit.addEventListener('pointerenter', show);
+      hit.addEventListener('pointerleave', hide);
+    });
+  }
+
+  /* ---- wiring ------------------------------------------------------ */
+  function renderScoped() { renderComposite(); renderCompare(); renderGrid(); renderGmv(); }
+
+  document.querySelectorAll('.preset').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var w = btn.getAttribute('data-win');
+      if (w === 'full') state.win = [0, N - 1];
+      else if (w === 'y12') state.win = [Math.max(0, N - 12), N - 1];
+      else {
+        var i0 = DATA.months.findIndex(function (m) { return m.indexOf('2026-') === 0; });
+        state.win = [i0 < 0 ? 0 : i0, N - 1];
+      }
+      document.querySelectorAll('.preset').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      renderScoped();
+    });
+  });
+  document.querySelector('.preset[data-win="full"]').setAttribute('aria-pressed', 'true');
+
+  document.querySelectorAll('#seg-control button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      state.seg = btn.getAttribute('data-seg');
+      document.querySelectorAll('#seg-control button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      renderCompare();
+    });
+  });
+
+  document.getElementById('band-input').addEventListener('change', function (ev) {
+    state.band = ev.target.checked;
+    renderCompare();
+  });
+
+  var chipsMount = document.getElementById('chips');
+  DATA.focus.forEach(function (k) {
+    var chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.style.setProperty('--c', gameColor[k]);
+    chip.setAttribute('aria-pressed', 'true');
+    var key = document.createElement('span'); key.className = 'key'; chip.appendChild(key);
+    var nm = document.createElement('span'); nm.textContent = k; chip.appendChild(nm);
+    chip.addEventListener('click', function () {
+      var on = state.sel.indexOf(k) >= 0;
+      if (on && state.sel.length === 1) return;         // keep at least one
+      state.sel = DATA.focus.filter(function (f) {
+        return f === k ? !on : state.sel.indexOf(f) >= 0;
+      });
+      chip.setAttribute('aria-pressed', on ? 'false' : 'true');
+      renderCompare();
+    });
+    chipsMount.appendChild(chip);
+  });
+
+  document.querySelectorAll('[data-view-toggle]').forEach(function (seg) {
+    var id = seg.getAttribute('data-view-toggle');
+    seg.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.views[id] = btn.getAttribute('data-view');
+        seg.querySelectorAll('button').forEach(function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        ({ composite: renderComposite, compare: renderCompare, grid: renderGrid, gmv: renderGmv })[id]();
+      });
+    });
+  });
+
+  /* re-render charts when the layout width changes (debounced) */
+  var raf = null;
+  var lastW = document.querySelector('.wrap').clientWidth;
+  function onResize() {
+    if (raf) return;
+    raf = requestAnimationFrame(function () {
+      raf = null;
+      var w = document.querySelector('.wrap').clientWidth;
+      if (w !== lastW) { lastW = w; renderScoped(); }
+    });
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(onResize).observe(document.querySelector('.wrap'));
+  } else {
+    window.addEventListener('resize', onResize);
+  }
+
+  renderTiles();
+  renderScoped();
+})();
+</script>
