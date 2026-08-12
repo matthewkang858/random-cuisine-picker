@@ -1,0 +1,7449 @@
+[
+ {
+  "slug": "tecdemonterrey-estrategia-omnicanal-gtm",
+  "ld": [
+   150.3,
+   150.3,
+   150.3
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Estrategia Omnicanal GTM Professional Certificate"
+ },
+ {
+  "slug": "delftx-housing-design-for-all",
+  "ld": [
+   318.6,
+   318.6,
+   318.6
+  ],
+  "amounts": [
+   354,
+   318.6,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Housing Design for All Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-blockchain-fundamentos-y-aplicaciones-para-la-optimizacion-de-negocios",
+  "ld": [
+   108.9,
+   108.9,
+   108.9
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Blockchain: fundamentos y aplicaciones para la optimización de negocios Professional Certificate"
+ },
+ {
+  "slug": "wisconsinx-cybersecurity-fundamentals-for-small-organizations",
+  "ld": [
+   591.3,
+   591.3,
+   591.3
+  ],
+  "amounts": [
+   657,
+   591.3,
+   723,
+   650.7,
+   375,
+   337.5,
+   512,
+   460.8,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Cybersecurity Fundamentals for Small Organizations Professional Certificate"
+ },
+ {
+  "slug": "ai-rust-programming",
+  "ld": [
+   2021.391,
+   2021.391,
+   2021.391
+  ],
+  "amounts": [
+   2245.99,
+   2021.39,
+   2743,
+   2468.7,
+   3592,
+   3232.8,
+   1493.99,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "Rust Programming Professional Certificate"
+ },
+ {
+  "slug": "statisticscomx-machine-learning-operations-using-google-cloud-platform-mlops-with-gcp",
+  "ld": [
+   555.3,
+   555.3,
+   555.3
+  ],
+  "amounts": [
+   617,
+   555.3,
+   567,
+   510.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Machine Learning Operations with Google Cloud Platform (MLOps with GCP) Professional Certificate"
+ },
+ {
+  "slug": "linuxfoundationx-open-source-software-development-linux-and-git",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Open Source Software Development, Linux and Git Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-fundamentos-de-derecho-comercial-internacional",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Fundamentos de Derecho Comercial Internacional Professional Certificate"
+ },
+ {
+  "slug": "delftx-sustainable-resource-management",
+  "ld": [
+   301.5,
+   301.5,
+   301.5
+  ],
+  "amounts": [
+   335,
+   301.5,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Sustainable Resource Management Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-inteligencia-emocional-y-liderazgo",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Inteligencia emocional y liderazgo Professional Certificate"
+ },
+ {
+  "slug": "alaskax-behavioral-neuroscience-research",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   687,
+   618.3,
+   447,
+   402.3,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Behavioral Neuroscience Research Professional Certificate"
+ },
+ {
+  "slug": "ibm-generative-ai-for-cybersecurity",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   112000,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generative AI for Cybersecurity Professional Certificate"
+ },
+ {
+  "slug": "ubcx-professional-certificate-business-fundamentals",
+  "ld": [
+   405,
+   405,
+   405
+  ],
+  "amounts": [
+   450,
+   405,
+   625,
+   562.5,
+   567,
+   510.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Business Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "sda-bocconi-blockchain-for-business",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Blockchain for Business Professional Certificate"
+ },
+ {
+  "slug": "harvardx-python-for-data-science-and-machine-learning",
+  "ld": [
+   538.2,
+   538.2,
+   538.2
+  ],
+  "amounts": [
+   598,
+   538.2,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Python for Data Science and Machine Learning Professional Certificate"
+ },
+ {
+  "slug": "stellenboschx-multilingual-mastery-embracing-linguistic-diversity",
+  "ld": [
+   536.4,
+   536.4,
+   536.4
+  ],
+  "amounts": [
+   596,
+   536.4,
+   98,
+   88.2,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Multilingual Mastery: Embracing Linguistic Diversity Professional Certificate"
+ },
+ {
+  "slug": "alaskax-sport-business-management",
+  "ld": [
+   618.3,
+   618.3,
+   618.3
+  ],
+  "amounts": [
+   687,
+   618.3,
+   567,
+   510.3,
+   447,
+   402.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Sport Business Management Professional Certificate"
+ },
+ {
+  "slug": "wageningenx-tourism-in-transition-exploring-a-sustainable-future",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   498,
+   448.2,
+   378,
+   340.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Tourism in Transition: Exploring a Sustainable Future Professional Certificate"
+ },
+ {
+  "slug": "sdgacademyx-masters-pathway-in-foundations-of-sustainable-development",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   167,
+   150.3,
+   177,
+   159.3,
+   118,
+   106.2,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Master’s Pathway in Foundations of Sustainable Development Professional Certificate"
+ },
+ {
+  "slug": "delftx-quantum-computer-and-quantum-internet-applications-hands-on-training-with-qutechs-quantum-demonstrators",
+  "ld": [
+   270,
+   270,
+   270
+  ],
+  "amounts": [
+   300,
+   270,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Quantum Computer and Quantum Internet Applications: Hands-on Training with QuTech’s Quantum Demonstrators Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-liderazgo-y-comunicacion-en-equipos-hibridos-y-remotos",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Liderazgo y Comunicación en Equipos híbridos y remotos Professional Certificate"
+ },
+ {
+  "slug": "harvardx-tiny-machine-learning",
+  "ld": [
+   807.3,
+   807.3,
+   807.3
+  ],
+  "amounts": [
+   897,
+   807.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Tiny Machine Learning (TinyML) Professional Certificate"
+ },
+ {
+  "slug": "university-of-torontox-enabling-impact-through-inclusive-leadership",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   148,
+   133.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Enabling Impact Through Inclusive Leadership Professional Certificate"
+ },
+ {
+  "slug": "delftx-mastering-linear-algebra",
+  "ld": [
+   297,
+   297,
+   297
+  ],
+  "amounts": [
+   330,
+   297,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Mastering Linear Algebra Professional Certificate"
+ },
+ {
+  "slug": "sda-bocconi-circular-fashion-management-building-sustainable-value-chains",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Circular Fashion Management - Building Sustainable Value Chains Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-gemini-for-google-workspace",
+  "ld": [
+   216,
+   216,
+   216
+  ],
+  "amounts": [
+   240,
+   216,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   80920
+  ],
+  "nCourses": 8,
+  "title": "Gemini for Google Workspace Professional Certificate"
+ },
+ {
+  "slug": "tugrazx-side-channel-security-caches-and-physical-attacks",
+  "ld": [
+   232.2,
+   232.2,
+   232.2
+  ],
+  "amounts": [
+   258,
+   232.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Side Channel Security – Caches and Physical Attacks Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-estrategia-politicas-innovacion-y-rendicion-de-cuentas-en-la-administracion-publica",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   75000
+  ],
+  "nCourses": 2,
+  "title": "Estrategia, políticas, innovación y rendición de cuentas en la administración pública Professional Certificate"
+ },
+ {
+  "slug": "louvainx-refugee-and-migration-law",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   995,
+   895.5,
+   597,
+   537.3,
+   278,
+   250.2,
+   60000
+  ],
+  "nCourses": 2,
+  "title": "Refugee and Migration Law Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-fundamentos-tic-para-profesionales-de-negocios",
+  "ld": [
+   310.5,
+   310.5,
+   310.5
+  ],
+  "amounts": [
+   345,
+   310.5,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   140910
+  ],
+  "nCourses": 5,
+  "title": "Fundamentos TIC para profesionales de negocios Professional Certificate"
+ },
+ {
+  "slug": "ucsandiegox-virtual-reality-app-development",
+  "ld": [
+   267.3,
+   267.3,
+   267.3
+  ],
+  "amounts": [
+   297,
+   267.3,
+   1050,
+   945,
+   1200,
+   1080,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Virtual Reality (VR) App Development Professional Certificate"
+ },
+ {
+  "slug": "wageningenx-food-security-and-sustainability",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   378,
+   340.2,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Food Security and Sustainability Professional Certificate"
+ },
+ {
+  "slug": "microsoft-data-scientist",
+  "ld": [
+   126,
+   126,
+   126
+  ],
+  "amounts": [
+   140,
+   126,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Data Scientist Professional Certificate"
+ },
+ {
+  "slug": "hkpolyu-introduction-to-stroke-care",
+  "ld": [
+   277.2,
+   277.2,
+   277.2
+  ],
+  "amounts": [
+   308,
+   277.2,
+   1112,
+   1000.8,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Introduction to Stroke Care Professional Certificate"
+ },
+ {
+  "slug": "delftx-quantum-301-quantum-computing-with-semiconductor-technology",
+  "ld": [
+   333,
+   333,
+   333
+  ],
+  "amounts": [
+   370,
+   333,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Quantum 301: Quantum Computing with Semiconductor Technology Professional Certificate"
+ },
+ {
+  "slug": "google-cloud-engineer-learning-path",
+  "ld": [
+   640.8,
+   640.8,
+   640.8
+  ],
+  "amounts": [
+   712,
+   640.8,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   140910
+  ],
+  "nCourses": 8,
+  "title": "Google Cloud Engineer Learning Path Professional Certificate"
+ },
+ {
+  "slug": "gtx-health-informatics-on-fhir",
+  "ld": [
+   297,
+   297,
+   297
+  ],
+  "amounts": [
+   297,
+   756,
+   680.4,
+   2475,
+   498,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Health Informatics on FHIR Professional Certificate"
+ },
+ {
+  "slug": "alaskax-unmanned-aerial-systems",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   567,
+   510.3,
+   687,
+   618.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Unmanned Aerial Systems Professional Certificate"
+ },
+ {
+  "slug": "tsinghuax-english-communication-skills",
+  "ld": [
+   591.3,
+   591.3,
+   591.3
+  ],
+  "amounts": [
+   60000
+  ],
+  "nCourses": 3,
+  "title": "English Communication Skills Professional Certificate"
+ },
+ {
+  "slug": "taux-unlocking-information-security",
+  "ld": [
+   268.191,
+   268.191,
+   268.191
+  ],
+  "amounts": [
+   297.99,
+   268.19,
+   298,
+   268.2,
+   378,
+   340.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Unlocking Information Security Professional Certificate"
+ },
+ {
+  "slug": "hbkux-sustainability-and-major-sport-events",
+  "ld": [
+   214.2,
+   214.2,
+   214.2
+  ],
+  "amounts": [
+   238,
+   214.2,
+   249.99,
+   224.99,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Sustainability & Major Sport Events Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-ciencia-de-datos",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Ciencia de Datos Professional Certificate"
+ },
+ {
+  "slug": "usmx-environmental-management-for-sustainability",
+  "ld": [
+   536.4,
+   536.4,
+   536.4
+  ],
+  "amounts": [
+   596,
+   536.4,
+   597,
+   537.3,
+   75000
+  ],
+  "nCourses": 4,
+  "title": "Environmental Management for Sustainability Professional Certificate"
+ },
+ {
+  "slug": "delftx-management-of-engineering-projects-dealing-with-complexity",
+  "ld": [
+   387,
+   387,
+   387
+  ],
+  "amounts": [
+   430,
+   387,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Engineering Project Management: Mastering Project Complexity Professional Certificate"
+ },
+ {
+  "slug": "nyif-financial-accounting",
+  "ld": [
+   1590.3,
+   1590.3,
+   1590.3
+  ],
+  "amounts": [
+   1767,
+   1590.3,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Financial Accounting Professional Certificate"
+ },
+ {
+  "slug": "edinburghx-the-nitrogen-challenge-from-a-social-science-perspective",
+  "ld": [
+   106.2,
+   106.2,
+   106.2
+  ],
+  "amounts": [
+   118,
+   106.2,
+   298,
+   268.2,
+   75000
+  ],
+  "nCourses": 2,
+  "title": "The Nitrogen Challenge from a Social Science Perspective Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-javerianax-gestion-de-proyectos-y-metodologia-agil",
+  "ld": [
+   114.3,
+   114.3,
+   114.3
+  ],
+  "amounts": [
+   127,
+   114.3,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Gestión de proyectos y metodología ágil Professional Certificate"
+ },
+ {
+  "slug": "urosariox-genero-y-sexualidad-construccion-de-espacios-habitables",
+  "ld": [
+   132.291,
+   132.291,
+   132.291
+  ],
+  "amounts": [
+   146.99,
+   132.29,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Género y sexualidad: construcción de espacios habitables Professional Certificate"
+ },
+ {
+  "slug": "idbx-gestion-sostenible-de-empresas-de-agua-y-saneamiento",
+  "ld": [
+   74.7,
+   74.7,
+   74.7
+  ],
+  "amounts": [
+   83,
+   74.7,
+   99,
+   89.1,
+   75,
+   60,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Gestión sostenible de empresas de agua y saneamiento Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-appsheet-developer",
+  "ld": [
+   165.6,
+   165.6,
+   165.6
+  ],
+  "amounts": [
+   184,
+   165.6,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "AppSheet Developer Professional Certificate"
+ },
+ {
+  "slug": "louvainx-corporate-social-responsibility",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   995,
+   895.5,
+   597,
+   537.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Corporate Social Responsibility Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-transformacion-digital-como-estrategia-de-negocios-e-innovacion",
+  "ld": [
+   348.3,
+   348.3,
+   348.3
+  ],
+  "amounts": [
+   387,
+   348.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Transformación digital como estrategia de negocios e innovación Professional Certificate"
+ },
+ {
+  "slug": "iimbx-customer-relationship-management-for-marketers",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   488,
+   439.2,
+   567,
+   510.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Customer Relationship Management for Marketers Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-empresas-familiares-emprendimiento-y-liderazgo-para-trascender",
+  "ld": [
+   118,
+   118,
+   118
+  ],
+  "amounts": [
+   118,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Empresas familiares: emprendimiento y liderazgo para trascender Professional Certificate"
+ },
+ {
+  "slug": "ibm-people-and-power-skills",
+  "ld": [
+   156.6,
+   156.6,
+   156.6
+  ],
+  "amounts": [
+   174,
+   156.6,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "People and Power Skills Professional Certificate"
+ },
+ {
+  "slug": "javerianax-fundamentos-de-la-construccion",
+  "ld": [
+   147.6,
+   147.6,
+   147.6
+  ],
+  "amounts": [
+   164,
+   147.6,
+   121,
+   108.9,
+   127,
+   114.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Fundamentos de la Construcción 4.0 Professional Certificate"
+ },
+ {
+  "slug": "tugrazx-side-channel-security-basics",
+  "ld": [
+   232.2,
+   232.2,
+   232.2
+  ],
+  "amounts": [
+   258,
+   232.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Side Channel Security Basics Professional Certificate"
+ },
+ {
+  "slug": "delftx-inclusive-and-sustainable-cities",
+  "ld": [
+   499.5,
+   499.5,
+   499.5
+  ],
+  "amounts": [
+   555,
+   499.5,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Inclusive and Sustainable Cities Professional Certificate"
+ },
+ {
+  "slug": "ibm-blockchain-essentials",
+  "ld": [
+   268.2,
+   268.2,
+   268.2
+  ],
+  "amounts": [
+   298,
+   268.2,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Blockchain Essentials Professional Certificate"
+ },
+ {
+  "slug": "ibm-python-data-science",
+  "ld": [
+   516.6,
+   516.6,
+   516.6
+  ],
+  "amounts": [
+   574,
+   516.6,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 6,
+  "title": "Python Data Science Professional Certificate"
+ },
+ {
+  "slug": "hkpolyux-aviation",
+  "ld": [
+   238,
+   238,
+   238
+  ],
+  "amounts": [
+   238,
+   1112,
+   1000.8,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Aviation Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-analyst",
+  "ld": [
+   783.9,
+   783.9,
+   783.9
+  ],
+  "amounts": [
+   871,
+   783.9,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 9,
+  "title": "Data Analyst Professional Certificate"
+ },
+ {
+  "slug": "smithsonianx-the-smithsonian-summer-sessions-teaching-with-museum-objects",
+  "ld": [
+   168.3,
+   168.3,
+   168.3
+  ],
+  "amounts": [
+   187,
+   168.3,
+   236,
+   212.4,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "The Smithsonian Summer Sessions: Teaching with Museum Objects Professional Certificate"
+ },
+ {
+  "slug": "georgetownx-foundations-of-quantum-sensing",
+  "ld": [
+   556.2,
+   556.2,
+   556.2
+  ],
+  "amounts": [
+   618,
+   556.2,
+   537,
+   483.3,
+   516,
+   464.4,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Foundations of Quantum Sensing Professional Certificate"
+ },
+ {
+  "slug": "ibm-essential-technologies-for-business",
+  "ld": [
+   222.3,
+   222.3,
+   222.3
+  ],
+  "amounts": [
+   247,
+   222.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Essential Technologies for Business Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-mastering-ai-leadership-advanced-certificate-in-prompt-engineering-and-professional-ethics",
+  "ld": [
+   169.2,
+   169.2,
+   169.2
+  ],
+  "amounts": [
+   188,
+   169.2,
+   498,
+   448.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Mastering AI Leadership: Advanced Certificate in Prompt Engineering and Professional Ethics Professional Certificate"
+ },
+ {
+  "slug": "delftx-electric-cars",
+  "ld": [
+   486,
+   486,
+   486
+  ],
+  "amounts": [
+   540,
+   486,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Electric Cars Professional Certificate"
+ },
+ {
+  "slug": "aptly-getting-started-with-social-media-marketing",
+  "ld": [
+   287.964,
+   287.964,
+   287.964
+  ],
+  "amounts": [
+   319.96,
+   287.96,
+   239.97,
+   215.97,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Getting Started with Social Media Marketing Professional Certificate"
+ },
+ {
+  "slug": "mathworks-engineering-design-and-simulation",
+  "ld": [
+   212.4,
+   212.4,
+   212.4
+  ],
+  "amounts": [
+   236,
+   212.4,
+   225,
+   202.5,
+   140910
+  ],
+  "nCourses": 4,
+  "title": "Engineering Design and Simulation Professional Certificate"
+ },
+ {
+  "slug": "ibm-generative-ai-for-data-scientists",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generative AI for Data Scientists Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-innova-y-emprende-con-design-thinking-y-lean-startup",
+  "ld": [
+   79.2,
+   79.2,
+   79.2
+  ],
+  "amounts": [
+   88,
+   79.2,
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Innova y emprende con Design Thinking y Lean Startup Professional Certificate"
+ },
+ {
+  "slug": "harvardx-computer-science-for-python-programming",
+  "ld": [
+   466.2,
+   466.2,
+   466.2
+  ],
+  "amounts": [
+   518,
+   466.2,
+   1225,
+   910,
+   668,
+   601.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Computer Science for Python Programming Professional Certificate"
+ },
+ {
+  "slug": "ibm-generative-ai-for-data-analysts",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generative AI for Data Analysts Professional Certificate"
+ },
+ {
+  "slug": "curtinx-software-defined-networking",
+  "ld": [
+   597,
+   597,
+   597
+  ],
+  "amounts": [
+   597,
+   537,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Software Defined Networking (SDN) Professional Certificate"
+ },
+ {
+  "slug": "google-cloud-data-engineer-learning-path",
+  "ld": [
+   558.9,
+   558.9,
+   558.9
+  ],
+  "amounts": [
+   621,
+   558.9,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   140910
+  ],
+  "nCourses": 9,
+  "title": "Google Cloud Data Engineer Learning Path Professional Certificate"
+ },
+ {
+  "slug": "ai-large-language-model-operations-llmops",
+  "ld": [
+   2468.7,
+   2468.7,
+   2468.7
+  ],
+  "amounts": [
+   2743,
+   2468.7,
+   3592,
+   3232.8,
+   1493.99,
+   2245.99,
+   2021.39,
+   112590
+  ],
+  "nCourses": 7,
+  "title": "Large Language Model Operations (LLMOps) Professional Certificate"
+ },
+ {
+  "slug": "imperialbusinessx-pre-mba-essentials-for-professionals",
+  "ld": [
+   396,
+   396,
+   396
+  ],
+  "amounts": [
+   396,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "PreMBA Essentials for Professionals Professional Certificate"
+ },
+ {
+  "slug": "kingscollegelondon-grand-strategy",
+  "ld": [
+   896.4,
+   896.4,
+   896.4
+  ],
+  "amounts": [
+   996,
+   896.4,
+   747,
+   672.3,
+   60000
+  ],
+  "nCourses": 4,
+  "title": "Grand Strategy Professional Certificate"
+ },
+ {
+  "slug": "curtinx-5g-networking",
+  "ld": [
+   448,
+   448,
+   448
+  ],
+  "amounts": [
+   448,
+   537,
+   60000
+  ],
+  "nCourses": 2,
+  "title": "5G Networking Professional Certificate"
+ },
+ {
+  "slug": "tau-climate-change-the-science-behind-the-crisis",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   298,
+   268.2,
+   297.99,
+   268.19,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Climate Change. The Science Behind the Crisis Professional Certificate"
+ },
+ {
+  "slug": "universidad-galileo-marketing-digital",
+  "ld": [
+   176.4,
+   176.4,
+   176.4
+  ],
+  "amounts": [
+   196,
+   176.4,
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Marketing Digital Professional Certificate"
+ },
+ {
+  "slug": "humorx-remotely-humorous",
+  "ld": [
+   240.3,
+   240.3,
+   240.3
+  ],
+  "amounts": [
+   267,
+   240.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Remotely Humorous: Build Joyful and Resilient Virtual Teams with Humor Professional Certificate"
+ },
+ {
+  "slug": "michiganx-public-library-management",
+  "ld": [
+   424.8,
+   424.8,
+   424.8
+  ],
+  "amounts": [
+   472,
+   424.8,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 8,
+  "title": "Public Library Management Professional Certificate"
+ },
+ {
+  "slug": "delftx-sustainable-design-of-electronics",
+  "ld": [
+   283.5,
+   283.5,
+   283.5
+  ],
+  "amounts": [
+   315,
+   283.5,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Sustainable Design of Electronics Professional Certificate"
+ },
+ {
+  "slug": "wisconsinx-online-education",
+  "ld": [
+   460.8,
+   460.8,
+   460.8
+  ],
+  "amounts": [
+   512,
+   460.8,
+   723,
+   650.7,
+   375,
+   337.5,
+   876,
+   788.4,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Online Education Professional Certificate"
+ },
+ {
+  "slug": "galileox-upvalenciax-marketing-digital-google-adwords-y-facebook-ads",
+  "ld": [
+   128.7,
+   128.7,
+   128.7
+  ],
+  "amounts": [
+   143,
+   128.7,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Marketing Digital: Google Adwords y Facebook Ads Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-getting-started-with-google-cloud",
+  "ld": [
+   138.6,
+   138.6,
+   138.6
+  ],
+  "amounts": [
+   154,
+   138.6,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Getting Started with Google Cloud Professional Certificate"
+ },
+ {
+  "slug": "lcieducation-introduction-to-3d-modeling-for-video-games",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   198,
+   178.2,
+   537,
+   483.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Introduction to 3D Modeling for Video Games Professional Certificate"
+ },
+ {
+  "slug": "imperialx-clean-power",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Clean Power Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-marketing-de-servicios",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Marketing de servicios Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-integrate-generative-ai-into-your-data-workflow",
+  "ld": [
+   108,
+   108,
+   108
+  ],
+  "amounts": [
+   120,
+   108,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Integrate Generative AI Into Your Data Workflow Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-excel-para-los-negocios",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   107,
+   96.3,
+   156,
+   140.4,
+   127,
+   114.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Excel para los negocios Professional Certificate"
+ },
+ {
+  "slug": "umd-artificial-intelligence-in-government-procurement",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Artificial Intelligence in Government Procurement Professional Certificate"
+ },
+ {
+  "slug": "universityofcambridge-applied-organizational-finance",
+  "ld": [
+   538.2,
+   538.2,
+   538.2
+  ],
+  "amounts": [
+   598,
+   538.2,
+   2392,
+   2152.8,
+   2095,
+   1885.5,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Applied Organizational Finance Professional Certificate"
+ },
+ {
+  "slug": "gtx-project-management-fundamentals",
+  "ld": [
+   536.4,
+   536.4,
+   536.4
+  ],
+  "amounts": [
+   596,
+   536.4,
+   756,
+   680.4,
+   2475,
+   498,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Project Management Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "javerianax-gerencia-estrategica",
+  "ld": [
+   147.6,
+   147.6,
+   147.6
+  ],
+  "amounts": [
+   164,
+   147.6,
+   121,
+   108.9,
+   127,
+   114.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Gerencia estratégica Professional Certificate"
+ },
+ {
+  "slug": "delftx-navigating-ai-and-online-platform-regulations-eu-ai-act-and-dsa",
+  "ld": [
+   252,
+   252,
+   252
+  ],
+  "amounts": [
+   280,
+   252,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Navigating AI and Online Platform Regulations: EU AI Act and DSA Professional Certificate"
+ },
+ {
+  "slug": "zhawx-sustainable-corporate-financing",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   567,
+   510.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Sustainable Corporate Financing Professional Certificate"
+ },
+ {
+  "slug": "hp-the-next-layer-ai-cybersecurity-narrative-design",
+  "ld": [
+   13.5,
+   13.5,
+   13.5
+  ],
+  "amounts": [
+   15,
+   13.5,
+   10,
+   9,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "The Next Layer: AI, Cybersecurity & Narrative Design Professional Certificate"
+ },
+ {
+  "slug": "urosariox-derechos-humanos-en-el-siglo-xxi-una-apuesta-para-todos",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Derechos humanos en el siglo XXI: una apuesta para todos Professional Certificate"
+ },
+ {
+  "slug": "ucx-field-volcanology-and-hazards",
+  "ld": [
+   198,
+   198,
+   198
+  ],
+  "amounts": [
+   198,
+   845,
+   760.5,
+   338,
+   618,
+   556.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Field Volcanology and Hazards Professional Certificate"
+ },
+ {
+  "slug": "uct-feature-journalism",
+  "ld": [
+   597,
+   597,
+   597
+  ],
+  "amounts": [
+   597,
+   567,
+   510.3,
+   795.99,
+   716.39,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "Feature Journalism Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-transformacion-digital-para-el-minorista",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Transformación Digital para el Minorista Professional Certificate"
+ },
+ {
+  "slug": "iscea-certified-professional-in-logistics-management",
+  "ld": [
+   1256.4,
+   1256.4,
+   1256.4
+  ],
+  "amounts": [
+   1396,
+   1256.4,
+   1366,
+   1229.4,
+   627,
+   564.3,
+   1395.99,
+   1256.39,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Certified Professional in Logistics Management (CPLM) Professional Certificate"
+ },
+ {
+  "slug": "mandarinx-mandarin-essentials-for-beginners",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   268,
+   241.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Mandarin Essentials for Beginners Professional Certificate"
+ },
+ {
+  "slug": "delftx-industrial-biotechnology-and-industrial-fermentation",
+  "ld": [
+   333,
+   333,
+   333
+  ],
+  "amounts": [
+   370,
+   333,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Industrial Biotechnology and Industrial Fermentation Professional Certificate"
+ },
+ {
+  "slug": "nyif-corporate-finance-and-valuation-methods",
+  "ld": [
+   1590.3,
+   1590.3,
+   1590.3
+  ],
+  "amounts": [
+   1767,
+   1590.3,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Corporate Finance and Valuation Methods Professional Certificate"
+ },
+ {
+  "slug": "columbiax-essential-math-for-ai-programming-data-structures",
+  "ld": [
+   135,
+   135,
+   135
+  ],
+  "amounts": [
+   150,
+   135,
+   675,
+   607.5,
+   200,
+   180,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Essential Math for AI Programming & Data Structures Professional Certificate"
+ },
+ {
+  "slug": "nyif-mergers-and-acquisitions",
+  "ld": [
+   1690.2,
+   1690.2,
+   1690.2
+  ],
+  "amounts": [
+   1878,
+   1690.2,
+   55,
+   1705,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8
+  ],
+  "nCourses": 6,
+  "title": "Mergers & Acquisitions (M&A) Professional Certificate"
+ },
+ {
+  "slug": "nyif-introduction-to-trading-with-technical-analysis",
+  "ld": [
+   612,
+   612,
+   612
+  ],
+  "amounts": [
+   680,
+   612,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Introduction to Trading with Technical Analysis Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-comunicacion-estrategica-para-negocios-digitales",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Comunicación estratégica para negocios digitales Professional Certificate"
+ },
+ {
+  "slug": "projectuniversity-engenharia-com-arduino-programacao-eletronica-e-sistemas-de-automacao",
+  "ld": [
+   130.5,
+   130.5,
+   130.5
+  ],
+  "amounts": [
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Engenharia com Arduino: Programação, Eletrônica e Sistemas de Automação Professional Certificate"
+ },
+ {
+  "slug": "new-york-institute-finance-introduction-to-finance-entrepreneurship",
+  "ld": [
+   956.8,
+   956.8,
+   956.8
+  ],
+  "amounts": [
+   1196,
+   956.8,
+   333,
+   299.7,
+   834,
+   750.6,
+   680,
+   612,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Introduction to Finance & Entrepreneurship Professional Certificate"
+ },
+ {
+  "slug": "microsoft-azure-administrator",
+  "ld": [
+   63,
+   63,
+   63
+  ],
+  "amounts": [
+   70,
+   63,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Azure Administrator Professional Certificate"
+ },
+ {
+  "slug": "gtx-human-computer-interaction",
+  "ld": [
+   428.4,
+   428.4,
+   428.4
+  ],
+  "amounts": [
+   476,
+   428.4,
+   756,
+   680.4,
+   2475,
+   498,
+   140910
+  ],
+  "nCourses": 4,
+  "title": "Human-Computer Interaction Professional Certificate"
+ },
+ {
+  "slug": "ritx-leadership-essentials",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   1596,
+   1436.4,
+   747,
+   672.3,
+   1348,
+   1213.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Leadership Essentials Professional Certificate"
+ },
+ {
+  "slug": "ibm-cloud-and-application-development-foundations",
+  "ld": [
+   198,
+   198,
+   198
+  ],
+  "amounts": [
+   220,
+   198,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 5,
+  "title": "Cloud and Application Development Foundations Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-inteligencia-artificial-y-robotica",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Inteligencia Artificial y Robótica Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-generate-smarter-generative-ai-outputs",
+  "ld": [
+   112.5,
+   112.5,
+   112.5
+  ],
+  "amounts": [
+   125,
+   112.5,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generate Smarter Generative AI Outputs Professional Certificate"
+ },
+ {
+  "slug": "idbx-road-safety-in-the-caribbean-region",
+  "ld": [
+   25.5,
+   25.5,
+   25.5
+  ],
+  "amounts": [
+   30,
+   25.5,
+   99,
+   89.1,
+   83,
+   74.7,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Road Safety in the Caribbean Region Professional Certificate"
+ },
+ {
+  "slug": "kuleuvenx-european-studies-history-and-culture-law-and-eu-governance",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "European Studies: History & Culture, Law and EU Governance Professional Certificate"
+ },
+ {
+  "slug": "mandarinx-intermediate-mandarin-essentials",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   268,
+   241.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Intermediate Mandarin Essentials Professional Certificate"
+ },
+ {
+  "slug": "mathworks-machine-learning-for-manufacturing-operations",
+  "ld": [
+   202.5,
+   202.5,
+   202.5
+  ],
+  "amounts": [
+   225,
+   202.5,
+   236,
+   212.4,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Machine Learning for Manufacturing Operations Professional Certificate"
+ },
+ {
+  "slug": "alaskax-social-work-perspectives-on-trauma-and-wellness",
+  "ld": [
+   214.2,
+   214.2,
+   214.2
+  ],
+  "amounts": [
+   238,
+   214.2,
+   567,
+   510.3,
+   687,
+   618.3,
+   75000
+  ],
+  "nCourses": 2,
+  "title": "Social Work: Perspectives on Trauma and Wellness Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-sustentabilidad-energetica-y-la-smart-grid",
+  "ld": [
+   212.4,
+   212.4,
+   212.4
+  ],
+  "amounts": [
+   236,
+   212.4,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Sustentabilidad energética y la smart grid Professional Certificate"
+ },
+ {
+  "slug": "babsonx-executive-leadership",
+  "ld": [
+   277.2,
+   277.2,
+   277.2
+  ],
+  "amounts": [
+   308,
+   277.2,
+   1494,
+   1344.6,
+   498,
+   448.2,
+   558,
+   502.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Executive Leadership Professional Certificate"
+ },
+ {
+  "slug": "dartmouthx-strategic-corporate-communication",
+  "ld": [
+   700,
+   700,
+   700
+  ],
+  "amounts": [
+   720,
+   700,
+   693,
+   623.7,
+   477,
+   429.3,
+   328,
+   295.2,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Strategic Corporate Communication Professional Certificate"
+ },
+ {
+  "slug": "javerianax-gestion-de-la-proteccion-de-datos-personales-en-linea",
+  "ld": [
+   147.6,
+   147.6,
+   147.6
+  ],
+  "amounts": [
+   164,
+   147.6,
+   121,
+   108.9,
+   127,
+   114.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Gestión de la protección de datos personales en línea Professional Certificate"
+ },
+ {
+  "slug": "dartmouthx-data-analytics-for-digital-transformation",
+  "ld": [
+   429.3,
+   429.3,
+   429.3
+  ],
+  "amounts": [
+   477,
+   429.3,
+   693,
+   623.7,
+   328,
+   295.2,
+   720,
+   700,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Data Analytics for Digital Transformation Professional Certificate"
+ },
+ {
+  "slug": "davidson-college-fundamentals-of-data-visualization-with-power-bi",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   544,
+   489.6,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Fundamentals of Data Visualization with Power BI Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-docencia-digital",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "Docencia digital Professional Certificate"
+ },
+ {
+  "slug": "hkux-fintech-technologies-i",
+  "ld": [
+   267.3,
+   267.3,
+   267.3
+  ],
+  "amounts": [
+   297,
+   267.3,
+   597,
+   537.3,
+   298,
+   268.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "FinTech Technologies I Professional Certificate"
+ },
+ {
+  "slug": "javerianax-gerencia-de-ventas-desarrollo-de-habilidades-comerciales",
+  "ld": [
+   147.6,
+   147.6,
+   147.6
+  ],
+  "amounts": [
+   164,
+   147.6,
+   121,
+   108.9,
+   127,
+   114.3,
+   209,
+   188.1,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Gerencia de ventas: desarrollo de habilidades comerciales Professional Certificate"
+ },
+ {
+  "slug": "iscea-administrador-de-cadena-de-suministro-certificado-internacional-en-espanol-cscm",
+  "ld": [
+   1571.4,
+   1571.4,
+   1571.4
+  ],
+  "amounts": [
+   1746,
+   1571.4,
+   1366,
+   1229.4,
+   627,
+   564.3,
+   1395.99,
+   1256.39,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Administrador de Cadena de Suministro Certificado Internacional en Español (CSCM) Professional Certificate"
+ },
+ {
+  "slug": "leoron-change-management-master-advanced-diploma",
+  "ld": [
+   680.4,
+   680.4,
+   680.4
+  ],
+  "amounts": [
+   756,
+   680.4,
+   567,
+   510.3,
+   687,
+   618.3,
+   945,
+   850.5,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Change Management Advanced Diploma دبلومة متقدمة في إدارة التغيير Professional Certificate"
+ },
+ {
+  "slug": "new-york-institute-finance-asset-liability-management",
+  "ld": [
+   1490.4,
+   1490.4,
+   1490.4
+  ],
+  "amounts": [
+   1656,
+   1490.4,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Asset Liability Management Professional Certificate"
+ },
+ {
+  "slug": "ibm-it-project-manager",
+  "ld": [
+   575.1,
+   575.1,
+   575.1
+  ],
+  "amounts": [
+   639,
+   575.1,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 11,
+  "title": "IT Project Manager Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-storytelling-for-aspiring-entrepreneurs",
+  "ld": [
+   228,
+   228,
+   228
+  ],
+  "amounts": [
+   228,
+   498,
+   448.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Storytelling for Aspiring Entrepreneurs Professional Certificate"
+ },
+ {
+  "slug": "hkux-dento-maxillofacial-radiology-in-dental-medicine",
+  "ld": [
+   267.3,
+   267.3,
+   267.3
+  ],
+  "amounts": [
+   297,
+   267.3,
+   597,
+   537.3,
+   298,
+   268.2,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Dento-Maxillofacial Radiology in Dental Medicine Professional Certificate"
+ },
+ {
+  "slug": "ibm-inteligencia-artificial-aplicada",
+  "ld": [
+   195,
+   195,
+   195
+  ],
+  "amounts": [
+   195,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "Inteligencia artificial aplicada Professional Certificate"
+ },
+ {
+  "slug": "uct-english-and-soft-skills-for-tech-professionals",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   795.99,
+   716.39,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "English and Soft Skills For Tech Professionals Professional Certificate"
+ },
+ {
+  "slug": "kingscollegelondon-ethics-and-security",
+  "ld": [
+   896.4,
+   896.4,
+   896.4
+  ],
+  "amounts": [
+   996,
+   896.4,
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Ethics and Security Professional Certificate"
+ },
+ {
+  "slug": "tugrazx-side-channel-security-transient-execution-and-fault-attacks",
+  "ld": [
+   232.2,
+   232.2,
+   232.2
+  ],
+  "amounts": [
+   258,
+   232.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Side Channel Security – Transient Execution and Fault Attacks Professional Certificate"
+ },
+ {
+  "slug": "umd-project-management-professional-exam-prep-training-crystalizing-methods-terminology-and-techniques",
+  "ld": [
+   716.4,
+   716.4,
+   716.4
+  ],
+  "amounts": [
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Project Management Professional (PMP) Exam Prep Training- Crystalizing Methods, Terminology and Techniques. Professional Certificate"
+ },
+ {
+  "slug": "ucdavis-learn-spanish-basic-spanish-vocabulary",
+  "ld": [
+   284.4,
+   284.4,
+   284.4
+  ],
+  "amounts": [
+   316,
+   284.4,
+   196,
+   176.4,
+   398,
+   358.2,
+   60000
+  ],
+  "nCourses": 4,
+  "title": "Learn Spanish: Basic Spanish Vocabulary Professional Certificate"
+ },
+ {
+  "slug": "microsoft-software-developer",
+  "ld": [
+   373.5,
+   373.5,
+   373.5
+  ],
+  "amounts": [
+   415,
+   373.5,
+   165,
+   148.5,
+   155,
+   139.5,
+   245,
+   220.5,
+   140910
+  ],
+  "nCourses": 5,
+  "title": "Software Developer Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-cloud-architect-accelerated-path-for-azure-professionals",
+  "ld": [
+   547.2,
+   547.2,
+   547.2
+  ],
+  "amounts": [
+   608,
+   547.2,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   140910
+  ],
+  "nCourses": 6,
+  "title": "Cloud Architect Accelerated Path for Azure Professionals Professional Certificate"
+ },
+ {
+  "slug": "delftx-automated-software-testing",
+  "ld": [
+   179.1,
+   179.1,
+   179.1
+  ],
+  "amounts": [
+   199,
+   179.1,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   140910
+  ],
+  "nCourses": 1,
+  "title": "Automated Software Testing Professional Certificate"
+ },
+ {
+  "slug": "microsoft-data-engineer",
+  "ld": [
+   148.5,
+   148.5,
+   148.5
+  ],
+  "amounts": [
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Data Engineer Professional Certificate"
+ },
+ {
+  "slug": "leoron-certificate-in-governance-risk-compliance",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   687,
+   618.3,
+   945,
+   850.5,
+   756,
+   680.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Governance, Risk & Compliance Advanced Diploma دبلومه متقدمه في الحوكمة والمخاطر والإمتثال Professional Certificate"
+ },
+ {
+  "slug": "ica-compliance-foundations",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Compliance Foundations Professional Certificate"
+ },
+ {
+  "slug": "babsonx-financial-decision-making-for-leaders",
+  "ld": [
+   950.4,
+   950.4,
+   950.4
+  ],
+  "amounts": [
+   1056,
+   950.4,
+   1494,
+   1344.6,
+   498,
+   448.2,
+   558,
+   502.2,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Financial Decision-Making for Leaders Professional Certificate"
+ },
+ {
+  "slug": "uqx-cell-physiology",
+  "ld": [
+   278,
+   278,
+   278
+  ],
+  "amounts": [
+   278,
+   996,
+   387,
+   617,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Cell Physiology Professional Certificate"
+ },
+ {
+  "slug": "tefl-org-120-hour-tefl-certification",
+  "ld": [
+   647.5,
+   647.5,
+   647.5
+  ],
+  "amounts": [
+   925,
+   647.5,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "120-hour TEFL Certification Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-understanding-data-to-create-applications",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Web App Development for Data Scientists Professional Certificate"
+ },
+ {
+  "slug": "idbx-metodos-de-ensenanza-y-educacion-efectiva",
+  "ld": [
+   60,
+   60,
+   60
+  ],
+  "amounts": [
+   75,
+   60,
+   99,
+   89.1,
+   83,
+   74.7,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Métodos de enseñanza y educación efectiva Professional Certificate"
+ },
+ {
+  "slug": "urosariox-habilidades-comerciales-para-la-venta-de-servicios-financieros",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Habilidades comerciales para la venta de servicios financieros Professional Certificate"
+ },
+ {
+  "slug": "ucx-text-analytics-with-python",
+  "ld": [
+   556.2,
+   556.2,
+   556.2
+  ],
+  "amounts": [
+   618,
+   556.2,
+   845,
+   760.5,
+   338,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Text Analytics with Python Professional Certificate"
+ },
+ {
+  "slug": "leoron-strategic-procurement",
+  "ld": [
+   554.4,
+   554.4,
+   554.4
+  ],
+  "amounts": [
+   616,
+   554.4,
+   567,
+   510.3,
+   687,
+   618.3,
+   945,
+   850.5,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Strategic Procurement Advanced Diploma دبلومة المشتريات الإستراتيجية المتقدمة Professional Certificate"
+ },
+ {
+  "slug": "harvardx-happiness-in-leadership-driving-team-success",
+  "ld": [
+   582.3,
+   582.3,
+   582.3
+  ],
+  "amounts": [
+   647,
+   582.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Happiness in Leadership: Driving Team Success Professional Certificate"
+ },
+ {
+  "slug": "chalmersx-computer-system-design-concepts-of-modern-microprocessors",
+  "ld": [
+   88.2,
+   88.2,
+   88.2
+  ],
+  "amounts": [
+   98,
+   88.2,
+   498,
+   448.2,
+   298,
+   268.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Computer System Design: Concepts of Modern Microprocessors Professional Certificate"
+ },
+ {
+  "slug": "berkeleyx-entrepreneurship-for-all-the-startup-guide-by-silicon-valley-insiders",
+  "ld": [
+   398,
+   398,
+   398
+  ],
+  "amounts": [
+   398,
+   597,
+   537.3,
+   450,
+   405,
+   589.99,
+   530.99,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Entrepreneurship For All: The Startup Guide by Silicon Valley Insiders Professional Certificate"
+ },
+ {
+  "slug": "kingscollegelondon-security-threats-and-challenges",
+  "ld": [
+   896.4,
+   896.4,
+   896.4
+  ],
+  "amounts": [],
+  "nCourses": null,
+  "title": "Security Threats and Challenges Professional Certificate"
+ },
+ {
+  "slug": "ec-council-cybersecurity-essentials",
+  "ld": [
+   348.3,
+   348.3,
+   348.3
+  ],
+  "amounts": [
+   387,
+   348.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Cybersecurity Essentials Professional Certificate"
+ },
+ {
+  "slug": "louvainx-responsabilite-societale-des-entreprises",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   995,
+   895.5,
+   597,
+   537.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Responsabilité sociétale des entreprises Professional Certificate"
+ },
+ {
+  "slug": "urosariox-fundamentos-para-los-estudios-socioambientales",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Fundamentos para los estudios socioambientales Professional Certificate"
+ },
+ {
+  "slug": "ibm-ibm-applied-ai-developer",
+  "ld": [
+   425.7,
+   425.7,
+   425.7
+  ],
+  "amounts": [
+   473,
+   425.7,
+   1004,
+   903.6,
+   197,
+   177.3,
+   871,
+   783.9,
+   112590
+  ],
+  "nCourses": 7,
+  "title": "IBM Applied AI Developer Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-science",
+  "ld": [
+   873,
+   873,
+   873
+  ],
+  "amounts": [
+   970,
+   873,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 10,
+  "title": "IBM Data Science Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-devops-foundations",
+  "ld": [
+   178.2,
+   178.2,
+   178.2
+  ],
+  "amounts": [
+   198,
+   178.2,
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "DevOps Foundations: Software Development Optimization Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-green-marketing-y-marketing-experiencial",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Green Marketing y Marketing Experiencial Professional Certificate"
+ },
+ {
+  "slug": "aws-cloud-solutions-architect-professional-certificate",
+  "ld": [
+   374.4,
+   374.4,
+   374.4
+  ],
+  "amounts": [
+   416,
+   374.4,
+   730.98,
+   657.88,
+   297,
+   267.3,
+   147,
+   132.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Cloud Solutions Architecture Professional Certificate"
+ },
+ {
+  "slug": "uc-berkeleyx-data-88cx-computational-structures-in-data-science",
+  "ld": [
+   530.991,
+   530.991,
+   530.991
+  ],
+  "amounts": [
+   589.99,
+   530.99,
+   597,
+   537.3,
+   450,
+   405,
+   398,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "DATA 88CX: Computational Structures in Data Science Professional Certificate"
+ },
+ {
+  "slug": "nyif-introduction-to-investment-banking",
+  "ld": [
+   750.6,
+   750.6,
+   750.6
+  ],
+  "amounts": [
+   834,
+   750.6,
+   333,
+   299.7,
+   1196,
+   956.8,
+   680,
+   612,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Introduction to Investment Banking Professional Certificate"
+ },
+ {
+  "slug": "delftx-circular-strategies-for-sustainable-healthcare",
+  "ld": [
+   387,
+   387,
+   387
+  ],
+  "amounts": [
+   430,
+   387,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Circular Strategies for Sustainable Healthcare Professional Certificate"
+ },
+ {
+  "slug": "ica-anti-money-laundering-fundamentals",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Anti-Money Laundering Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "microsoft-az-400-devops-engineer",
+  "ld": [
+   234,
+   234,
+   234
+  ],
+  "amounts": [
+   260,
+   234,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   140910
+  ],
+  "nCourses": 5,
+  "title": "​​AZ-400 DevOps Engineer Professional Certificate"
+ },
+ {
+  "slug": "iimbx-digital-marketing-professional-certificate-program",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   488,
+   439.2,
+   378,
+   340.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Digital Marketing Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-drug-discovery-and-lead-optimization",
+  "ld": [
+   489.6,
+   489.6,
+   489.6
+  ],
+  "amounts": [
+   544,
+   489.6,
+   498,
+   448.2,
+   77600
+  ],
+  "nCourses": 6,
+  "title": "Drug Discovery and Lead Optimization Professional Certificate"
+ },
+ {
+  "slug": "ritx-communication-skills",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   1596,
+   1436.4,
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Communication Skills Professional Certificate"
+ },
+ {
+  "slug": "mgh-institute-nursing-preceptor-education",
+  "ld": [
+   180,
+   180,
+   180
+  ],
+  "amounts": [
+   200,
+   180,
+   618,
+   556.2,
+   400,
+   360,
+   1236,
+   1112.4,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Nursing Preceptor Education Professional Certificate"
+ },
+ {
+  "slug": "harvardx-data-analysis-for-life-sciences",
+  "ld": [
+   788.4,
+   788.4,
+   788.4
+  ],
+  "amounts": [
+   876,
+   788.4,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   77600
+  ],
+  "nCourses": 4,
+  "title": "Data Analysis for Life Sciences Professional Certificate"
+ },
+ {
+  "slug": "ibm-fundamentos-de-inteligencia-artificial",
+  "ld": [
+   117,
+   117,
+   117
+  ],
+  "amounts": [
+   117,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Fundamentos de Inteligencia Artificial Professional Certificate"
+ },
+ {
+  "slug": "wageningenx-animal-breeding-and-genetics",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   498,
+   448.2,
+   458,
+   412.2,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Animal Breeding and Genetics Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-excel-para-los-negocios-nivel-intermedio",
+  "ld": [
+   114.3,
+   114.3,
+   114.3
+  ],
+  "amounts": [
+   127,
+   114.3,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Excel para los negocios nivel intermedio Professional Certificate"
+ },
+ {
+  "slug": "nyif-financial-analysis-of-insurance-companies",
+  "ld": [
+   590.4,
+   590.4,
+   590.4
+  ],
+  "amounts": [
+   656,
+   590.4,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Financial Analysis of Insurance Companies Professional Certificate"
+ },
+ {
+  "slug": "sdgacademyx-sustainable-water-management",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   167,
+   150.3,
+   147,
+   132.3,
+   118,
+   106.2,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Sustainable Water Management Professional Certificate"
+ },
+ {
+  "slug": "sdgacademyx-sustainable-cities-and-urban-development",
+  "ld": [
+   150.3,
+   150.3,
+   150.3
+  ],
+  "amounts": [
+   167,
+   150.3,
+   177,
+   159.3,
+   147,
+   132.3,
+   118,
+   106.2,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Sustainable Cities and Urban Development Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-python-de-la-a-a-la-z-desde-programacion-hasta-gestion-de-datos",
+  "ld": [
+   117,
+   117,
+   117
+  ],
+  "amounts": [
+   117,
+   78,
+   70.2,
+   105.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Python de la A a la Z: desde programación hasta gestión de datos Professional Certificate"
+ },
+ {
+  "slug": "ibm-fundamentos-de-ciencia-de-datos",
+  "ld": [
+   156,
+   156,
+   156
+  ],
+  "amounts": [
+   156,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "IBM: Fundamentos de ciencia de datos Professional Certificate"
+ },
+ {
+  "slug": "ubcx-excel-for-everyone",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   450,
+   405,
+   625,
+   562.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Excel for Everyone Professional Certificate"
+ },
+ {
+  "slug": "microsoft-security-engineer",
+  "ld": [
+   148.5,
+   148.5,
+   148.5
+  ],
+  "amounts": [
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Security Engineer Professional Certificate"
+ },
+ {
+  "slug": "codio-c-programming-a-hands-on-introduction",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "C++ Programming: A Hands-on Introduction Professional Certificate"
+ },
+ {
+  "slug": "umd-designing-and-delivering-the-citizen-developer-training-program",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Designing and Delivering the Citizen Developer Training Program Professional Certificate"
+ },
+ {
+  "slug": "gtx-introduction-to-object-oriented-programming-with-java",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   756,
+   680.4,
+   2475,
+   498,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Introduction to Object-Oriented Programming with Java Professional Certificate"
+ },
+ {
+  "slug": "juranx-lean-six-sigma-black-belt-training-and-certification-program",
+  "ld": [
+   525,
+   525,
+   525
+  ],
+  "amounts": [
+   525,
+   250,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Lean Six Sigma Black Belt Training & Certification Program Professional Certificate"
+ },
+ {
+  "slug": "statisticscomx-machine-learning-operations-with-amazon-web-services-mlops-with-aws",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   617,
+   555.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Machine Learning Operations with Amazon Web Services (MLOps with AWS) Professional Certificate"
+ },
+ {
+  "slug": "javerianax-proyectos-constructivos-4",
+  "ld": [
+   147.6,
+   147.6,
+   147.6
+  ],
+  "amounts": [
+   164,
+   147.6,
+   121,
+   108.9,
+   127,
+   114.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Proyectos Constructivos 4.0 Professional Certificate"
+ },
+ {
+  "slug": "apa-psychology-in-action",
+  "ld": [
+   375.3,
+   375.3,
+   375.3
+  ],
+  "amounts": [
+   417,
+   375.3,
+   387,
+   348.3,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Psychology in Action Professional Certificate"
+ },
+ {
+  "slug": "aws-devops-and-ai-on-aws",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   730.98,
+   657.88,
+   416,
+   374.4,
+   297,
+   267.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "DevOps and AI on AWS Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-data-analysis-basics-with-excel",
+  "ld": [
+   498,
+   498,
+   498
+  ],
+  "amounts": [
+   498,
+   448.2,
+   544,
+   489.6,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Data Analysis Basics with Excel and R Professional Certificate"
+ },
+ {
+  "slug": "the-georgia-institute-of-technology-introduction-to-python-programming",
+  "ld": [
+   680.4,
+   680.4,
+   680.4
+  ],
+  "amounts": [
+   756,
+   680.4,
+   2475,
+   498,
+   140910
+  ],
+  "nCourses": 4,
+  "title": "Introduction to Python Programming Professional Certificate"
+ },
+ {
+  "slug": "ibm-full-stack-developer",
+  "ld": [
+   713.7,
+   713.7,
+   713.7
+  ],
+  "amounts": [
+   793,
+   713.7,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 12,
+  "title": "Full Stack Developer Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-interdisciplinary-sustainable-architecture-assessment",
+  "ld": [
+   97.2,
+   97.2,
+   97.2
+  ],
+  "amounts": [
+   108,
+   97.2,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Interdisciplinary Sustainable Architecture Assessment Professional Certificate"
+ },
+ {
+  "slug": "ibm-generative-ai-for-software-developers",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generative AI for Software Developers Professional Certificate"
+ },
+ {
+  "slug": "google-fundamentals-of-google-ai-for-web-based-machine-learning",
+  "ld": [
+   538.2,
+   538.2,
+   538.2
+  ],
+  "amounts": [
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Fundamentals of Google AI for Web Based Machine Learning Professional Certificate"
+ },
+ {
+  "slug": "logycax-calidad-de-informacion-para-sus-productos",
+  "ld": [
+   49.5,
+   49.5,
+   49.5
+  ],
+  "amounts": [
+   55,
+   49.5,
+   76,
+   68.4,
+   90,
+   81,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Calidad de información para sus productos Professional Certificate"
+ },
+ {
+  "slug": "delftx-analisis-y-visualizacion-de-datos-con-excel",
+  "ld": [
+   98,
+   98,
+   98
+  ],
+  "amounts": [
+   98,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Análisis y Visualización de Datos con Excel Professional Certificate"
+ },
+ {
+  "slug": "adelaidex-fundamentals-of-project-management",
+  "ld": [
+   405,
+   405,
+   405
+  ],
+  "amounts": [
+   450,
+   405,
+   250,
+   225,
+   594,
+   534.6,
+   1095,
+   985.5,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Fundamentals of Project Management Professional Certificate"
+ },
+ {
+  "slug": "delftx-sustainable-engineering-design",
+  "ld": [
+   378,
+   378,
+   378
+  ],
+  "amounts": [
+   420,
+   378,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Sustainable Engineering Design Professional Certificate"
+ },
+ {
+  "slug": "georgetownx-american-sign-language-science",
+  "ld": [
+   464.4,
+   464.4,
+   464.4
+  ],
+  "amounts": [
+   516,
+   464.4,
+   618,
+   556.2,
+   537,
+   483.3,
+   60000
+  ],
+  "nCourses": 4,
+  "title": "American Sign Language Science Professional Certificate"
+ },
+ {
+  "slug": "wisconsin-digital-asset-management",
+  "ld": [
+   650.7,
+   650.7,
+   650.7
+  ],
+  "amounts": [
+   723,
+   650.7,
+   375,
+   337.5,
+   512,
+   460.8,
+   876,
+   788.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Digital Asset Management Professional Certificate"
+ },
+ {
+  "slug": "ica-the-fundamentals-of-anti-corruption",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "The Fundamentals of Anti-Corruption Professional Certificate"
+ },
+ {
+  "slug": "nyif-capital-markets",
+  "ld": [
+   1590.3,
+   1590.3,
+   1590.3
+  ],
+  "amounts": [
+   1767,
+   1590.3,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Capital Markets Professional Certificate"
+ },
+ {
+  "slug": "harvardx-data-analysis-for-genomics",
+  "ld": [
+   591.3,
+   591.3,
+   591.3
+  ],
+  "amounts": [
+   657,
+   591.3,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Data Analysis for Genomics Professional Certificate"
+ },
+ {
+  "slug": "adelaidex-leadership-and-team-management-effectiveness",
+  "ld": [
+   337.5,
+   337.5,
+   337.5
+  ],
+  "amounts": [
+   375,
+   337.5,
+   250,
+   225,
+   594,
+   534.6,
+   1095,
+   985.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Leadership and Team Management Effectiveness Professional Certificate"
+ },
+ {
+  "slug": "davidson-galileo-ai-for-marketing",
+  "ld": [
+   267.3,
+   267.3,
+   267.3
+  ],
+  "amounts": [
+   297,
+   267.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "AI for Marketing Professional Certificate"
+ },
+ {
+  "slug": "codio-java-programming-a-hands-on-introduction",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Java Programming: A Hands-on Introduction Professional Certificate"
+ },
+ {
+  "slug": "w3cx-front-end-web-developer",
+  "ld": [
+   1075.5,
+   1075.5,
+   1075.5
+  ],
+  "amounts": [
+   140910
+  ],
+  "nCourses": 5,
+  "title": "Front-End Web Developer Professional Certificate"
+ },
+ {
+  "slug": "uct-leading-diversity-and-inclusion-at-work",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   567,
+   510.3,
+   795.99,
+   716.39,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Leading Diversity and Inclusion at Work Professional Certificate"
+ },
+ {
+  "slug": "nyif-project-finance-and-public-private-partnerships",
+  "ld": [
+   1590,
+   1590,
+   1590
+  ],
+  "amounts": [
+   1590,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 7,
+  "title": "Project Finance and Public Private Partnerships Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-digital-transformation-as-a-business-and-innovation-strategy",
+  "ld": [
+   348.3,
+   348.3,
+   348.3
+  ],
+  "amounts": [
+   387,
+   348.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Digital transformation as a business and innovation strategy Professional Certificate"
+ },
+ {
+  "slug": "uqx-macroeconomics",
+  "ld": [
+   627,
+   627,
+   627
+  ],
+  "amounts": [
+   627,
+   996,
+   387,
+   617,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Macroeconomics Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-habilidades-cuantitativas-esenciales-en-economia-y-estadistica",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Habilidades cuantitativas esenciales en economía y estadística Professional Certificate"
+ },
+ {
+  "slug": "chalmersx-foundations-of-environmental-science-measuring-and-monitoring-our-planet",
+  "ld": [
+   268.2,
+   268.2,
+   268.2
+  ],
+  "amounts": [
+   298,
+   268.2,
+   98,
+   88.2,
+   498,
+   448.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Foundations of Environmental Science: Measuring and monitoring our planet Professional Certificate"
+ },
+ {
+  "slug": "iscea-cpsp-certified-professional-in-sourcing-and-procurement",
+  "ld": [
+   1256.391,
+   1256.391,
+   1256.391
+  ],
+  "amounts": [
+   1395.99,
+   1256.39,
+   1366,
+   1229.4,
+   627,
+   564.3,
+   1986,
+   1787.4,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "CPSP - Certified Professional in Sourcing and Procurement Professional Certificate"
+ },
+ {
+  "slug": "ieuniversity-data-strategy-and-management",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Data Strategy and Management Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-the-authentic-human-in-the-global-workplace",
+  "ld": [
+   258,
+   258,
+   258
+  ],
+  "amounts": [
+   258,
+   498,
+   448.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "The Authentic Human in the Global Workplace Professional Certificate"
+ },
+ {
+  "slug": "dartmouthx-retail-and-omnichannel-management",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   693,
+   623.7,
+   477,
+   429.3,
+   328,
+   295.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Retail and Omnichannel Management Professional Certificate"
+ },
+ {
+  "slug": "iscea-certified-lean-six-sigma-yellow-belt-clssyb",
+  "ld": [
+   564.3,
+   564.3,
+   564.3
+  ],
+  "amounts": [
+   627,
+   564.3,
+   1366,
+   1229.4,
+   1395.99,
+   1256.39,
+   1986,
+   1787.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Certified Lean Six Sigma Yellow Belt (CLSSYB) Professional Certificate"
+ },
+ {
+  "slug": "uchicagox-quantum-computer-systems-design",
+  "ld": [
+   540,
+   540,
+   540
+  ],
+  "amounts": [
+   600,
+   540,
+   398,
+   358.2,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Quantum Computer Systems Design Professional Certificate"
+ },
+ {
+  "slug": "ibm-devops-cloud-and-agile-foundations",
+  "ld": [
+   222.3,
+   222.3,
+   222.3
+  ],
+  "amounts": [
+   247,
+   222.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "DevOps, Cloud, and Agile Foundations Professional Certificate"
+ },
+ {
+  "slug": "ibm-applied-data-science-with-r",
+  "ld": [
+   445.5,
+   445.5,
+   445.5
+  ],
+  "amounts": [
+   495,
+   445.5,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "Applied Data Science with R Professional Certificate"
+ },
+ {
+  "slug": "iimbx-services-marketing-fundamentals",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   488,
+   439.2,
+   567,
+   510.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Services Marketing Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "wageningenx-crop-production-and-soil-management",
+  "ld": [
+   412.2,
+   412.2,
+   412.2
+  ],
+  "amounts": [
+   458,
+   412.2,
+   498,
+   448.2,
+   378,
+   340.2,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Crop Production and Soil Management Professional Certificate"
+ },
+ {
+  "slug": "usmx-re-imagining-leadership",
+  "ld": [
+   1344.6,
+   1344.6,
+   1344.6
+  ],
+  "amounts": [
+   1494,
+   1344.6,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Re-Imagining Leadership Professional Certificate"
+ },
+ {
+  "slug": "delftx-circular-economy-for-renewable-energy-technologies",
+  "ld": [
+   237.6,
+   237.6,
+   237.6
+  ],
+  "amounts": [
+   264,
+   237.6,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Circular Economy for Renewable Energy Technologies Professional Certificate"
+ },
+ {
+  "slug": "delftx-transport-phenomena",
+  "ld": [
+   300,
+   300,
+   300
+  ],
+  "amounts": [
+   300,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Transport Phenomena Professional Certificate"
+ },
+ {
+  "slug": "microsoft-sc-200-security-operations-analyst",
+  "ld": [
+   216,
+   216,
+   216
+  ],
+  "amounts": [
+   240,
+   216,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "SC-200 Security Operations Analyst Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-analytics-and-visualization-with-excel-and-r",
+  "ld": [
+   712.8,
+   712.8,
+   712.8
+  ],
+  "amounts": [
+   792,
+   712.8,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 8,
+  "title": "Data Analytics and Visualization with Excel and R Professional Certificate"
+ },
+ {
+  "slug": "alaskax-geographic-information-systems-essentials",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   7,
+   25,
+   687,
+   618.3,
+   447,
+   402.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Geographic Information Systems (GIS) Essentials Professional Certificate"
+ },
+ {
+  "slug": "harvardx-computer-science-for-web-programming",
+  "ld": [
+   376.2,
+   376.2,
+   376.2
+  ],
+  "amounts": [
+   418,
+   376.2,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Computer Science for Web Programming Professional Certificate"
+ },
+ {
+  "slug": "hp-esports-management-and-game-development-academy",
+  "ld": [
+   15,
+   15,
+   15
+  ],
+  "amounts": [
+   15,
+   13.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "إدارة الرياضات الإلكترونية وتطوير الألعاب Professional Certificate"
+ },
+ {
+  "slug": "ibm-devops-and-software-engineering",
+  "ld": [
+   871.5,
+   871.5,
+   871.5
+  ],
+  "amounts": [
+   1245,
+   871.5,
+   121000,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 15,
+  "title": "DevOps and Software Engineering Professional Certificate"
+ },
+ {
+  "slug": "nyif-derivatives",
+  "ld": [
+   1290.6,
+   1290.6,
+   1290.6
+  ],
+  "amounts": [
+   1434,
+   1290.6,
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 6,
+  "title": "Derivatives Professional Certificate"
+ },
+ {
+  "slug": "uc3mx-introduction-java-programming",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   117,
+   105.3,
+   195,
+   175.5,
+   177,
+   159.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Introduction to Java Programming Professional Certificate"
+ },
+ {
+  "slug": "uc3mx-agenda-2030-trabajo-decente-y-proteccion-social",
+  "ld": [
+   132.3,
+   132.3,
+   132.3
+  ],
+  "amounts": [
+   147,
+   132.3,
+   567,
+   510.3,
+   117,
+   105.3,
+   195,
+   175.5,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Agenda 2030: Trabajo decente y protección social Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-science-foundations",
+  "ld": [
+   356.4,
+   356.4,
+   356.4
+  ],
+  "amounts": [
+   396,
+   356.4,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Data Science Foundations Professional Certificate"
+ },
+ {
+  "slug": "louvainx-modeling-and-simulation-of-multibody-systems",
+  "ld": [
+   250.2,
+   250.2,
+   250.2
+  ],
+  "amounts": [
+   278,
+   250.2,
+   995,
+   895.5,
+   398,
+   358.2,
+   597,
+   537.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Modeling and Simulation of Multibody Systems Professional Certificate"
+ },
+ {
+  "slug": "international-supply-chain-education-alliance-certified-forecaster-and-demand-planner-cfdp",
+  "ld": [
+   1454.4,
+   1454.4,
+   1454.4
+  ],
+  "amounts": [
+   1616,
+   1454.4,
+   1366,
+   1229.4,
+   627,
+   564.3,
+   1395.99,
+   1256.39,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Certified Forecaster and Demand Planner (CFDP) Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-habilidades-cuantitativas-esenciales-en-finanzas-negocios-y-ciencia-de-datos",
+  "ld": [
+   168.3,
+   168.3,
+   168.3
+  ],
+  "amounts": [
+   187,
+   168.3,
+   1134,
+   1020.6,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Habilidades cuantitativas esenciales en finanzas, negocios y ciencia de datos Professional Certificate"
+ },
+ {
+  "slug": "berkeleyx-data-88ex-economic-models-with-python",
+  "ld": [
+   405,
+   405,
+   405
+  ],
+  "amounts": [
+   450,
+   405,
+   597,
+   537.3,
+   398,
+   589.99,
+   530.99,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "DATA 88EX: Economic Models with Python Professional Certificate"
+ },
+ {
+  "slug": "harvardx-computer-science-for-artifical-intelligence",
+  "ld": [
+   466.2,
+   466.2,
+   466.2
+  ],
+  "amounts": [
+   518,
+   466.2,
+   1225,
+   910,
+   668,
+   601.2,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Computer Science for Artificial Intelligence Professional Certificate"
+ },
+ {
+  "slug": "stellenboschx-media-and-digital-policy-in-africa",
+  "ld": [
+   88.2,
+   88.2,
+   88.2
+  ],
+  "amounts": [
+   98,
+   88.2,
+   596,
+   536.4,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Media and Digital Policy in Africa Professional Certificate"
+ },
+ {
+  "slug": "university-torontox-the-fintech-future-of-payments",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   148,
+   133.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "The FinTech: Future of Payments Professional Certificate"
+ },
+ {
+  "slug": "gtx-probability-random-variables",
+  "ld": [
+   498,
+   498,
+   498
+  ],
+  "amounts": [
+   498,
+   756,
+   680.4,
+   2475,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Probability/Random Variables Professional Certificate"
+ },
+ {
+  "slug": "ibm-c-programming-essentials",
+  "ld": [
+   357.3,
+   357.3,
+   357.3
+  ],
+  "amounts": [
+   397,
+   357.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "C++ Programming Essentials Professional Certificate"
+ },
+ {
+  "slug": "alaskax-fundamentals-of-grant-proposal-writing-and-management",
+  "ld": [
+   402.3,
+   402.3,
+   402.3
+  ],
+  "amounts": [
+   447,
+   402.3,
+   567,
+   510.3,
+   687,
+   618.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Fundamentals of Grant Proposal Writing and Management Professional Certificate"
+ },
+ {
+  "slug": "wharton-strategic-management",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Strategic Management Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-data-engineer",
+  "ld": [
+   339.3,
+   339.3,
+   339.3
+  ],
+  "amounts": [
+   377,
+   339.3,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   112590
+  ],
+  "nCourses": 6,
+  "title": "Data Engineer Professional Certificate"
+ },
+ {
+  "slug": "chalmersx-battery-electric-vehicles-and-hybrid-vehicles",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   98,
+   88.2,
+   298,
+   268.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Battery Electric Vehicles and Hybrid Vehicles Professional Certificate"
+ },
+ {
+  "slug": "ibm-nosql-big-data-and-spark-fundamentals",
+  "ld": [
+   222.3,
+   222.3,
+   222.3
+  ],
+  "amounts": [
+   247,
+   222.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "NoSQL, Big Data and Spark Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-marketing-digital-y-estrategias-digitales-empresariales",
+  "ld": [
+   96.3,
+   96.3,
+   96.3
+  ],
+  "amounts": [
+   107,
+   96.3,
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Marketing Digital y Estrategias Digitales Empresariales Professional Certificate"
+ },
+ {
+  "slug": "delftx-mastering-calculus",
+  "ld": [
+   297,
+   297,
+   297
+  ],
+  "amounts": [
+   330,
+   297,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Mastering Calculus Professional Certificate"
+ },
+ {
+  "slug": "harvardx-improving-educational-outcomes-through-family-engagement",
+  "ld": [
+   228.6,
+   228.6,
+   228.6
+  ],
+  "amounts": [
+   254,
+   228.6,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Improving Educational Outcomes through Family Engagement Professional Certificate"
+ },
+ {
+  "slug": "umd-international-marketing-and-product-development-taking-your-business-global",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "International Marketing and Product Development: Taking your Business Global Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-ingles-basico-para-negocios",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Inglés básico para negocios Professional Certificate"
+ },
+ {
+  "slug": "chalmersx-supply-chain-management-and-logistics",
+  "ld": [
+   88.2,
+   88.2,
+   88.2
+  ],
+  "amounts": [
+   98,
+   88.2,
+   498,
+   448.2,
+   298,
+   268.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Supply Chain Management and Logistics Professional Certificate"
+ },
+ {
+  "slug": "aptly-search-advertising-with-google",
+  "ld": [
+   287.964,
+   287.964,
+   287.964
+  ],
+  "amounts": [
+   319.96,
+   287.96,
+   239.97,
+   215.97,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Search Advertising with Google Professional Certificate"
+ },
+ {
+  "slug": "utaustinx-fintech-the-future-of-finance",
+  "ld": [
+   2592,
+   2592,
+   2592
+  ],
+  "amounts": [
+   2880,
+   2592,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Fintech: The Future of Finance Professional Certificate"
+ },
+ {
+  "slug": "lcieducation-evolution-of-game-design",
+  "ld": [
+   483.3,
+   483.3,
+   483.3
+  ],
+  "amounts": [
+   537,
+   483.3,
+   198,
+   178.2,
+   398,
+   358.2,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Evolution of Game Design Professional Certificate"
+ },
+ {
+  "slug": "umd-usmx-agile-project-management",
+  "ld": [
+   1120.5,
+   1120.5,
+   1120.5
+  ],
+  "amounts": [
+   1245,
+   1120.5,
+   796,
+   716.4,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 5,
+  "title": "Agile Project Management Professional Certificate"
+ },
+ {
+  "slug": "ibm-deep-learning",
+  "ld": [
+   436.5,
+   436.5,
+   436.5
+  ],
+  "amounts": [
+   485,
+   436.5,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "Deep Learning Professional Certificate"
+ },
+ {
+  "slug": "delftx-buildings-as-sustainable-energy-systems",
+  "ld": [
+   740,
+   740,
+   740
+  ],
+  "amounts": [
+   740,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Buildings as Sustainable Energy Systems Professional Certificate"
+ },
+ {
+  "slug": "idbx-gestion-publica-para-el-desarrollo",
+  "ld": [
+   89.1,
+   89.1,
+   89.1
+  ],
+  "amounts": [
+   99,
+   89.1,
+   83,
+   74.7,
+   75,
+   60,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Gestión Pública para el Desarrollo Professional Certificate"
+ },
+ {
+  "slug": "urosariox-analitica-en-mercados-de-capitales-y-finanzas-sostenibles",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Analítica en mercados de capitales y finanzas sostenibles Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-analysis-and-visualization-fundamentals",
+  "ld": [
+   267.3,
+   267.3,
+   267.3
+  ],
+  "amounts": [
+   297,
+   267.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Data Analysis and Visualization Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "ica-the-foundations-of-financial-crime-prevention",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "The Foundations of Financial Crime Prevention Professional Certificate"
+ },
+ {
+  "slug": "experience-management-xm-fundamentals",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Experience Management (XM) Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "microsoft-ai-engineer",
+  "ld": [
+   229.5,
+   229.5,
+   229.5
+  ],
+  "amounts": [
+   255,
+   229.5,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "AI Engineer Professional Certificate"
+ },
+ {
+  "slug": "delftx-management-and-financing-of-engineering-projects",
+  "ld": [
+   387,
+   387,
+   387
+  ],
+  "amounts": [
+   430,
+   387,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Engineering Project Management: Project Financing Professional Certificate"
+ },
+ {
+  "slug": "alaskax-synthetic-aperture-radar-sar-applications",
+  "ld": [
+   618.3,
+   618.3,
+   618.3
+  ],
+  "amounts": [
+   687,
+   618.3,
+   567,
+   510.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Synthetic Aperture Radar (SAR): Applications Professional Certificate"
+ },
+ {
+  "slug": "ibm-cloud-native-foundations",
+  "ld": [
+   246,
+   246,
+   246
+  ],
+  "amounts": [
+   246,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Cloud Native Foundations Professional Certificate"
+ },
+ {
+  "slug": "harvardx-applied-tiny-machine-learning-tinyml-for-scale",
+  "ld": [
+   807.3,
+   807.3,
+   807.3
+  ],
+  "amounts": [
+   897,
+   807.3,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Applied Tiny Machine Learning (TinyML) for Scale Professional Certificate"
+ },
+ {
+  "slug": "ibm-data-warehouse-engineering",
+  "ld": [
+   649.8,
+   649.8,
+   649.8
+  ],
+  "amounts": [
+   722,
+   649.8,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   140910
+  ],
+  "nCourses": 8,
+  "title": "Data Warehouse Engineering Professional Certificate"
+ },
+ {
+  "slug": "osmosisfromelsevier-foundations-of-client-care",
+  "ld": [
+   117.6,
+   117.6,
+   117.6
+  ],
+  "amounts": [
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Foundations of Client Care Professional Certificate"
+ },
+ {
+  "slug": "delftx-ai-skills-basic-and-advanced-techniques-in-machine-learning",
+  "ld": [
+   333,
+   333,
+   333
+  ],
+  "amounts": [
+   370,
+   333,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "AI Skills: Basic and Advanced Techniques in Machine Learning Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-hybrid-and-multi-cloud-architect",
+  "ld": [
+   232.2,
+   232.2,
+   232.2
+  ],
+  "amounts": [
+   258,
+   232.2,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Hybrid and Multi-Cloud Architect Professional Certificate"
+ },
+ {
+  "slug": "harvardx-python-for-data-science-and-deep-learning",
+  "ld": [
+   807.3,
+   807.3,
+   807.3
+  ],
+  "amounts": [
+   897,
+   807.3,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Python for Data Science and Deep Learning Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-mineria-de-datos-aplicada-al-marketing",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   117,
+   105.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Minería de datos aplicada al marketing Professional Certificate"
+ },
+ {
+  "slug": "usmx-product-management",
+  "ld": [
+   1120.5,
+   1120.5,
+   1120.5
+  ],
+  "amounts": [
+   1245,
+   1120.5,
+   796,
+   716.4,
+   996,
+   896.4,
+   1494,
+   1344.6,
+   80920
+  ],
+  "nCourses": 5,
+  "title": "Product Management Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-essential-quantitative-business-skills",
+  "ld": [
+   348.3,
+   348.3,
+   348.3
+  ],
+  "amounts": [
+   387,
+   348.3,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Essential quantitative business skills Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-google-security-operations",
+  "ld": [
+   121.5,
+   121.5,
+   121.5
+  ],
+  "amounts": [
+   135,
+   121.5,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Google Security Operations Professional Certificate"
+ },
+ {
+  "slug": "babsonx-marketing-strategy",
+  "ld": [
+   394.2,
+   394.2,
+   394.2
+  ],
+  "amounts": [
+   438,
+   394.2,
+   1494,
+   1344.6,
+   498,
+   448.2,
+   558,
+   502.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Marketing Strategy Professional Certificate"
+ },
+ {
+  "slug": "international-supply-chain-education-alliance-certified-supply-chain-analyst-csca",
+  "ld": [
+   1229.4,
+   1229.4,
+   1229.4
+  ],
+  "amounts": [
+   1366,
+   1229.4,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Certified Supply Chain Analyst (CSCA) Professional Certificate"
+ },
+ {
+  "slug": "hp-esports-management-and-game-development",
+  "ld": [
+   15,
+   15,
+   15
+  ],
+  "amounts": [
+   15,
+   13.5,
+   10,
+   9,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Esports Management and Game Development Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-power-bi-para-los-negocios",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Power Bi para los negocios Professional Certificate"
+ },
+ {
+  "slug": "catalystx-inclusive-leadership",
+  "ld": [
+   186.3,
+   186.3,
+   186.3
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Inclusive Leadership Professional Certificate"
+ },
+ {
+  "slug": "usmx-innovation-and-entrepreneurship",
+  "ld": [
+   680.4,
+   680.4,
+   680.4
+  ],
+  "amounts": [
+   756,
+   680.4,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Innovation and Entrepreneurship Professional Certificate"
+ },
+ {
+  "slug": "urosariox-habilidades-de-comunicacion-para-abogados",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   60000
+  ],
+  "nCourses": 3,
+  "title": "Habilidades de comunicación para abogados Professional Certificate"
+ },
+ {
+  "slug": "gtx-statistics-confidence-intervals-and-hypothesis-tests",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Statistics, Confidence Intervals and Hypothesis Tests Professional Certificate"
+ },
+ {
+  "slug": "iu-the-new-managers-toolkit",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   396,
+   356.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "The New Manager’s Toolkit Professional Certificate"
+ },
+ {
+  "slug": "doanex-cannabis-science-and-industries-seeds-to-needs",
+  "ld": [
+   618.3,
+   618.3,
+   618.3
+  ],
+  "amounts": [
+   687,
+   618.3,
+   497,
+   447.3,
+   900,
+   810,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Cannabis Science and Industries: Seeds to Needs Professional Certificate"
+ },
+ {
+  "slug": "microsoft-sc-400-information-protection-officer",
+  "ld": [
+   135,
+   135,
+   135
+  ],
+  "amounts": [
+   150,
+   135,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "SC-400 Information Protection Officer Professional Certificate"
+ },
+ {
+  "slug": "taux-viruses-and-how-to-beat-them-from-cells-to-pandemics",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   298,
+   268.2,
+   297.99,
+   268.19,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Viruses & How to Beat Them: From Cells to Pandemics Professional Certificate"
+ },
+ {
+  "slug": "galileox-analisis-de-datos-para-la-toma-de-decisiones-empresariales",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   117,
+   105.3,
+   143,
+   128.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Análisis de datos para la toma de decisiones empresariales Professional Certificate"
+ },
+ {
+  "slug": "gtx-applications-of-linear-algebra",
+  "ld": [
+   498,
+   498,
+   498
+  ],
+  "amounts": [
+   498,
+   756,
+   680.4,
+   2475,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Applications of Linear Algebra Professional Certificate"
+ },
+ {
+  "slug": "microsoft-az-305-solution-architect",
+  "ld": [
+   112.5,
+   112.5,
+   112.5
+  ],
+  "amounts": [
+   125,
+   112.5,
+   165,
+   148.5,
+   415,
+   373.5,
+   155,
+   139.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "AZ-305 Solution Architect Professional Certificate"
+ },
+ {
+  "slug": "mandarinx-business-mandarin-essentials",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   268,
+   241.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Business Mandarin Essentials Professional Certificate"
+ },
+ {
+  "slug": "delftx-biomedical-equipment-repair-maintenance-and-healthcare-technology-management",
+  "ld": [
+   90,
+   90,
+   90
+  ],
+  "amounts": [
+   100,
+   90,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Biomedical Equipment: Repair, Maintenance and Healthcare Technology Management Professional Certificate"
+ },
+ {
+  "slug": "delftx-solar-energy",
+  "ld": [
+   580.5,
+   580.5,
+   580.5
+  ],
+  "amounts": [
+   645,
+   580.5,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Solar Energy Professional Certificate"
+ },
+ {
+  "slug": "dartmouthx-digital-transformation-for-managers",
+  "ld": [
+   295.2,
+   295.2,
+   295.2
+  ],
+  "amounts": [
+   328,
+   295.2,
+   693,
+   623.7,
+   477,
+   429.3,
+   720,
+   700,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Digital Transformation for Managers Professional Certificate"
+ },
+ {
+  "slug": "ibm-machine-learning",
+  "ld": [
+   804.6,
+   804.6,
+   804.6
+  ],
+  "amounts": [
+   894,
+   804.6,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 6,
+  "title": "Machine Learning Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterreyx-family-businesses-entrepreneurship-and-leadership-to-transcend",
+  "ld": [
+   232.2,
+   232.2,
+   232.2
+  ],
+  "amounts": [
+   258,
+   232.2,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Family Businesses: Entrepreneurship and Leadership to Transcend Professional Certificate"
+ },
+ {
+  "slug": "delft-university-of-technology-product-design-health",
+  "ld": [
+   315,
+   315,
+   315
+  ],
+  "amounts": [
+   350,
+   315,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Product Design & Health Professional Certificate"
+ },
+ {
+  "slug": "nyif-brokerage-operations",
+  "ld": [],
+  "amounts": [
+   333,
+   299.7,
+   834,
+   750.6,
+   1196,
+   956.8,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Brokerage Operations Professional Certificate"
+ },
+ {
+  "slug": "logyca-introduccion-a-la-logistica",
+  "ld": [
+   81,
+   81,
+   81
+  ],
+  "amounts": [
+   90,
+   81,
+   76,
+   68.4,
+   55,
+   49.5,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Introducción a la logística Professional Certificate"
+ },
+ {
+  "slug": "codio-python-programming-a-hands-on-introduction",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Python Programming: A Hands-on Introduction Professional Certificate"
+ },
+ {
+  "slug": "lcieducation-introduction-to-graphic-design",
+  "ld": [
+   178.2,
+   178.2,
+   178.2
+  ],
+  "amounts": [
+   198,
+   178.2,
+   398,
+   358.2,
+   537,
+   483.3,
+   60000
+  ],
+  "nCourses": 2,
+  "title": "Introduction to Graphic Design Professional Certificate"
+ },
+ {
+  "slug": "babsonx-fundamentals-of-financial-analysis",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   1494,
+   1344.6,
+   558,
+   502.2,
+   438,
+   394.2,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Fundamentals of Financial Analysis Professional Certificate"
+ },
+ {
+  "slug": "harvardx-power-skills-for-career-growth",
+  "ld": [
+   910,
+   910,
+   910
+  ],
+  "amounts": [
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   80920
+  ],
+  "nCourses": 7,
+  "title": "Power Skills for Career Growth Professional Certificate"
+ },
+ {
+  "slug": "dartmouth-imtx-c-programming-with-linux",
+  "ld": [
+   623.7,
+   623.7,
+   623.7
+  ],
+  "amounts": [
+   693,
+   623.7,
+   477,
+   429.3,
+   328,
+   295.2,
+   720,
+   700,
+   140910
+  ],
+  "nCourses": 7,
+  "title": "C Programming with Linux Professional Certificate"
+ },
+ {
+  "slug": "leoron-financial-modeling-master-advanced",
+  "ld": [
+   680.4,
+   680.4,
+   680.4
+  ],
+  "amounts": [
+   756,
+   680.4,
+   567,
+   510.3,
+   687,
+   618.3,
+   945,
+   850.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Financial Modelling Advanced Diploma دبلومة متقدمة في النمذجة المالية Professional Certificate"
+ },
+ {
+  "slug": "lcieducation-introduction-to-level-design",
+  "ld": [
+   483.291,
+   483.291,
+   483.291
+  ],
+  "amounts": [
+   536.99,
+   483.29,
+   198,
+   178.2,
+   398,
+   358.2,
+   537,
+   483.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Introduction to Level Design Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-excel-para-los-negocios-nivel-avanzado",
+  "ld": [
+   79.2,
+   79.2,
+   79.2
+  ],
+  "amounts": [
+   88,
+   79.2,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Excel para los negocios nivel avanzado Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-gdc-air-gapped-practitioner-fundamentals",
+  "ld": [
+   71.991,
+   71.991,
+   71.991
+  ],
+  "amounts": [
+   79.99,
+   71.99,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "GDC Air-Gapped Practitioner Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "umd-digital-transformation-playbook-for-supply-chain",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Digital Transformation Playbook for Supply Chain Professional Certificate"
+ },
+ {
+  "slug": "ibm-zos-mainframe-practitioner",
+  "ld": [
+   357.3,
+   357.3,
+   357.3
+  ],
+  "amounts": [
+   397,
+   357.3,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "IBM z/OS Mainframe Practitioner Professional Certificate"
+ },
+ {
+  "slug": "hkpolyux-fashion-design-and-creation",
+  "ld": [
+   178.2,
+   178.2,
+   178.2
+  ],
+  "amounts": [
+   198,
+   178.2,
+   1112,
+   1000.8,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Fashion Design and Creation Professional Certificate"
+ },
+ {
+  "slug": "decx-digital-asset-101",
+  "ld": [
+   297,
+   297,
+   297
+  ],
+  "amounts": [
+   330,
+   297,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Digital Asset 101 Professional Certificate"
+ },
+ {
+  "slug": "davidsonx-from-database-to-dashboard-using-sql-and-power-bi",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   544,
+   489.6,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "From Database to Dashboard using SQL and Power BI Professional Certificate"
+ },
+ {
+  "slug": "ibm-information-technology-support",
+  "ld": [
+   275.1,
+   275.1,
+   275.1
+  ],
+  "amounts": [
+   393,
+   275.1,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 7,
+  "title": "Information Technology (IT) Support PC Professional Certificate"
+ },
+ {
+  "slug": "uamx-introduccion-a-la-programacion-en-c",
+  "ld": [
+   78.3,
+   78.3,
+   78.3
+  ],
+  "amounts": [
+   87,
+   78.3,
+   58,
+   52.2,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Introducción a la programación en C Professional Certificate"
+ },
+ {
+  "slug": "ibm-sql-etl-and-bi-fundamentals",
+  "ld": [
+   293.4,
+   293.4,
+   293.4
+  ],
+  "amounts": [
+   326,
+   293.4,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   140910
+  ],
+  "nCourses": 4,
+  "title": "SQL, ETL and BI Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "tumx-realizing-biotech-innovations-a-business-guide-for-scientists",
+  "ld": [
+   467.1,
+   467.1,
+   467.1
+  ],
+  "amounts": [
+   519,
+   467.1,
+   1446,
+   1301.4,
+   3207,
+   607,
+   546.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Realizing Biotech Innovation — A Business Guide for Scientists Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-gdc-air-gapped-security-operator-fundamentals",
+  "ld": [
+   80.1,
+   80.1,
+   80.1
+  ],
+  "amounts": [
+   89,
+   80.1,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "GDC Air-Gapped Security Operator Fundamentals Professional Certificate"
+ },
+ {
+  "slug": "hbkux-solar-energy-in-hot-desert-climates",
+  "ld": [
+   214.2,
+   214.2,
+   214.2
+  ],
+  "amounts": [
+   238,
+   214.2,
+   249.99,
+   224.99,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Solar Energy in Hot Desert Climates Professional Certificate"
+ },
+ {
+  "slug": "wisconsinx-actuarial-science-financial-math-and-probability",
+  "ld": [
+   788.4,
+   788.4,
+   788.4
+  ],
+  "amounts": [
+   876,
+   788.4,
+   723,
+   650.7,
+   375,
+   337.5,
+   512,
+   460.8,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Actuarial Science: Financial Math and Probability Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-inteligencia-artificial-aplicada-a-los-negocios",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   117,
+   105.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Inteligencia Artificial aplicada a los negocios Professional Certificate"
+ },
+ {
+  "slug": "ai-data-engineering-foundations",
+  "ld": [
+   3232.8,
+   3232.8,
+   3232.8
+  ],
+  "amounts": [
+   3592,
+   3232.8,
+   2743,
+   2468.7,
+   1493.99,
+   2245.99,
+   2021.39,
+   112590
+  ],
+  "nCourses": 8,
+  "title": "Data Engineering Foundations Professional Certificate"
+ },
+ {
+  "slug": "zhawx-marketing-technology",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   378,
+   340.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Marketing Technology Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-medical-spanish-communication-in-healthcare-contexts",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Medical Spanish: Communication in Healthcare Contexts Professional Certificate"
+ },
+ {
+  "slug": "doanex-leading-community-based-projects-in-a-virtual-world",
+  "ld": [
+   618.3,
+   618.3,
+   618.3
+  ],
+  "amounts": [
+   687,
+   618.3,
+   497,
+   447.3,
+   900,
+   810,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Leading Community Based Projects in A Virtual World Professional Certificate"
+ },
+ {
+  "slug": "javerianax-upvx-herramientas-de-presentacion-powerpoint-photoshop-e-illustrator",
+  "ld": [
+   188.1,
+   188.1,
+   188.1
+  ],
+  "amounts": [
+   209,
+   188.1,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Herramientas de presentación: Power Point, Photoshop e Illustrator Professional Certificate"
+ },
+ {
+  "slug": "delftx-ai-in-practice",
+  "ld": [
+   486,
+   486,
+   486
+  ],
+  "amounts": [
+   540,
+   486,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "AI in Practice Professional Certificate"
+ },
+ {
+  "slug": "harvardx-leadership-and-communication",
+  "ld": [
+   376.2,
+   376.2,
+   376.2
+  ],
+  "amounts": [
+   418,
+   376.2,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   60000
+  ],
+  "nCourses": 2,
+  "title": "Leadership and Communication Professional Certificate"
+ },
+ {
+  "slug": "armeducationx-teaching-with-physical-computing",
+  "ld": [
+   176.4,
+   176.4,
+   176.4
+  ],
+  "amounts": [
+   196,
+   176.4,
+   198,
+   178.2,
+   140910
+  ],
+  "nCourses": 4,
+  "title": "Teaching with Physical Computing Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-vertex-ai-search-for-retail",
+  "ld": [
+   248.4,
+   248.4,
+   248.4
+  ],
+  "amounts": [
+   276,
+   248.4,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   112590
+  ],
+  "nCourses": 4,
+  "title": "Vertex AI Search for Retail Professional Certificate"
+ },
+ {
+  "slug": "statistics-comx-data-science-ethics",
+  "ld": [
+   498,
+   498,
+   498
+  ],
+  "amounts": [
+   498,
+   617,
+   555.3,
+   567,
+   510.3,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Data Science Ethics Professional Certificate"
+ },
+ {
+  "slug": "usmx-program-management-enabling-value-driven-change",
+  "ld": [
+   1112.4,
+   1112.4,
+   1112.4
+  ],
+  "amounts": [
+   1236,
+   1112.4,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Program Management: Enabling Value Driven Change Professional Certificate"
+ },
+ {
+  "slug": "galileox-electronica-basica",
+  "ld": [
+   105.3,
+   105.3,
+   105.3
+  ],
+  "amounts": [
+   117,
+   105.3,
+   78,
+   70.2,
+   143,
+   128.7,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Electrónica básica Professional Certificate"
+ },
+ {
+  "slug": "delftx-science-and-engineering-pre-university-calculus-physics-and-chemistry",
+  "ld": [
+   148.491,
+   148.491,
+   148.491
+  ],
+  "amounts": [
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   100,
+   90,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Science and Engineering - Pre-university Calculus, Physics and Chemistry Professional Certificate"
+ },
+ {
+  "slug": "ipl-generative-ai-for-product-managers",
+  "ld": [
+   108,
+   108,
+   108
+  ],
+  "amounts": [
+   120,
+   108,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Generative AI for Product Managers Professional Certificate"
+ },
+ {
+  "slug": "anahuacx-fundamentos-de-ciberseguridad",
+  "ld": [
+   70.2,
+   70.2,
+   70.2
+  ],
+  "amounts": [
+   78,
+   70.2,
+   3.86,
+   7.13,
+   117,
+   105.3,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Fundamentos de Ciberseguridad: Protección de Datos Professional Certificate"
+ },
+ {
+  "slug": "ibm-project-manager",
+  "ld": [
+   397.8,
+   397.8,
+   397.8
+  ],
+  "amounts": [
+   442,
+   397.8,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   80920
+  ],
+  "nCourses": 8,
+  "title": "Project Manager Professional Certificate"
+ },
+ {
+  "slug": "uchicagox-introduction-to-quantum-computing",
+  "ld": [
+   358.2,
+   358.2,
+   358.2
+  ],
+  "amounts": [
+   398,
+   358.2,
+   600,
+   540,
+   140910
+  ],
+  "nCourses": 2,
+  "title": "Quantum Computing for Everyone Professional Certificate"
+ },
+ {
+  "slug": "harvardx-learning-python-for-data-science",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   1225,
+   910,
+   518,
+   466.2,
+   668,
+   601.2,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Learning Python for Data Science Professional Certificate"
+ },
+ {
+  "slug": "upvalenciax-fundamentos-de-microsoft-office-para-la-empresa",
+  "ld": [
+   116.1,
+   116.1,
+   116.1
+  ],
+  "amounts": [
+   129,
+   116.1,
+   107,
+   96.3,
+   156,
+   140.4,
+   177,
+   159.3,
+   140910
+  ],
+  "nCourses": 3,
+  "title": "Fundamentos de Microsoft Office para la empresa Professional Certificate"
+ },
+ {
+  "slug": "university-of-torontox-rotman-leading-strategic-change",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   148,
+   133.2,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Rotman Leading Strategic Change Professional Certificate"
+ },
+ {
+  "slug": "delftx-mastering-probability-and-statistics",
+  "ld": [
+   297,
+   297,
+   297
+  ],
+  "amounts": [
+   330,
+   297,
+   164.99,
+   148.49,
+   109.99,
+   98.99,
+   493,
+   443.7,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Mastering Probability and Statistics Professional Certificate"
+ },
+ {
+  "slug": "uncordobax-agricultura-de-bajo-impacto-ambiental",
+  "ld": [
+   81,
+   81,
+   81
+  ],
+  "amounts": [
+   90,
+   81,
+   327,
+   294.3,
+   135,
+   121.5,
+   445,
+   400.5,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Agricultura de bajo impacto ambiental Professional Certificate"
+ },
+ {
+  "slug": "umd-digital-transformation-playbook-for-government",
+  "ld": [
+   672.3,
+   672.3,
+   672.3
+  ],
+  "amounts": [
+   747,
+   672.3,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Digital Transformation Playbook for Government Professional Certificate"
+ },
+ {
+  "slug": "iux-personal-finance",
+  "ld": [
+   537.3,
+   537.3,
+   537.3
+  ],
+  "amounts": [
+   597,
+   537.3,
+   10000,
+   396,
+   356.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Personal Finance Professional Certificate"
+ },
+ {
+  "slug": "sdgacademyx-sustainable-development",
+  "ld": [
+   106.2,
+   106.2,
+   106.2
+  ],
+  "amounts": [
+   118,
+   106.2,
+   167,
+   150.3,
+   177,
+   159.3,
+   147,
+   132.3,
+   75000
+  ],
+  "nCourses": 2,
+  "title": "Foundations of Sustainable Development Professional Certificate"
+ },
+ {
+  "slug": "ibm-generative-ai-for-everyone",
+  "ld": [
+   220.5,
+   220.5,
+   220.5
+  ],
+  "amounts": [
+   245,
+   220.5,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 5,
+  "title": "Generative AI for Everyone Professional Certificate"
+ },
+ {
+  "slug": "mdandersonx-comparative-effectiveness-research-training-and-instruction",
+  "ld": [
+   1120.5,
+   1120.5,
+   1120.5
+  ],
+  "amounts": [
+   1245,
+   1120.5,
+   77600
+  ],
+  "nCourses": 5,
+  "title": "Comparative Effectiveness Research Training and Instruction (CERTaIN) Professional Certificate"
+ },
+ {
+  "slug": "google-cloud-architect-learning-path",
+  "ld": [
+   640.8,
+   640.8,
+   640.8
+  ],
+  "amounts": [
+   712,
+   640.8,
+   193,
+   173.7,
+   255,
+   229.5,
+   175,
+   157.5,
+   140910
+  ],
+  "nCourses": 8,
+  "title": "Google Cloud Architect Learning Path Professional Certificate"
+ },
+ {
+  "slug": "washu-technical-leadership",
+  "ld": [
+   6744.99,
+   6744.99,
+   6744.99
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 11,
+  "title": "Technical Leadership Professional Certificate"
+ },
+ {
+  "slug": "uncordobax-trayecto-formativo-en-innovacion-abierta-emprendedurismo-y-vinculacion",
+  "ld": [
+   67.5,
+   67.5,
+   67.5
+  ],
+  "amounts": [
+   75,
+   67.5,
+   327,
+   294.3,
+   135,
+   121.5,
+   445,
+   400.5,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Trayecto Formativo en Innovación Abierta, Emprendedurismo y Vinculación Professional Certificate"
+ },
+ {
+  "slug": "alaskax-fundamentals-of-geospatial-science",
+  "ld": [
+   510.3,
+   510.3,
+   510.3
+  ],
+  "amounts": [
+   567,
+   510.3,
+   687,
+   618.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Fundamentals of Geospatial Science Professional Certificate"
+ },
+ {
+  "slug": "javerianax-financiamiento-climatico",
+  "ld": [
+   114.3,
+   114.3,
+   114.3
+  ],
+  "amounts": [
+   127,
+   114.3,
+   121,
+   108.9,
+   164,
+   147.6,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Financiamiento Climático Professional Certificate"
+ },
+ {
+  "slug": "sdgacademyx-sustainable-mining-and-resource-management",
+  "ld": [
+   159.3,
+   159.3,
+   159.3
+  ],
+  "amounts": [
+   177,
+   159.3,
+   167,
+   150.3,
+   147,
+   132.3,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Sustainable Mining and Resource Management Professional Certificate"
+ },
+ {
+  "slug": "wageningenx-urban-gamechanger-for-sustainability",
+  "ld": [
+   304.2,
+   304.2,
+   304.2
+  ],
+  "amounts": [
+   338,
+   304.2,
+   498,
+   448.2,
+   378,
+   340.2,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Urban Gamechanger for Sustainability Professional Certificate"
+ },
+ {
+  "slug": "tecdemonterrey-digital-marketing-and-customer-engagement",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   1134,
+   1020.6,
+   187,
+   168.3,
+   236,
+   212.4,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Digital Marketing and Customer Engagement Professional Certificate"
+ },
+ {
+  "slug": "urosariox-atencion-integrada-de-enfermedades-prevalentes-de-la-infancia-aiepi",
+  "ld": [
+   88.2,
+   88.2,
+   88.2
+  ],
+  "amounts": [
+   98,
+   88.2,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Atención integrada de enfermedades prevalentes de la infancia AIEPI Professional Certificate"
+ },
+ {
+  "slug": "umd-product-visioning-and-strategy-preparing-for-agile-execution",
+  "ld": [
+   448.2,
+   448.2,
+   448.2
+  ],
+  "amounts": [
+   498,
+   448.2,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   996,
+   896.4,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Product Visioning and Strategy: Preparing for Agile Execution Professional Certificate"
+ },
+ {
+  "slug": "uamx-desarrollo-y-gestion-de-proyectos-informaticos",
+  "ld": [
+   52.2,
+   52.2,
+   52.2
+  ],
+  "amounts": [
+   58,
+   52.2,
+   87,
+   78.3,
+   80920
+  ],
+  "nCourses": 2,
+  "title": "Desarrollo y gestión de proyectos informáticos Professional Certificate"
+ },
+ {
+  "slug": "wageningen-animal-behaviour-in-science-and-conservation",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   498,
+   448.2,
+   458,
+   412.2,
+   77600
+  ],
+  "nCourses": 2,
+  "title": "Animal Behaviour in Science and Conservation Professional Certificate"
+ },
+ {
+  "slug": "googlecloud-associate-data-practitioner",
+  "ld": [
+   157.5,
+   157.5,
+   157.5
+  ],
+  "amounts": [
+   175,
+   157.5,
+   193,
+   173.7,
+   255,
+   229.5,
+   240,
+   216,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Associate Data Practitioner Professional Certificate"
+ },
+ {
+  "slug": "uc-berkeleyx-data-88bx-data-statistics-programming-for-business-decisions",
+  "ld": [
+   404.982,
+   404.982,
+   404.982
+  ],
+  "amounts": [
+   449.98,
+   404.98,
+   597,
+   537.3,
+   450,
+   405,
+   398,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "DATA 88BX: Data, Statistics & Programming for Business Decisions Professional Certificate"
+ },
+ {
+  "slug": "uncordobax-gestion-de-proyectos-matriz-de-marco-logico-y-herramientas",
+  "ld": [
+   121.5,
+   121.5,
+   121.5
+  ],
+  "amounts": [
+   135,
+   121.5,
+   327,
+   294.3,
+   445,
+   400.5,
+   90,
+   81,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Gestión de Proyectos: Matriz de Marco Lógico y Herramientas Professional Certificate"
+ },
+ {
+  "slug": "aptly-job-search-with-genai",
+  "ld": [
+   287.964,
+   287.964,
+   287.964
+  ],
+  "amounts": [
+   319.96,
+   287.96,
+   239.97,
+   215.97,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Job Search with GenAI Professional Certificate"
+ },
+ {
+  "slug": "usmx-construction-management",
+  "ld": [
+   896.4,
+   896.4,
+   896.4
+  ],
+  "amounts": [
+   996,
+   896.4,
+   796,
+   716.4,
+   1245,
+   1120.5,
+   1494,
+   1344.6,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Construction Management Professional Certificate"
+ },
+ {
+  "slug": "hkustx-principle-of-semiconductor-devices",
+  "ld": [
+   340.2,
+   340.2,
+   340.2
+  ],
+  "amounts": [
+   378,
+   340.2,
+   1825,
+   1642.5,
+   338,
+   304.2,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Principle of Semiconductor Devices Professional Certificate"
+ },
+ {
+  "slug": "iscea-certified-sustainable-supply-chain-professional",
+  "ld": [
+   1787.4,
+   1787.4,
+   1787.4
+  ],
+  "amounts": [
+   1986,
+   1787.4,
+   1366,
+   1229.4,
+   627,
+   564.3,
+   1395.99,
+   1256.39,
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Certified Sustainable Supply Chain Professional (CSSCP) Professional Certificate"
+ },
+ {
+  "slug": "catalystx-race-gender-and-workplace-equity",
+  "ld": [
+   212.4,
+   212.4,
+   212.4
+  ],
+  "amounts": [
+   80920
+  ],
+  "nCourses": 4,
+  "title": "Race, Gender and Workplace Equity Professional Certificate"
+ },
+ {
+  "slug": "urosariox-programa-de-certificacion-profesional-en-experiencias-de-aprendizaje-digital-a-partir-del-diseno-tecno-pedagogico",
+  "ld": [
+   88.2,
+   88.2,
+   88.2
+  ],
+  "amounts": [
+   98,
+   88.2,
+   58,
+   52.2,
+   3351,
+   3015.9,
+   4041,
+   3636.9,
+   60000
+  ],
+  "nCourses": 2,
+  "title": "Experiencias de aprendizaje digital a partir del diseño tecno-pedagógico Professional Certificate"
+ },
+ {
+  "slug": "berkeleyx-beyond-diversity-anti-racism-and-equity-in-the-workplace",
+  "ld": [
+   597,
+   597,
+   597
+  ],
+  "amounts": [
+   597,
+   537.3,
+   450,
+   405,
+   398,
+   75000
+  ],
+  "nCourses": 3,
+  "title": "Beyond Diversity: Navigating the DEI Landscape in These Challenging Times Professional Certificate"
+ },
+ {
+  "slug": "leoron-effective-communication-skills-in-the-workplace",
+  "ld": [
+   618.3,
+   618.3,
+   618.3
+  ],
+  "amounts": [
+   687,
+   618.3,
+   567,
+   510.3,
+   945,
+   850.5,
+   756,
+   680.4,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "مهارات التواصل الفعال Professional Certificate"
+ },
+ {
+  "slug": "ucx-statistical-analysis-in-r",
+  "ld": [
+   556.2,
+   556.2,
+   556.2
+  ],
+  "amounts": [
+   618,
+   556.2,
+   845,
+   760.5,
+   338,
+   112590
+  ],
+  "nCourses": 2,
+  "title": "Statistical Analysis in R Professional Certificate"
+ },
+ {
+  "slug": "alaskax-understanding-and-operationalizing-one-health",
+  "ld": [
+   348.3,
+   348.3,
+   348.3
+  ],
+  "amounts": [
+   387,
+   348.3,
+   567,
+   510.3,
+   687,
+   618.3,
+   77600
+  ],
+  "nCourses": 3,
+  "title": "Understanding and Operationalizing One Health Professional Certificate"
+ },
+ {
+  "slug": "statisticscomx-machine-learning-operations-mlops-with-azure",
+  "ld": [
+   555.3,
+   555.3,
+   555.3
+  ],
+  "amounts": [
+   617,
+   555.3,
+   567,
+   510.3,
+   112590
+  ],
+  "nCourses": 3,
+  "title": "Machine Learning Operations with Microsoft Azure (MLOps with Azure) Professional Certificate"
+ },
+ {
+  "slug": "tumx-six-sigma-and-lean",
+  "ld": [
+   546.3,
+   546.3,
+   546.3
+  ],
+  "amounts": [
+   607,
+   546.3,
+   1446,
+   1301.4,
+   3207,
+   519,
+   467.1,
+   80920
+  ],
+  "nCourses": 3,
+  "title": "Lean Six Sigma Yellow Belt: Quantitative Tools for Quality and Productivity Professional Certificate"
+ },
+ {
+  "slug": "ibm-cybersecurity-analyst",
+  "ld": [
+   1697.4,
+   1697.4,
+   1697.4
+  ],
+  "amounts": [
+   1886,
+   1697.4,
+   1004,
+   903.6,
+   473,
+   425.7,
+   197,
+   177.3,
+   112590
+  ],
+  "nCourses": 14,
+  "title": "Cybersecurity Analyst Professional Certificate"
+ }
+]
