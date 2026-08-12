@@ -1,6 +1,6 @@
-# One-off helper: investigate the gap between Coursera's catalog-API course
-# count (~23k) and the ~5k the site's search filters show. Runs when this
-# file changes; results are read from the job log.
+# One-off helper: capture Coursera's own search GraphQL request and replay it
+# with facets to read the search index's product-type counts (the ~5k the
+# site's filter dropdown shows). Runs when this file changes.
 name: Count Coursera catalog
 on:
   push:
@@ -10,108 +10,9 @@ on:
 jobs:
   count:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
-      - name: Catalog tally by partner + enrollability sample
-        run: |
-          python3 - <<'EOF'
-          import json, random, re, time, urllib.request
-          from collections import Counter
-
-          UA = {'User-Agent': 'Mozilla/5.0 (compatible; catalog-count/1.0)'}
-
-          def get(url, tries=4):
-              for a in range(tries):
-                  try:
-                      return urllib.request.urlopen(
-                          urllib.request.Request(url, headers=UA), timeout=90).read()
-                  except Exception as e:
-                      err = e; time.sleep(2 * (a + 1))
-              print('FETCH_FAIL', url[:120], repr(err))
-              return b''
-
-          # ---- enumerate catalog (slug, partners, language) ----------------
-          BASE = 'https://api.coursera.org/api/courses.v1'
-          FIELDS = 'slug,name,primaryLanguages,partnerIds'
-          courses, start = {}, 0
-          while True:
-              d = json.loads(get(f'{BASE}?start={start}&limit=100&fields={FIELDS}'))
-              for e in d.get('elements', []):
-                  courses[e['id']] = e
-              nxt = d.get('paging', {}).get('next')
-              if not nxt: break
-              start = int(nxt)
-          print('ENUMERATED =', len(courses))
-
-          # ---- dedupe (same rules as before) ------------------------------
-          LANG = ('ar|az|bg|bn|cs|da|de|el|es|et|fa|fi|fr|he|hi|hr|hu|id|it|ja|ka|kk|km|'
-                  'ko|lt|lv|mn|ms|my|ne|nl|no|pl|pt|ro|ru|si|sk|sr|sv|sw|ta|te|th|tr|uk|'
-                  'ur|uz|vi|zh')
-          SUF = re.compile(r'-(?:' + LANG + r')(?:-[a-z0-9]{2,3})?$')
-          HSH = re.compile(r'-[a-z0-9]{5}$')
-          slugs = {e['slug'] for e in courses.values()}
-          parent = {s: s for s in slugs}
-          def find(x):
-              while parent[x] != x:
-                  parent[x] = parent[parent[x]]; x = parent[x]
-              return x
-          for s in sorted(slugs):
-              m = SUF.search(s) or HSH.search(s)
-              if m and s[:m.start()] in slugs:
-                  parent[find(s)] = find(s[:m.start()])
-
-          xml = get('https://www.coursera.org/sitemap~www~courses.xml').decode('utf-8', 'ignore')
-          live = set(re.findall(r'https://www\.coursera\.org/learn/([^/<\s]+)', xml))
-          live_roots = {find(s) for s in slugs if s in live}
-          print('DEDUPED_LIVE =', len(live_roots))
-
-          # ---- partner tally over live deduped roots ----------------------
-          root_course = {}
-          for e in courses.values():
-              r = find(e['slug'])
-              if r in live_roots and r not in root_course:
-                  root_course[r] = e
-          pcount = Counter()
-          for e in root_course.values():
-              for pid in (e.get('partnerIds') or ['?']):
-                  pcount[str(pid)] += 1
-          ids = [p for p, _ in pcount.most_common(30) if p != '?']
-          names = {}
-          for i in range(0, len(ids), 40):
-              batch = ','.join(ids[i:i+40])
-              d = json.loads(get(f'https://api.coursera.org/api/partners.v1?ids={batch}&fields=name') or b'{}')
-              for el in d.get('elements', []):
-                  names[str(el['id'])] = el.get('name', '?')
-          print('--- top 30 partners by live deduped courses ---')
-          for pid, n in pcount.most_common(30):
-              print(f'PARTNER\t{n}\t{names.get(pid, pid)}')
-
-          # ---- enrollability sample of live course pages ------------------
-          AVAIL = re.compile(r'enroll for free|enroll now|enroll starting|join for free|'
-                             r'financial aid available|already enrolled', re.I)
-          GONE = re.compile(r'no longer available|not accepting (?:new )?enrollments|'
-                            r'course is unavailable|this course has been retired', re.I)
-          random.seed(42)
-          sample = random.sample(sorted(live), 80)
-          tally = Counter(); gone_list = []
-          for s in sample:
-              html = get(f'https://www.coursera.org/learn/{s}', tries=2).decode('utf-8', 'ignore')
-              if not html: tally['fetch_error'] += 1; continue
-              if GONE.search(html):
-                  tally['unavailable'] += 1; gone_list.append(s)
-              elif AVAIL.search(html):
-                  tally['enrollable'] += 1
-              else:
-                  tally['unclear'] += 1
-              time.sleep(0.25)
-          print('--- enrollability sample (n=80 random live pages) ---')
-          for k, v in tally.most_common():
-              print('SAMPLE', k, v)
-          for s in gone_list[:20]:
-              print('GONE', s)
-          EOF
-
-      - name: Read the site search totals (headless browser)
+      - name: Replay site search with facets
         run: |
           npm init -y >/dev/null 2>&1
           npm i playwright >/dev/null 2>&1
@@ -121,32 +22,65 @@ jobs:
           (async () => {
             const b = await chromium.launch();
             const p = await b.newPage();
-            let dumped = 0;
-            p.on('response', async r => {
-              const u = r.url();
-              if (dumped < 2 && /graphql/i.test(u) && /search/i.test(u)) {
-                try {
-                  const t = await r.text();
-                  console.log('GRAPHQL_URL', u.slice(0, 140));
-                  console.log('GRAPHQL_BODY_HEAD', t.slice(0, 1200).replace(/\n/g, ' '));
-                  dumped++;
-                } catch (e) {}
+            const reqBodies = [];
+            p.on('request', r => {
+              if (/graphql-gateway\?opname=Search/.test(r.url()) && reqBodies.length < 4) {
+                const d = r.postData();
+                if (d) reqBodies.push(d);
               }
             });
-            await p.goto('https://www.coursera.org/search?productTypeDescription=Courses',
-                         { waitUntil: 'domcontentloaded', timeout: 90000 });
-            await p.waitForTimeout(12000);
-            console.log('PAGE_TITLE', await p.title());
-            const body = await p.evaluate(() => document.body.innerText);
-            const m = body.match(/([\d,]+)\s+results/i);
-            console.log('RESULTS_TOTAL_TEXT', m ? m[1] : 'not found');
-            const facetRe = /(Courses|Specializations|Professional Certificates|Guided Projects|Degrees|Graduate Certificates|Postgraduate Diploma|MasterTrack|English|Spanish|French)[^\d(]{0,20}\(([\d,]+)\)/g;
-            const seen = new Set();
-            for (const mm of body.matchAll(facetRe)) {
-              const key = mm[1] + '=' + mm[2];
-              if (!seen.has(key)) { seen.add(key); console.log('FACET', mm[1], mm[2]); }
+            await p.goto('https://www.coursera.org/search?query=', { waitUntil: 'domcontentloaded', timeout: 90000 });
+            await p.waitForTimeout(10000);
+            console.log('captured request bodies:', reqBodies.length);
+
+            // find the PRODUCTS search op and use it as a template
+            let template = null;
+            for (const d of reqBodies) {
+              try {
+                const parsed = JSON.parse(d);
+                const ops = Array.isArray(parsed) ? parsed : [parsed];
+                for (const op of ops) {
+                  if (JSON.stringify(op.variables || {}).includes('PRODUCTS')) { template = op; break; }
+                }
+              } catch (e) {}
+              if (template) break;
             }
-            console.log('BODY_HEAD', body.slice(0, 400).replace(/\n/g, ' | '));
+            if (!template) { console.log('NO_PRODUCTS_OP_FOUND'); for (const d of reqBodies) console.log('RAW_REQ', d.slice(0, 800)); await b.close(); return; }
+            console.log('TEMPLATE_VARS', JSON.stringify(template.variables).slice(0, 1200));
+
+            async function run(mutate, label) {
+              const op = JSON.parse(JSON.stringify(template));
+              const req = op.variables.requests ? op.variables.requests[0] : null;
+              if (!req) { console.log('NO_REQUESTS_FIELD'); return; }
+              mutate(req);
+              const out = await p.evaluate(async body => {
+                const r = await fetch('/graphql-gateway?opname=Search', {
+                  method: 'POST',
+                  headers: { 'content-type': 'application/json' },
+                  body
+                });
+                return (await r.text()).slice(0, 5000);
+              }, JSON.stringify([op]));
+              console.log('=== ' + label + ' ===');
+              console.log(out.replace(/\n/g, ' '));
+            }
+
+            await run(r => {
+              r.query = '';
+              r.limit = 1;
+              r.facets = ['productTypeDescription', 'language'];
+              r.maxValuesPerFacet = 60;
+              r.facetFilters = [];
+            }, 'ALL PRODUCTS, facet counts');
+
+            await run(r => {
+              r.query = '';
+              r.limit = 1;
+              r.facets = ['language'];
+              r.maxValuesPerFacet = 60;
+              r.facetFilters = [['productTypeDescription:Courses']];
+            }, 'FILTER productTypeDescription=Courses');
+
             await b.close();
           })();
           EOF
