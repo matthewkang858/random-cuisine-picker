@@ -1,0 +1,874 @@
+{
+ "sample_courses": [
+  {
+   "id": "l31la3mKEe-zFg7heHyXOQ",
+   "slug": "googlecloud-getting-started-with-the-vertex-ai-gemini-1-5-pro-model-i43mr",
+   "s12nIds": []
+  },
+  {
+   "id": "OK4S2mhbEfCCGA7lN4veKQ",
+   "slug": "spss-apply-interpret-logistic-regression-models",
+   "s12nIds": []
+  },
+  {
+   "id": "mukrVoSKEe-L8RKezlgehQ",
+   "slug": "googlecloud-securing-compute-engine-applications-and-resources-using-chrom-or1ml",
+   "s12nIds": []
+  },
+  {
+   "id": "DMkcgX7LEeyRTg6FtAvfBw",
+   "slug": "integrer-applications-dashboard-hootsuite",
+   "s12nIds": []
+  },
+  {
+   "id": "ecoAPNowEe22LAo38arT7w",
+   "slug": "overcoming-challenges-in-self-and-society",
+   "s12nIds": [
+    "ZWrAG3s4QkSU2Vc0sCzlHw"
+   ]
+  },
+  {
+   "id": "YLO0oGSUEeyIUg4Qv2RsBQ",
+   "slug": "getting-started-with-hootsuite-ar",
+   "s12nIds": []
+  },
+  {
+   "id": "69Bku0KoEeWZtA4u62x6lQ",
+   "slug": "gamification",
+   "s12nIds": []
+  },
+  {
+   "id": "hOzhxVNuEfCW8Q55q1kSNQ",
+   "slug": "pearson-comptia-cybersecurity-analyst-cysa-cs0-003-video-course-2-jt58z",
+   "s12nIds": [
+    "mdFGF_DwTDmf4OqGNOElcA"
+   ]
+  }
+ ],
+ "api": [
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/VerifiedCertificate~l31la3mKEe-zFg7heHyXOQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":9.99,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"l31la3mKEe-zFg7heHyXOQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":9.99,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"9.99~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~l31la3mKEe-"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/VerifiedCertificate~l31la3mKEe-zFg7heHyXOQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":9.99,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"l31la3mKEe-zFg7heHyXOQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":9.99,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"9.99~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~l31la3mKEe-"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v4/VerifiedCertificate~l31la3mKEe-zFg7heHyXOQ~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/VerifiedCertificate~OK4S2mhbEfCCGA7lN4veKQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":49,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"OK4S2mhbEfCCGA7lN4veKQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":49,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"49.00~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~OK4S2mhbEfCCGA"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/VerifiedCertificate~OK4S2mhbEfCCGA7lN4veKQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":49,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"OK4S2mhbEfCCGA7lN4veKQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":49,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"49.00~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~OK4S2mhbEfCCGA"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v4/VerifiedCertificate~OK4S2mhbEfCCGA7lN4veKQ~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/VerifiedCertificate~mukrVoSKEe-L8RKezlgehQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":9.99,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"mukrVoSKEe-L8RKezlgehQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":9.99,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"9.99~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~mukrVoSKEe-"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/VerifiedCertificate~mukrVoSKEe-L8RKezlgehQ~USD~US",
+   "body": "{\"elements\":[{\"amount\":9.99,\"priceCountryIsoCode\":\"US\",\"countryIsoCode\":\"US\",\"liableForTax\":false,\"productItemId\":\"mukrVoSKEe-L8RKezlgehQ\",\"promotionInfo\":{\"promotionName\":\"zero dollar payment offer for course\",\"discountPercent\":100,\"discountAmount\":9.99,\"isAutoCouponCreationPromotionType\":true,\"promotionId\":78705},\"productPriceIdV2\":\"9.99~USD\",\"finalAmount\":0,\"id\":\"VerifiedCertificate~mukrVoSKEe-"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v4/VerifiedCertificate~mukrVoSKEe-L8RKezlgehQ~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/SpecializationSubscription~ZWrAG3s4QkSU2Vc0sCzlHw~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/SpecializationSubscription~ZWrAG3s4QkSU2Vc0sCzlHw~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/SpecializationSubscription~mdFGF_DwTDmf4OqGNOElcA~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/SpecializationSubscription~mdFGF_DwTDmf4OqGNOElcA~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/SpecializationSubscription~child~lSc_SHL7S1GqzSYOBLMj6w~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://api.coursera.org/api/productPrices.v3/SpecializationSubscription~child~lSc_SHL7S1GqzSYOBLMj6w~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3/CourseraPlusSubscription~USD~US",
+   "body": "ERROR <HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://www.coursera.org/api/productPrices.v3?q=bulk",
+   "body": "ERROR <HTTPError 405: 'Method Not Allowed'>"
+  }
+ ],
+ "mastertrack": [
+  {
+   "url": "https://www.coursera.org/mastertrack",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/accounting-foundations-uiuc",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$8,748 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "8,748",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/administracion-de-empresas-palermo",
+   "title": "",
+   "lines": [
+    "ctors FAQ Inscripciones abiertas hasta el 19 de junio Costo de inscripci\u00f3n: AR$ 890",
+    "Checklist\"},\"atAGlance\":{\"__typename\":\"AtAGlance\",\"programStartDate\":\"Costo de inscripci\u00f3n: AR$ 890"
+   ],
+   "dollars": [
+    "890.00",
+    "2.25"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/analitica-datos-visualizacion-prediccion-toma-decisiones-uniandes",
+   "title": "",
+   "lines": [
+    "000 COP | $1,678 USD* Costo por ciclo de 5 cr\u00e9ditos (10 cr\u00e9ditos en total) | Precios para 2026, sujetos al aumento de tarifa anual",
+    "\",\"tuition\":\"$6",
+    "000 COP | $1,678 USD*\",\"tuitionCaption\":\"Costo por ciclo de 5 cr\u00e9ditos (10 cr\u00e9ditos en total) | Precios para 2026,"
+   ],
+   "dollars": [
+    "6.88",
+    "1,678"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/artificial-intelligence-boulder",
+   "title": "",
+   "lines": [
+    "ending on chosen course load per session $525 per credit $6,300 total cost 100% online No traditional application required",
+    "ximately in 6-9 months, depending on chosen course load per session\",\"tuition\":\"$525 per credit\",\"tuitionCaption\":\"$6,300 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "525",
+    "6,300"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/circular-economy-boulder",
+   "title": "",
+   "lines": [
+    "be completed in approximately 6-9 months 667 per credit $6,003 total cost 100% online No traditional application required",
+    "icate is 9 credits and can be completed in approximately 6-9 months\",\"tuition\":\"667 per credit\",\"tuitionCaption\":\"$6,003 total cost\",\"paymentDetail"
+   ],
+   "dollars": [
+    "6,003",
+    "60"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/cpa-pathway-uiuc",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$8,748 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "8,748",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/data-analytics-engineering-northeastern",
+   "title": "",
+   "lines": [
+    "8+ months 16 credits $5,250 USD tuition $329/credit",
+    "tureDates\":null,\"timeFrame\":\"8+ months \",\"hoursPerWeek\":\"16 credits\",\"tuition\":\"$5,250 USD tuition\",\"tuitionCaption\":\"$329\\u002Fcredit"
+   ],
+   "dollars": [
+    "5,250",
+    "329",
+    "499",
+    "100"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/data-science-boulder",
+   "title": "",
+   "lines": [
+    "ending on chosen course load per session $525 per credit $6,300 total cost 100% online No traditional application required",
+    "ximately in 6-9 months, depending on chosen course load per session\",\"tuition\":\"$525 per credit\",\"tuitionCaption\":\"$6,300 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "525",
+    "6,300"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/engineering-management-boulder",
+   "title": "",
+   "lines": [
+    "be completed in approximately 6-9 months $667 per credit $6,003 total cost 100% online No traditional application required",
+    "icate is 9 credits and can be completed in approximately 6-9 months\",\"tuition\":\"$667 per credit\",\"tuitionCaption\":\"$6,003 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "667",
+    "6,003"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/gestion-politicas-salud-publica-ucchile",
+   "title": "",
+   "lines": [
+    "200 USD para alumnos afuera del territorio chileno $1",
+    "\":null,\"timeFrame\":\"4 meses\",\"hoursPerWeek\":\"11-22 horas por semana\",\"tuition\":\"$2",
+    "200 USD para alumnos afuera del territorio chileno\",\"tuitionCaption\":\"$1"
+   ],
+   "dollars": [
+    "2.20",
+    "1.98"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-business-analytics-uiuc",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-certificate-accounting-data-analytics-illinois",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$6,648 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "6,648",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-certificate-digital-marketing",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-certificate-financial-management-uiuc",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-certificate-strategic-leadership-management-illinois",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-certificate-taxation-uiuc",
+   "title": "",
+   "lines": [
+    "$10,200 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$10,200\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "10,200"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-entrepreneurship-strategic-innovation-uiuc",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-global-challenges-business-uiuc",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-managerial-economics-business-analysis-uiuc",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-mergers-and-acquisitions-uiuc",
+   "title": "",
+   "lines": [
+    "$4,164 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,164\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,164"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/graduate-value-chain-management-uiuc",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/healthcare-innovation-design-entrepreneurship-illinois",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/instructional-design-illinois",
+   "title": "",
+   "lines": [
+    "er\":{\"@type\":\"Answer\",\"text\":\"The total cost of the certificate program is $2,384",
+    "al cost of the certificate program is $2,384",
+    "\",\"tuition\":\"$2,384\",\"tuitionCaption\":\"Once you enroll, you will pay the University of Illinois at",
+    "tion\":\"What is the refund policy?\"},{\"__typename\":\"Faq\",\"answer\":\"The total cost of the certificate program is $2,384"
+   ],
+   "dollars": [
+    "2,384",
+    "119",
+    "2,384.00",
+    "298.00",
+    "1,192.00"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/introduccion-ciencia-datos-ucchile",
+   "title": "",
+   "lines": [
+    "200 USD para alumnos afuera del territorio chileno $1",
+    "a tiene un costo de $2",
+    "\u200e Chevron Right \u00bfCu\u00e1l es el costo del programa? \u200e El programa tiene un costo de $2",
+    "\":null,\"timeFrame\":\"4 meses\",\"hoursPerWeek\":\"11-22 horas por semana\",\"tuition\":\"$2",
+    "200 USD para alumnos afuera del territorio chileno\",\"tuitionCaption\":\"$1",
+    "e un costo de $2"
+   ],
+   "dollars": [
+    "2.20",
+    "1.98",
+    "2.80"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/introduccion-inteligencia-artificial-uniandes",
+   "title": "",
+   "lines": [
+    "000 COP | ~ $1,729 USD* Costo por ciclo de 5 cr\u00e9ditos (9 cr\u00e9ditos en total) | Precios para 2026, sujetos al aumento de tarifa anual",
+    "\",\"tuition\":\"$7",
+    "000 COP | ~ $1,729 USD*\",\"tuitionCaption\":\"Costo por ciclo de 5 cr\u00e9ditos (9 cr\u00e9ditos en total) | Precios para 2026, s"
+   ],
+   "dollars": [
+    "7.26",
+    "1,729"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/metodologias-agiles-desarrollo-software-uniandes",
+   "title": "",
+   "lines": [
+    "000 COP | ~ $1,383 USD* Costo por ciclo de 4 cr\u00e9ditos (8 cr\u00e9ditos en total) | Precios para 2026, sujetos al aumento de tarifa anual",
+    "\",\"tuition\":\"$5",
+    "000 COP | ~ $1,383 USD*\",\"tuitionCaption\":\"Costo por ciclo de 4 cr\u00e9ditos (8 cr\u00e9ditos en total) | Precios para 2026, s"
+   ],
+   "dollars": [
+    "5.81",
+    "1,383"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/modelos-analiticos-toma-decisiones-ucchile",
+   "title": "",
+   "lines": [
+    "200 USD para alumnos afuera del territorio chileno $1",
+    "\":null,\"timeFrame\":\"6 meses\",\"hoursPerWeek\":\"11-22 horas por semana\",\"tuition\":\"$2",
+    "200 USD para alumnos afuera del territorio chileno\",\"tuitionCaption\":\"$1"
+   ],
+   "dollars": [
+    "2.20",
+    "1.98"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/principios-ingenieria-software-automatizada-agil-uniandes",
+   "title": "",
+   "lines": [
+    "000 COP | ~ $1,383 USD* Costo por ciclo de 4 cr\u00e9ditos (8 cr\u00e9ditos en total) | Precios para 2026, sujetos al aumento de tarifa anual",
+    "\",\"tuition\":\"$5",
+    "000 COP | ~ $1,383 USD*\",\"tuitionCaption\":\"Costo por ciclo de 4 cr\u00e9ditos (8 cr\u00e9ditos en total) | Precios para 2026, s"
+   ],
+   "dollars": [
+    "5.81",
+    "1,383"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/mastertrack/semiconductor-photonics-boulder",
+   "title": "",
+   "lines": [
+    "$667 per credit $6,003 total cost 100% online No traditional application required",
+    "\",\"tuition\":\"$667 per credit\",\"tuitionCaption\":\"$6,003 total cost\",\"paymentDetails\":null,\"location\":\"100% online\",\"locationCaption\":\"No"
+   ],
+   "dollars": [
+    "667",
+    "6,003"
+   ]
+  }
+ ],
+ "certificates": [
+  {
+   "url": "https://www.coursera.org/certificates",
+   "title": "",
+   "lines": [
+    "Start pursuing your career dreams today with programs starting at $49 USD per month and a 7 day free trial"
+   ],
+   "dollars": [
+    "49"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/accounting-foundations-uiuc",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$8,748 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "8,748",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/advance-your-career",
+   "title": "",
+   "lines": [
+    "e approximately ten hours of flexible study per week and start at $49 USD per month"
+   ],
+   "dollars": [
+    "49"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/advanced-ai-ml-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/blockchain-duke",
+   "title": "",
+   "lines": [
+    "Start pursuing your career dreams today with programs starting at $49 USD per month and a 7 day free trial"
+   ],
+   "dollars": [
+    "49"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/business",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/business-management-iimk",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/cloud-computing-applications-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/computer-science-it",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/cpa-pathway-uiuc",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$8,748 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "8,748",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/data-driven-decision-making-iimk",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/data-science",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/data-science-boulder",
+   "title": "",
+   "lines": [
+    "ending on chosen course load per session $525 per credit $6,300 total cost 100% online No traditional application required",
+    "ximately in 6-9 months, depending on chosen course load per session\",\"tuition\":\"$525 per credit\",\"tuitionCaption\":\"$6,300 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "525",
+    "6,300"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/data-science-machine-learning-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/deep-learning-computer-vision-xr-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/digital-manufacturing-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/digital-transformation-dartmouth",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/digital-transformation-iitbombay",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/engineering-management-boulder",
+   "title": "",
+   "lines": [
+    "be completed in approximately 6-9 months $667 per credit $6,003 total cost 100% online No traditional application required",
+    "icate is 9 credits and can be completed in approximately 6-9 months\",\"tuition\":\"$667 per credit\",\"tuitionCaption\":\"$6,003 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "667",
+    "6,003"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/five-g-iot-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-certificate-accounting-data-analytics-illinois",
+   "title": "",
+   "lines": [
+    "\",\"tuition\":\"$6,648 - $10,848\",\"tuitionCaption\":\"Approximate depending on choice of electives"
+   ],
+   "dollars": [
+    "6,648",
+    "10,848"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-certificate-computer-science-london",
+   "title": "",
+   "lines": [],
+   "dollars": [
+    "137",
+    "180"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-certificate-digital-marketing",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-certificate-strategic-leadership-management-illinois",
+   "title": "",
+   "lines": [
+    "$4,548 Tuition and fees are subject to change",
+    "\",\"tuition\":\"$4,548\",\"tuitionCaption\":\"Tuition and fees are subject to change"
+   ],
+   "dollars": [
+    "4,548"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-diploma-computer-science-london",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/graduate-english-proficiency-asu-cert",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/iiot-boulder",
+   "title": "",
+   "lines": [
+    "6-12 months 10 courses and 7 projects $667 per credit $6,003 total cost 100% online No traditional application required",
+    "\"timeFrame\":\"6-12 months\",\"hoursPerWeek\":\"10 courses and 7 projects\",\"tuition\":\"$667 per credit\",\"tuitionCaption\":\"$6,003 total cost\",\"paymentDetai"
+   ],
+   "dollars": [
+    "667",
+    "6,003"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/innovation-management-entrepreneurship-hec",
+   "title": "",
+   "lines": [
+    "es\":null,\"timeFrame\":\"5 months\",\"hoursPerWeek\":\"6-10 hours per week\",\"tuition\":\"$4,000\",\"tuitionCaption\":\"Eligible for CPF funding\",\"paymentDetails"
+   ],
+   "dollars": [
+    "4,000"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/investment-management-isb",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/launch-your-career",
+   "title": "",
+   "lines": [
+    "approximately ten hours of flexible study per week, and start at $49 USD per month",
+    "ms start at $49/month USD after the initial 7-day free trial period and can take less than 6 mo",
+    "hich means most learners can complete the full program for under $300 USD",
+    "What is the cost of these programs? Programs start at $49/month USD after",
+    "\"},{\"__typename\":\"Faq\",\"question\":\"What is the cost of these programs? \",\"answer\":\"Programs start at $49\\u002Fmonth USD a"
+   ],
+   "dollars": [
+    "49",
+    "300"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/leading-innovation-with-creativity-hec",
+   "title": "",
+   "lines": [
+    "es\":null,\"timeFrame\":\"5 months\",\"hoursPerWeek\":\"6-10 hours per week\",\"tuition\":\"$4,000\",\"tuitionCaption\":\"Eligible for CPF funding\",\"paymentDetails"
+   ],
+   "dollars": [
+    "4,000"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/learn",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/machine-learning-finance-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/natural-language-processing-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/pg-cert-cyber-security-london",
+   "title": "",
+   "lines": [],
+   "dollars": [
+    "135,000"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/pg-dip-cyber-security-london",
+   "title": "",
+   "lines": [],
+   "dollars": [
+    "135,000"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/power-electronics-boulder",
+   "title": "",
+   "lines": [
+    "9 months 10 courses and 4 projects $667 per credit $6003 total cost 100% online No traditional application required",
+    "ll,\"timeFrame\":\"9 months\",\"hoursPerWeek\":\"10 courses and 4 projects\",\"tuition\":\"$667 per credit\",\"tuitionCaption\":\"$6003 total cost\",\"paymentDetail"
+   ],
+   "dollars": [
+    "667",
+    "600"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/power-electronics-motors-ev-iitbombay",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/prepare-for-a-certification",
+   "title": "",
+   "lines": [
+    "approximately ten hours of flexible study per week, and start at $49 USD per month"
+   ],
+   "dollars": [
+    "49"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/certificates/robotics-mechatronics-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/strategic-leadership-isb",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/strategic-supply-chain-management-ai-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/ux-design-human-computer-interaction-iitguwahati",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/certificates/vlsi-design-iitr",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  },
+  {
+   "url": "https://www.coursera.org/professional-certificates",
+   "title": "",
+   "lines": [
+    "Start pursuing your career dreams today with programs starting at $49 USD per month and a 7 day free trial"
+   ],
+   "dollars": [
+    "49"
+   ]
+  }
+ ],
+ "product_pages": [
+  {
+   "url": "https://www.coursera.org/courseraplus",
+   "title": "Coursera Plus",
+   "lines": [
+    "$59 /month, cancel anytime Start 7-day Free Trial or $39"
+   ],
+   "dollars": [
+    "59",
+    "399"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+   "title": "Coursera Plus",
+   "lines": [
+    "and Canada, Coursera charges $49 per month after the initial 7-day free trial period",
+    "udy, so most learners can complete the certificate for less than $300 USD"
+   ],
+   "dollars": [
+    "97,000",
+    "49",
+    "300"
+   ]
+  },
+  {
+   "url": "https://www.coursera.org/specializations/deep-learning",
+   "title": "",
+   "lines": [],
+   "dollars": []
+  }
+ ]
+}
