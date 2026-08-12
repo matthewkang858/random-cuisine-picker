@@ -1,6 +1,6 @@
-# One-off helper: harvest Coursera prices — VerifiedCertificate price for
-# every course via productPrices.v3, ProfCert per-month prices from pages,
-# MasterTrack/Graduate Certificate tuition. Push harvest JSON back.
+# One-off helper: harvest v2 — probe the productPrices multi-get batch cap,
+# sweep VerifiedCertificate prices for all courses and Specialization prices
+# for all specializations + professional certificates. Push JSON back.
 # Runs when this file changes.
 name: Count Coursera catalog
 on:
@@ -14,10 +14,10 @@ permissions:
 jobs:
   count:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Harvest Coursera prices
+      - name: Harvest Coursera prices v2
         run: |
           python3 - <<'EOF'
           import json, re, time, urllib.request
@@ -31,10 +31,10 @@ jobs:
                       return urllib.request.urlopen(
                           urllib.request.Request(url, headers=UA), timeout=60).read().decode('utf-8', 'ignore')
                   except Exception as e:
-                      err = e; time.sleep(1 + a)
+                      err = e; time.sleep(0.5 + a)
               return None
 
-          # ---- 1. enumerate all courses ----------------------------------
+          # ---- enumerate courses -----------------------------------------
           courses, start = {}, 0
           while True:
               d = json.loads(get(f'https://api.coursera.org/api/courses.v1?start={start}&limit=100&fields=slug,name'))
@@ -46,108 +46,93 @@ jobs:
           ids = list(courses)
           print('courses enumerated:', len(ids))
 
-          # ---- 2. price sweep (multi-get if supported) --------------------
-          def batch_url(batch):
-              q = ','.join(f'VerifiedCertificate~{i}~USD~US' for i in batch)
-              return f'https://www.coursera.org/api/productPrices.v3?ids={q}'
+          # ---- find the multi-get batch cap -------------------------------
+          def price_url(pids):
+              return ('https://www.coursera.org/api/productPrices.v3?ids=' +
+                      ','.join(pids))
 
-          test = get(batch_url(ids[:5]))
-          multiget = test is not None and '"amount"' in (test or '')
-          print('multi-get supported:', multiget)
+          BATCH = None
+          for size in (40, 25, 20, 10, 5, 1):
+              pids = [f'VerifiedCertificate~{i}~USD~US' for i in ids[:size]]
+              t = get(price_url(pids), tries=1)
+              ok = bool(t and '"amount"' in t)
+              print(f'batch size {size}: {"OK" if ok else "FAIL"}',
+                    '' if ok else (t or 'no response')[:120])
+              if ok:
+                  BATCH = size
+                  break
+          if BATCH is None:
+              raise SystemExit('no batch size works')
+          print('using batch size', BATCH)
 
-          prices = {}
-          if multiget:
-              BATCH = 50
-              batches = [ids[i:i+BATCH] for i in range(0, len(ids), BATCH)]
-              def fetch_batch(b):
-                  t = get(batch_url(b), tries=2)
+          def sweep(pid_list, label):
+              out = {}
+              batches = [pid_list[i:i+BATCH] for i in range(0, len(pid_list), BATCH)]
+              def fb(b):
+                  t = get(price_url(b), tries=3)
                   if not t: return []
                   try:
                       return json.loads(t).get('elements', [])
                   except Exception:
                       return []
-              with ThreadPoolExecutor(max_workers=6) as ex:
-                  for i, els in enumerate(ex.map(fetch_batch, batches)):
+              with ThreadPoolExecutor(max_workers=5) as ex:
+                  for i, els in enumerate(ex.map(fb, batches)):
                       for el in els:
                           pid = el.get('productItemId')
                           if pid:
-                              prices[pid] = {'amount': el.get('amount'),
-                                             'promo': bool((el.get('promotionInfo') or {}).get('promotionId'))}
-                      if (i + 1) % 50 == 0:
-                          print('batches', i + 1, 'of', len(batches), '| prices:', len(prices))
-          else:
-              import random
-              random.seed(11)
-              sample = random.sample(ids, 2500)
-              def fetch_one(cid):
-                  t = get(f'https://www.coursera.org/api/productPrices.v3/VerifiedCertificate~{cid}~USD~US', tries=2)
-                  if not t: return None
-                  try:
-                      el = json.loads(t)['elements'][0]
-                      return (cid, {'amount': el.get('amount'),
-                                    'promo': bool((el.get('promotionInfo') or {}).get('promotionId'))})
-                  except Exception:
-                      return None
-              with ThreadPoolExecutor(max_workers=8) as ex:
-                  for r in ex.map(fetch_one, sample):
-                      if r: prices[r[0]] = r[1]
-              print('sampled prices:', len(prices))
-          print('TOTAL PRICES:', len(prices))
+                              out[pid] = {'amount': el.get('amount'),
+                                          'promo': bool((el.get('promotionInfo') or {}).get('promotionId'))}
+                      if (i + 1) % 100 == 0:
+                          print(label, 'batches', i + 1, 'of', len(batches), '| got', len(out))
+              print(label, 'TOTAL:', len(out))
+              return out
 
-          # ---- 3. specialization price API variants -----------------------
-          d = json.loads(get('https://api.coursera.org/api/courses.v1?limit=40&fields=s12nIds'))
-          sids = [s for c in d.get('elements', []) for s in (c.get('s12nIds') or [])][:3]
-          spec_probe = []
-          for sid in sids:
-              for pat in ['Specialization', 'SpecializationV2', 'S12nMembership']:
-                  u = f'https://www.coursera.org/api/productPrices.v3/{pat}~{sid}~USD~US'
-                  t = get(u, tries=1)
-                  spec_probe.append({'url': u, 'ok': bool(t and '"amount"' in t), 'body': (t or 'ERR')[:150]})
+          course_prices = sweep([f'VerifiedCertificate~{i}~USD~US' for i in ids], 'courses')
 
-          # ---- 4. page crawls: profcerts, mastertrack, certificates -------
-          def tuition_page(u):
-              html = get(u, tries=2)
-              if not html:
-                  return {'url': u, 'error': 'fetch failed'}
-              title = (re.search(r'<title>([^<]*)</title>', html) or [None, ''])[1]
-              tuition = re.findall(r'"tuition(?:Caption)?"\s*:\s*"([^"]{1,120})"', html)
-              monthly = re.findall(r'\$\s?(\d{2,3})\s*(?:USD\s*)?(?:per month|/month|a month)', html)
-              dollars = re.findall(r'\$\s?([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{2})?)', html)
-              return {'url': u, 'title': title.strip()[:110],
-                      'tuition': list(dict.fromkeys(tuition))[:4],
-                      'monthly': list(dict.fromkeys(monthly))[:4],
-                      'dollars': list(dict.fromkeys(dollars))[:8]}
+          # ---- specializations + profcerts: slug -> id -> price -----------
+          xml = get('https://www.coursera.org/sitemap~www~specializations.xml') or ''
+          spec_slugs = [u.rsplit('/', 1)[1] for u in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)]
+          xml = get('https://www.coursera.org/sitemap~www~certificates.xml') or ''
+          pc_slugs = [u.rsplit('/', 1)[1] for u in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)
+                      if '/professional-certificates/' in u]
+          print('spec slugs:', len(spec_slugs), '| profcert slugs:', len(pc_slugs))
 
-          out_pages = {}
-          for name, sm, keep in [
-              ('profcerts', 'https://www.coursera.org/sitemap~www~certificates.xml', '/professional-certificates/'),
-              ('gradcerts', 'https://www.coursera.org/sitemap~www~certificates.xml', '/certificates/'),
-              ('mastertrack', 'https://www.coursera.org/sitemap~www~mastertrack.xml', '')]:
-              xml = get(sm) or ''
-              urls = [u for u in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)
-                      if (keep in u if keep else True)]
-              if name == 'gradcerts':
-                  urls = [u for u in urls if '/professional-certificates/' not in u]
-              print(name, 'pages:', len(urls))
-              res = []
-              with ThreadPoolExecutor(max_workers=5) as ex:
-                  for r in ex.map(tuition_page, urls):
-                      res.append(r)
-              out_pages[name] = res
+          def resolve(slug):
+              t = get(f'https://api.coursera.org/api/onDemandSpecializations.v1?q=slug&slug={slug}&fields=id,name', tries=2)
+              if not t: return None
+              try:
+                  el = json.loads(t)['elements'][0]
+                  return (slug, el['id'], el.get('name', ''))
+              except Exception:
+                  return None
+
+          spec_map, pc_map = {}, {}
+          with ThreadPoolExecutor(max_workers=8) as ex:
+              for r in ex.map(resolve, spec_slugs):
+                  if r: spec_map[r[1]] = {'slug': r[0], 'name': r[2]}
+              for r in ex.map(resolve, pc_slugs):
+                  if r: pc_map[r[1]] = {'slug': r[0], 'name': r[2]}
+          print('resolved specs:', len(spec_map), '| profcerts:', len(pc_map))
+
+          spec_prices = sweep([f'Specialization~{i}~USD~US' for i in list(spec_map) + list(pc_map)], 'specs')
+
+          def strip(pid):
+              return pid.split('~')[1]
 
           harvest = {
-              'courses': {cid: {**courses.get(cid, {}), **p} for cid, p in prices.items()},
-              'multiget': multiget,
-              'spec_probe': spec_probe,
-              **out_pages,
+              'batch_size': BATCH,
+              'courses': {strip(p): {**courses.get(strip(p), {}), **v} for p, v in course_prices.items()},
+              'spec_prices': {strip(p): v for p, v in spec_prices.items()},
+              'spec_map': spec_map,
+              'pc_map': pc_map,
           }
-          json.dump(harvest, open('research/coursera-price-harvest.json', 'w'))
-          print('WROTE research/coursera-price-harvest.json')
+          json.dump(harvest, open('research/coursera-price-harvest2.json', 'w'))
+          print('WROTE research/coursera-price-harvest2.json')
           EOF
       - name: Push results back
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add research/coursera-price-harvest.json
-          git commit -m "Add Coursera price harvest" || echo "no changes"
+          git add research/coursera-price-harvest2.json
+          git commit -m "Add Coursera price harvest v2" || echo "no changes"
           git push
