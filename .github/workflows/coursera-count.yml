@@ -1,0 +1,82 @@
+# One-off helper: count Coursera's catalog two ways (public catalog API and
+# public sitemaps). Manually triggered only; results are read from the job log.
+name: Count Coursera catalog
+on: workflow_dispatch
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: "Method 1: catalog API paging.total"
+        run: |
+          echo "== METHOD 1: api.coursera.org/api/courses.v1 =="
+          curl -sS --max-time 60 "https://api.coursera.org/api/courses.v1?limit=1" -o api.json \
+            -H "User-Agent: catalog-count/1.0 (research; contact: repo owner)" || true
+          echo "--- first 400 bytes of response ---"
+          head -c 400 api.json; echo
+          python3 - <<'EOF'
+          import json
+          try:
+              d = json.load(open('api.json'))
+              print('PAGING OBJECT:', d.get('paging'))
+              print('API_COURSES_TOTAL =', (d.get('paging') or {}).get('total'))
+          except Exception as e:
+              print('API_PARSE_ERROR:', e)
+          EOF
+
+      - name: "Method 2: sitemap URL counts"
+        run: |
+          echo "== METHOD 2: www.coursera.org sitemaps =="
+          curl -sSL --max-time 60 "https://www.coursera.org/robots.txt" \
+            -H "User-Agent: Mozilla/5.0 catalog-count" | grep -i sitemap || true
+          python3 - <<'EOF'
+          import gzip, io, re, sys, urllib.request
+          from collections import Counter
+
+          UA = {'User-Agent': 'Mozilla/5.0 (compatible; catalog-count/1.0)'}
+
+          def fetch(url):
+              raw = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=120).read()
+              if raw[:2] == b'\x1f\x8b':
+                  raw = gzip.decompress(raw)
+              return raw.decode('utf-8', 'ignore')
+
+          def locs(xml):
+              return re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)
+
+          index = fetch('https://www.coursera.org/sitemap.xml')
+          subs = locs(index)
+          print('sitemap index entries:', len(subs))
+
+          fam = Counter()
+          per_sub = {}
+          queue = list(subs)
+          seen = set(queue)
+          while queue:
+              u = queue.pop(0)
+              try:
+                  xml = fetch(u)
+              except Exception as e:
+                  print('SUB_ERROR', u, repr(e))
+                  continue
+              if '<sitemapindex' in xml:            # nested index: recurse one level
+                  for s in locs(xml):
+                      if s not in seen:
+                          seen.add(s); queue.append(s)
+                  continue
+              ls = locs(xml)
+              per_sub[u] = len(ls)
+              for l in ls:
+                  m = re.match(r'https?://([a-z0-9.-]+)/([^/?#]*)', l)
+                  host = m.group(1) if m else '?'
+                  seg = m.group(2) if m else '?'
+                  fam[(host, seg)] += 1
+
+          for u in sorted(per_sub):
+              print('SUB', per_sub[u], u)
+          print('TOTAL_URLS =', sum(per_sub.values()))
+          print('--- counts by (host, first path segment), top 40 ---')
+          for (host, seg), n in fam.most_common(40):
+              print(f'FAMILY\t{host}\t/{seg}\t{n}')
+          EOF
