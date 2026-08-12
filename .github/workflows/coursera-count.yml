@@ -1,7 +1,11 @@
 # One-off helper: count Coursera's catalog two ways (public catalog API and
-# public sitemaps). Manually triggered only; results are read from the job log.
+# public sitemaps). Runs only when this file itself changes (touch it to
+# re-run); results are read from the job log.
 name: Count Coursera catalog
-on: workflow_dispatch
+on:
+  push:
+    branches: [claude/something-cool-rcnfvm]
+    paths: ['.github/workflows/coursera-count.yml']
 
 jobs:
   count:
