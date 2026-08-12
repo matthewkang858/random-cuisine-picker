@@ -1,7 +1,5 @@
-# One-off helper: harvest v2 — probe the productPrices multi-get batch cap,
-# sweep VerifiedCertificate prices for all courses and Specialization prices
-# for all specializations + professional certificates. Push JSON back.
-# Runs when this file changes.
+# One-off helper: recalculate the Coursera multi-tab price workbook with
+# LibreOffice and push it back. Runs when this file changes.
 name: Count Coursera catalog
 on:
   push:
@@ -14,123 +12,18 @@ permissions:
 jobs:
   count:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Harvest Coursera prices v2
+      - name: Recalculate workbook
         run: |
-          python3 - <<'EOF'
-          import json, re, time, urllib.request
-          from concurrent.futures import ThreadPoolExecutor
-
-          UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'}
-
-          def get(url, tries=3):
-              for a in range(tries):
-                  try:
-                      return urllib.request.urlopen(
-                          urllib.request.Request(url, headers=UA), timeout=60).read().decode('utf-8', 'ignore')
-                  except Exception as e:
-                      err = e; time.sleep(0.5 + a)
-              return None
-
-          # ---- enumerate courses -----------------------------------------
-          courses, start = {}, 0
-          while True:
-              d = json.loads(get(f'https://api.coursera.org/api/courses.v1?start={start}&limit=100&fields=slug,name'))
-              for e in d.get('elements', []):
-                  courses[e['id']] = {'slug': e['slug'], 'name': e.get('name', '')}
-              nxt = d.get('paging', {}).get('next')
-              if not nxt: break
-              start = int(nxt)
-          ids = list(courses)
-          print('courses enumerated:', len(ids))
-
-          # ---- find the multi-get batch cap -------------------------------
-          def price_url(pids):
-              return ('https://www.coursera.org/api/productPrices.v3?ids=' +
-                      ','.join(pids))
-
-          BATCH = None
-          for size in (40, 25, 20, 10, 5, 1):
-              pids = [f'VerifiedCertificate~{i}~USD~US' for i in ids[:size]]
-              t = get(price_url(pids), tries=1)
-              ok = bool(t and '"amount"' in t)
-              print(f'batch size {size}: {"OK" if ok else "FAIL"}',
-                    '' if ok else (t or 'no response')[:120])
-              if ok:
-                  BATCH = size
-                  break
-          if BATCH is None:
-              raise SystemExit('no batch size works')
-          print('using batch size', BATCH)
-
-          def sweep(pid_list, label):
-              out = {}
-              batches = [pid_list[i:i+BATCH] for i in range(0, len(pid_list), BATCH)]
-              def fb(b):
-                  t = get(price_url(b), tries=3)
-                  if not t: return []
-                  try:
-                      return json.loads(t).get('elements', [])
-                  except Exception:
-                      return []
-              with ThreadPoolExecutor(max_workers=5) as ex:
-                  for i, els in enumerate(ex.map(fb, batches)):
-                      for el in els:
-                          pid = el.get('productItemId')
-                          if pid:
-                              out[pid] = {'amount': el.get('amount'),
-                                          'promo': bool((el.get('promotionInfo') or {}).get('promotionId'))}
-                      if (i + 1) % 100 == 0:
-                          print(label, 'batches', i + 1, 'of', len(batches), '| got', len(out))
-              print(label, 'TOTAL:', len(out))
-              return out
-
-          course_prices = sweep([f'VerifiedCertificate~{i}~USD~US' for i in ids], 'courses')
-
-          # ---- specializations + profcerts: slug -> id -> price -----------
-          xml = get('https://www.coursera.org/sitemap~www~specializations.xml') or ''
-          spec_slugs = [u.rsplit('/', 1)[1] for u in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)]
-          xml = get('https://www.coursera.org/sitemap~www~certificates.xml') or ''
-          pc_slugs = [u.rsplit('/', 1)[1] for u in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)
-                      if '/professional-certificates/' in u]
-          print('spec slugs:', len(spec_slugs), '| profcert slugs:', len(pc_slugs))
-
-          def resolve(slug):
-              t = get(f'https://api.coursera.org/api/onDemandSpecializations.v1?q=slug&slug={slug}&fields=id,name', tries=2)
-              if not t: return None
-              try:
-                  el = json.loads(t)['elements'][0]
-                  return (slug, el['id'], el.get('name', ''))
-              except Exception:
-                  return None
-
-          spec_map, pc_map = {}, {}
-          with ThreadPoolExecutor(max_workers=8) as ex:
-              for r in ex.map(resolve, spec_slugs):
-                  if r: spec_map[r[1]] = {'slug': r[0], 'name': r[2]}
-              for r in ex.map(resolve, pc_slugs):
-                  if r: pc_map[r[1]] = {'slug': r[0], 'name': r[2]}
-          print('resolved specs:', len(spec_map), '| profcerts:', len(pc_map))
-
-          spec_prices = sweep([f'Specialization~{i}~USD~US' for i in list(spec_map) + list(pc_map)], 'specs')
-
-          # productItemId in responses is already the bare course/s12n id
-          harvest = {
-              'batch_size': BATCH,
-              'courses': {p: {**courses.get(p, {}), **v} for p, v in course_prices.items()},
-              'spec_prices': spec_prices,
-              'spec_map': spec_map,
-              'pc_map': pc_map,
-          }
-          json.dump(harvest, open('research/coursera-price-harvest2.json', 'w'))
-          print('WROTE research/coursera-price-harvest2.json')
-          EOF
+          sudo apt-get update -q
+          sudo apt-get install -y -q libreoffice-calc python3-openpyxl >/dev/null
+          python3 tools/recalc.py research/coursera-prices.xlsx 420
       - name: Push results back
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add research/coursera-price-harvest2.json
-          git commit -m "Add Coursera price harvest v2" || echo "no changes"
+          git add research/coursera-prices.xlsx
+          git commit -m "Recalculate Coursera price workbook" || echo "no changes"
           git push
