@@ -116,13 +116,11 @@ jobs:
 
           spec_prices = sweep([f'Specialization~{i}~USD~US' for i in list(spec_map) + list(pc_map)], 'specs')
 
-          def strip(pid):
-              return pid.split('~')[1]
-
+          # productItemId in responses is already the bare course/s12n id
           harvest = {
               'batch_size': BATCH,
-              'courses': {strip(p): {**courses.get(strip(p), {}), **v} for p, v in course_prices.items()},
-              'spec_prices': {strip(p): v for p, v in spec_prices.items()},
+              'courses': {p: {**courses.get(p, {}), **v} for p, v in course_prices.items()},
+              'spec_prices': spec_prices,
               'spec_map': spec_map,
               'pc_map': pc_map,
           }
